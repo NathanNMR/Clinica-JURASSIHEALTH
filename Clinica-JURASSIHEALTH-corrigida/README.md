@@ -68,15 +68,12 @@ em um projeto de teste rápido.
 
 ## Identidade visual
 
-- `wwwroot/img/logo-mark.svg` / `favicon.svg` — marca (ícone do mascote em selo circular).
-- `wwwroot/img/mascote-*.svg` — o mascote Doutor Rex em diferentes poses (estetoscópio,
-  prancheta, escudo), usado no hero e nas seções de Missão/Visão/Valores.
-- `wwwroot/img/cena-*.svg` — ilustrações de hospital, atendimento, equipe e pronto-atendimento.
-- `wwwroot/img/fundosite.svg` / `fundo-footer.svg` — textura de fundo com várias silhuetas do
-  mascote em tom de cinza, espalhadas de forma discreta.
+- `wwwroot/img/logo-mark.png` / `favicon.png` — marca (recorte circular do mascote oficial).
+- `wwwroot/img/mascote-hero.png` — o mascote "Doutor Rex" (arte fornecida pelo cliente), usado no hero.
+- `wwwroot/img/foto-*.jpg` — fotografias de hospital/atendimento (fornecidas pelo cliente), usadas na vitrine e nos cards de Missão/Visão/Valores.
+- `wwwroot/img/fundosite.png` / `fundo-footer.png` — padrão de fundo com o mascote repetido em tom acinzentado, gerado a partir da arte oficial.
 
-Todas as imagens são SVG (leves, nítidas em qualquer resolução, e fáceis de editar/recolorir
-depois, já que são vetoriais).
+> Seis das sete fotografias fornecidas têm resolução de origem baixa (147px de altura) e foram ampliadas com reamostragem de alta qualidade; para nitidez ideal, substitua por versões em resolução maior quando disponíveis (basta trocar o arquivo mantendo o mesmo nome em `wwwroot/img/`).
 
 ## Estrutura do projeto
 

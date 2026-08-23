@@ -104,4 +104,36 @@ O feedback foi direto: o mascote e as cenas da rodada anterior estavam com apar�
 
 **Limitação importante, dita com transparência:** não tenho, neste ambiente, uma ferramenta de geração de imagens fotorrealistas, e não posso baixar/usar fotografias de bancos de imagem de terceiros para os arquivos do site (isso violaria direitos autorais do material entregue). O que entreguei é ilustração vetorial (SVG) de qualidade bem superior à rodada anterior — se, no futuro, você tiver fotos reais da equipe/clínica, elas podem substituir essas ilustrações diretamente nos mesmos espaços do layout.
 
+---
+
+## 8. Quarta rodada: assets fornecidos pelo cliente (mascote + fotos reais)
+
+O cliente enviou 8 imagens próprias — um novo mascote ilustrado ("Doutor Rex") e 7 fotografias de hospital/atendimento — pedindo para substituir as imagens do site por elas. Trabalho realizado:
+
+### 8.1 Processamento do mascote
+- Removida a faixa de texto "NOSSO NOVO MASCOTE" que vinha no topo do arquivo original.
+- Fundo branco removido via chroma-key (limiar de luminosidade/saturação + suavização de borda), para poder usar o personagem como um "adesivo" recortado.
+- **Favicon** e **logo-mark** da navbar gerados a partir de um recorte da cabeça do mascote, compostos em selo circular.
+- **Hero**: o mascote recortado foi montado sobre um cartão arredondado cor de osso com sombra suave, para não "flutuar" sem contexto sobre o gradiente escuro do hero.
+- **Fundo do site e do rodapé**: gerado um padrão repetido com este mesmo mascote (não mais um desenho meu), em tom acinzentado/dessaturado e opacidade baixa — mesmo conceito pedido anteriormente ("vários Doutor Rex no fundo, em tom mais próximo do cinza"), agora usando a arte oficial do cliente.
+
+### 8.2 Fotografias
+As 7 fotos foram distribuídas pelas seções do site:
+
+| Foto enviada | Onde foi usada |
+|---|---|
+| Fachada da clínica | Vitrine (carrossel) — "Estrutura completa" |
+| Consulta médica | Vitrine (carrossel) — "Atendimento humanizado" |
+| Corredor com equipe | Vitrine (carrossel) — "Equipe especializada" |
+| Centro cirúrgico | Vitrine (carrossel) — "Alta complexidade" |
+| Coração nas mãos | Card "Missão" |
+| Recepção | Card "Visão" |
+| Médica com paciente idosa | Card "Valores" |
+
+Como as fotos não têm mais legenda "gravada" na própria imagem (ao contrário das ilustrações anteriores), as legendas do carrossel agora são feitas em HTML/CSS (`carousel-caption` do Bootstrap), o que também as torna editáveis sem precisar mexer em imagem nenhuma.
+
+### 8.3 Limitação de resolução (importante)
+Das 7 fotos, 6 vieram em resolução bem baixa (147px de altura). Para exibi-las em áreas maiores do site, foram ampliadas com reamostragem de alta qualidade (Lanczos) e um leve realce de nitidez (unsharp mask) para atenuar a perda de definição — mas um upscale nunca recupera detalhe que a imagem original não tinha. Caso versões maiores dessas fotos existam, recomendo substituí-las para um resultado mais nítido; o arquivo de mais alta resolução entre as sete (usado no card "Valores") ilustra bem a diferença de nitidez.
+
+
 
