@@ -15,6 +15,8 @@ builder.Services.AddDbContext<ClinicaContext>(options =>
     options.UseMySQL(connectionString));
 
 builder.Services.AddSingleton<TokenService>();
+builder.Services.AddMemoryCache(); // usado pelo LoginAttemptService para o bloqueio de tentativas
+builder.Services.AddSingleton<LoginAttemptService>();
 
 // BUG/RISCO CORRIGIDO: a política de CORS original liberava QUALQUER origem, cabeçalho e
 // método — inclusive em produção. Em desenvolvimento isso é conveniente, mas continua
@@ -33,6 +35,17 @@ builder.Services.AddCors(options => options.AddPolicy("Padrao", p =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// NOVO: cabeçalhos de segurança básicos. Nenhum deles existia antes. Reduzem a superfície de
+// ataque para clickjacking (X-Frame-Options), MIME-sniffing (X-Content-Type-Options) e
+// vazamento de URLs completas para terceiros ao seguir links (Referrer-Policy).
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["X-Content-Type-Options"] = "nosniff";
+    context.Response.Headers["X-Frame-Options"] = "DENY";
+    context.Response.Headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
+    await next();
+});
 
 // BUG CORRIGIDO: o index.html (e as imagens) ficavam na raiz do repositório, mas
 // UseStaticFiles() por padrão só serve o conteúdo de wwwroot/ — ou seja, a página nunca

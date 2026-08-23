@@ -1,6 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <circle cx="32" cy="32" r="32" fill="#53818e"/>
-  <circle cx="32" cy="32" r="27" fill="none" stroke="#d4af37" stroke-width="2"/>
-  <rect x="27" y="16" width="10" height="32" rx="3" fill="#ffffff"/>
-  <rect x="16" y="27" width="32" height="10" rx="3" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<defs><clipPath id="c1"><circle cx="100" cy="100" r="100"/></clipPath></defs>
+<g clip-path="url(#c1)">
+  <circle cx="100" cy="100" r="100" fill="#3E6E76"/>
+  <g transform="translate(-42,-2) scale(0.71)"><defs>
+    <radialGradient id="skinGradfav" cx="38%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#9BC494"/>
+      <stop offset="100%" stop-color="#74A76C"/>
+    </radialGradient>
+    <linearGradient id="bellyGradfav" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F3EFD8"/>
+      <stop offset="100%" stop-color="#E3DCB8"/>
+    </linearGradient>
+    <linearGradient id="coatGradfav" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDEFEA"/>
+    </linearGradient>
+    <radialGradient id="cheekGradfav" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
+    </radialGradient>
+    </defs>
+    <!-- sombra de chao -->
+    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
+
+    <!-- cauda: grossa, glossy, enrolada suavemente -->
+    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradfav)"/>
+    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+
+    <!-- perna tras -->
+    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#74A76C"/>
+    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#74A76C"/>
+
+    <!-- perna frente -->
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradfav)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradfav)"/>
+
+    <!-- corpo -->
+    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradfav)"/>
+    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradfav)"/>
+
+    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
+             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="url(#coatGradfav)"/>
+    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
+    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
+    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
+    <circle cx="186" cy="342" r="4.5" fill="#E08E1D"/>
+    <circle cx="186" cy="365" r="4.5" fill="#E08E1D"/>
+    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
+    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#E08E1D"/>
+
+    <ellipse cx="252" cy="316" rx="15" ry="11" fill="url(#coatGradfav)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradfav)"/>
+    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
+          fill="none" stroke="#2B3A2E" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
+    <circle cx="283" cy="358" r="12" fill="#2B3A2E" opacity="0.82"/>
+    <circle cx="283" cy="358" r="5.5" fill="url(#coatGradfav)"/>
+
+    <!-- pescoco -->
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradfav)"/>
+
+    <!-- cabeca -->
+    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
+             C130,234 124,242 124,242 C148,254 174,258 200,258
+             C226,258 252,254 276,242 C276,242 270,234 262,228
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradfav)"/>
+
+    <!-- sombra suave no queixo -->
+    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
+             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#74A76C" opacity="0.4"/>
+
+    <circle cx="126" cy="188" r="22" fill="url(#cheekGradfav)"/>
+    <circle cx="274" cy="188" r="22" fill="url(#cheekGradfav)"/>
+
+    <!-- boquinha sorridente com 2 dentinhos -->
+    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#2B3A2E" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
+
+    <!-- narinas -->
+    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#2B3A2E" opacity="0.45"/>
+    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#2B3A2E" opacity="0.45"/>
+
+    <!-- olhos enormes, kawaii -->
+    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
+    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
+    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#74A76C" stroke-width="2" opacity="0.3"/>
+    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#74A76C" stroke-width="2" opacity="0.3"/>
+    <circle cx="150" cy="136" r="20" fill="#2B3A2E"/>
+    <circle cx="250" cy="136" r="20" fill="#2B3A2E"/>
+    <circle cx="150" cy="136" r="20" fill="none"/>
+    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
+    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
+    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
+
+    <!-- sobrancelhas gentis -->
+    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#74A76C" stroke-width="7" stroke-linecap="round"/>
+    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#74A76C" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
+    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#74A76C"/>
+    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#74A76C"/>
+    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#74A76C"/>
+    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#74A76C"/>
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#2B3A2E" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g>
+</g>
 </svg>

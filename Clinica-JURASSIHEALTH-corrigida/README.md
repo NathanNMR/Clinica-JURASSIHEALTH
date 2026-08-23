@@ -5,9 +5,14 @@ acesso (Paciente, Secretaria e Médico) e um painel de Administrador, construíd
 **ASP.NET Core 8 (Web API) + Entity Framework Core + MySQL** no backend e uma **SPA em
 HTML/JS puro + Bootstrap 5** no frontend, servida pela própria aplicação.
 
+O site tem identidade visual própria: o mascote **"Doutor Rex"** (um T-Rex de jaleco e
+estetoscópio, desenhado especialmente para este projeto), paleta em tons de teal/âmbar
+fóssil, tipografia Fraunces + Inter, e ilustrações originais de hospital/atendimento médico.
+
 > Esta versão é uma correção/evolução do repositório original. Veja
 > [`RELATORIO_ANALISE.md`](./RELATORIO_ANALISE.md) para a lista completa de pontos fortes,
-> bugs encontrados e o que foi corrigido.
+> bugs encontrados e o que foi corrigido — incluindo a rodada mais recente (identidade visual,
+> limite de tentativas de login e tempo máximo de sessão).
 
 ## Como rodar
 
@@ -39,6 +44,15 @@ dotnet run
 A aplicação sobe em `http://localhost:5000` e já serve o site em `/` (não é mais necessário
 abrir o `index.html` separadamente — ver seção de bugs corrigidos).
 
+## Segurança da conta / sessão
+
+- **Limite de tentativas de login**: por padrão, 5 tentativas erradas seguidas para o mesmo
+  e-mail bloqueiam novas tentativas por 15 minutos (configurável em `LoginLockout`, no
+  `appsettings.json`).
+- **Tempo máximo de sessão**: o token emitido no login expira em 120 minutos por padrão
+  (`Auth:ExpiracaoMinutos`). O front-end faz logout automático assim que o token expira,
+  mesmo que a aba fique aberta.
+
 ## Acesso de administrador
 
 O admin não é mais uma conta cadastrada pela tela de "Cadastro" — ele é o único perfil com
@@ -52,6 +66,18 @@ Troque `AdminPadrao:SenhaHash` por um novo hash BCrypt antes de qualquer uso rea
 gerar um hash novo com qualquer gerador BCrypt (rounds 10–12) ou via `BCrypt.Net.BCrypt.HashPassword("nova-senha")`
 em um projeto de teste rápido.
 
+## Identidade visual
+
+- `wwwroot/img/logo-mark.svg` / `favicon.svg` — marca (ícone do mascote em selo circular).
+- `wwwroot/img/mascote-*.svg` — o mascote Doutor Rex em diferentes poses (estetoscópio,
+  prancheta, escudo), usado no hero e nas seções de Missão/Visão/Valores.
+- `wwwroot/img/cena-*.svg` — ilustrações de hospital, atendimento, equipe e pronto-atendimento.
+- `wwwroot/img/fundosite.svg` / `fundo-footer.svg` — textura de fundo com várias silhuetas do
+  mascote em tom de cinza, espalhadas de forma discreta.
+
+Todas as imagens são SVG (leves, nítidas em qualquer resolução, e fáceis de editar/recolorir
+depois, já que são vetoriais).
+
 ## Estrutura do projeto
 
 ```
@@ -60,11 +86,12 @@ em um projeto de teste rápido.
 ├── Models/Models.cs                   # Entidades + DTOs + validações
 ├── Services/TokenService.cs           # Emissão/validação de token de sessão (HMAC)
 ├── Services/TokenAuthAttribute.cs     # Filtro de autorização usado nos endpoints
+├── Services/LoginAttemptService.cs    # Limite de tentativas de login (lockout)
 ├── Program.cs                         # Composição da aplicação (DI, CORS, arquivos estáticos)
 ├── database.sql                       # Schema do banco
 └── wwwroot/
     ├── index.html                     # SPA (front-end)
-    └── img/                           # Ilustrações do site (geradas para este projeto)
+    └── img/                           # Identidade visual e ilustrações do site
 ```
 
 ## Limitações conhecidas / próximos passos sugeridos
@@ -75,6 +102,8 @@ evolução futura, valeria a pena:
 
 - Migrar o esquema de autenticação para ASP.NET Identity ou JWT com refresh tokens;
 - Adicionar testes de integração para os endpoints do `SistemaController`;
-- Forçar HTTPS e adicionar cabeçalhos de segurança (HSTS, CSP) antes de qualquer deploy público;
+- Forçar HTTPS e adicionar uma Content-Security-Policy completa antes de qualquer deploy público;
 - Criar um pipeline de migrations do EF Core (`dotnet ef migrations`) em vez do `database.sql` manual;
-- Adicionar paginação nas listagens (documentos, consultas) para contas com muito histórico.
+- Adicionar paginação nas listagens (documentos, consultas) para contas com muito histórico;
+- Mover o limite de tentativas de login (hoje em memória) para um cache distribuído (ex.: Redis) caso a aplicação passe a rodar em múltiplas instâncias.
+

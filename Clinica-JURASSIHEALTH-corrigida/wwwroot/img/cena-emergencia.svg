@@ -1,21 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700">
-    <rect width="700" height="700" rx="28" fill="#24444A"/>
-    <circle cx="350" cy="700" r="420" fill="#3E6E76" opacity="0.55"/>
-    <circle cx="120" cy="120" r="10" fill="#E08E1D" opacity="0.7"/><circle cx="590" cy="160" r="14" fill="#E08E1D" opacity="0.5"/><circle cx="560" cy="90" r="6" fill="#F6F1E4" opacity="0.6"/>
-    <g transform="translate(150,110) scale(1.0)"><defs>
-    <radialGradient id="skinGradap1" cx="38%" cy="30%" r="80%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" width="1400" height="760">
+    <rect width="1400" height="760" fill="#F6F1E4"/>
+    <rect x="0" y="560" width="1400" height="200" fill="#86A9AC" opacity="0.18"/>
+    
+<rect width="1400" height="560" fill="#24444A"/>
+<circle cx="1200" cy="120" r="90" fill="#E08E1D" opacity="0.18"/>
+<rect x="430" y="120" width="540" height="300" rx="16" fill="#20302F"/>
+<rect x="460" y="150" width="480" height="220" rx="8" fill="#12201F"/>
+<path d="M485,265.0 L553.8,265.0 L592.5,229.0 L631.2,310.0 L674.2,179.5 L712.9,287.5 L751.6,265.0 L915,265.0" fill="none" stroke="#59D9A0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="500" cy="330" r="6" fill="#E08E1D"/>
+<text x="880" y="200" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="34" fill="#E08E1D">98</text>
+<rect x="470" y="392" width="90" height="16" rx="6" fill="#3E6E76"/>
+<rect x="250" y="430" width="360" height="26" rx="10" fill="#F6F1E4"/>
+<rect x="270" y="456" width="20" height="70" fill="#86A9AC"/>
+<rect x="570" y="456" width="20" height="70" fill="#86A9AC"/>
+<g transform="translate(150,150)">
+  <circle cx="0" cy="0" r="70" fill="#E08E1D"/>
+  <rect x="-14" y="-42" width="28" height="84" rx="6" fill="#F6F1E4"/>
+  <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#F6F1E4"/>
+</g>
+<g transform="translate(1010,430) scale(0.55)"><defs>
+    <radialGradient id="skinGrademerg" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#9BC494"/>
       <stop offset="100%" stop-color="#74A76C"/>
     </radialGradient>
-    <linearGradient id="bellyGradap1" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGrademerg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#F3EFD8"/>
       <stop offset="100%" stop-color="#E3DCB8"/>
     </linearGradient>
-    <linearGradient id="coatGradap1" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGrademerg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradap1" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGrademerg" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -25,7 +41,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradap1)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGrademerg)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -33,17 +49,17 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#74A76C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradap1)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradap1)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGrademerg)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGrademerg)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradap1)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGrademerg)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradap1)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGrademerg)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="url(#coatGradap1)"/>
+             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="url(#coatGrademerg)"/>
     <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
     <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
     <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
@@ -52,28 +68,26 @@
     <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#E08E1D"/>
 
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="url(#coatGradap1)"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradap1)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#2B3A2E" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#2B3A2E" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="url(#coatGradap1)"/>
+    <ellipse cx="252" cy="316" rx="15" ry="11" fill="url(#coatGrademerg)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGrademerg)"/>
+    <path d="M266,318 L300,329 C300,354 289,375 266,388 C243,375 232,354 232,329 Z" fill="#E08E1D"/>
+    <path d="M266,332 L266,371 M251,351 L281,351" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradap1)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGrademerg)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradap1)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGrademerg)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
              C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#74A76C" opacity="0.4"/>
 
-    <circle cx="126" cy="188" r="22" fill="url(#cheekGradap1)"/>
-    <circle cx="274" cy="188" r="22" fill="url(#cheekGradap1)"/>
+    <circle cx="126" cy="188" r="22" fill="url(#cheekGrademerg)"/>
+    <circle cx="274" cy="188" r="22" fill="url(#cheekGrademerg)"/>
 
     <!-- boquinha sorridente com 2 dentinhos -->
     <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#2B3A2E" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
@@ -105,8 +119,9 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#74A76C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#74A76C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#74A76C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#2B3A2E" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g>
-    <rect x="0" y="600" width="700" height="100" fill="#24444A"/>
-    <text x="350" y="662" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="28"
-          letter-spacing="3" fill="#F0B65C">MISSÃO</text>
+</g>
+
+    <rect x="0" y="672" width="1400" height="88" fill="#24444A"/>
+    <text x="700" y="726" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="26"
+          letter-spacing="4" fill="#F6F1E4">PRONTO ATENDIMENTO · 24 HORAS POR DIA</text>
     </svg>

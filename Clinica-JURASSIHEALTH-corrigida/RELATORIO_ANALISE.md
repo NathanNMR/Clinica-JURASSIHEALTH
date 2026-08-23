@@ -59,3 +59,49 @@ O repositório referenciava 8 imagens que nunca foram adicionadas (`fundosite.pn
 ## 5. O que **não** foi alterado de propósito
 
 Para manter o escopo do trabalho fiel ao que já existia (é um projeto acadêmico/PIM, com um manual em PDF descrevendo requisitos), optei por **não** trocar a arquitetura de autenticação por algo como ASP.NET Identity + JWT completo, nem adicionar testes automatizados ou um pipeline de CI — essas são evoluções recomendadas, mas fora do escopo de "corrigir bugs existentes" (ver README para a lista de sugestões futuras).
+
+---
+
+## 6. Segunda rodada: identidade visual, segurança de sessão e demais melhorias
+
+### 6.1 Identidade visual
+
+O site usava Bootstrap "de fábrica" (cores padrão, cards genéricos, hero em carrossel com foto escurecida + texto centralizado — um padrão muito comum e pouco memorável) e as imagens que eu havia gerado antes eram ilustrações abstratas (batimento cardíaco, DNA, escudo). Nesta rodada:
+
+- **Mascote "Doutor Rex"**: personagem desenhado do zero (SVG, estilo *chibi*), um T-Rex de jaleco branco e estetoscópio, com 3 poses (estetoscópio, prancheta, escudo) usadas no hero e nas seções de Missão/Visão/Valores.
+- **Nova paleta**: teal profundo + âmbar "fóssil" (referência à resina fossilizada do período Jurássico — mais alinhado ao tema do que o laranja genérico anterior) sobre fundo creme/osso.
+- **Nova tipografia**: Fraunces (serifada, para títulos) + Inter (corpo) + IBM Plex Mono (rótulos pequenos, estilo etiqueta de museu/catálogo).
+- **Fundo com "vários Doutor Rex"**: conforme solicitado, o fundo do site (`fundosite.svg`) tem múltiplas silhuetas do mascote em tom de cinza, espalhadas em posições/rotações/escalas variadas, com opacidade baixa para não competir com o conteúdo. *(Durante a criação, encontrei e corrigi um bug de pré-visualização: `<use>` referenciando `<symbol>` com `opacity` não renderizava a opacidade corretamente em alguns renderizadores — troquei para grupos `<g opacity="...">` inline, que é o padrão mais confiável entre navegadores.)*
+- **Imagens de hospital/atendimento**: 4 cenas ilustradas novas — fachada do hospital com ambulância, sala de atendimento/consulta, equipe multidisciplinar, e pronto-atendimento com monitor cardíaco — substituindo o carrossel genérico anterior.
+- **Hero redesenhado**: o antigo padrão de "foto escurecida + texto branco centralizado" foi substituído por um layout mais autoral (mascote + texto lado a lado, com uma pequena faixa de fatos rápidos), e o carrossel de imagens foi realocado para uma seção de vitrine abaixo do hero, sem o filtro de escurecimento (desnecessário em ilustrações vetoriais).
+- **Favicon e logo-mark**: ambos usam o rosto do mascote simplificado, legível mesmo em 16×16px.
+
+### 6.2 Segurança de conta e sessão (novas funcionalidades pedidas)
+
+| Funcionalidade | Como foi implementada |
+|---|---|
+| **Limite de tentativas de login** | Novo `LoginAttemptService` (em memória, via `IMemoryCache`): 5 tentativas erradas para o mesmo e-mail bloqueiam novos logins por 15 minutos (ambos configuráveis em `appsettings.json → LoginLockout`). A resposta HTTP `429 Too Many Requests` informa quanto tempo falta; enquanto ainda há tentativas, a mensagem de erro informa quantas restam. |
+| **Tempo máximo de sessão** | O token já expirava (`Auth:ExpiracaoMinutos`, reduzido de 8h para 2h como padrão mais razoável); agora o **front-end também decodifica a expiração do token e faz logout automático** assim que ela é atingida, mesmo com a aba aberta — antes, uma sessão salva no `localStorage` "durava para sempre" do ponto de vista do navegador. |
+
+### 6.3 Outras melhorias adicionadas
+
+- **Cabeçalhos de segurança HTTP** (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`) — nenhum existia antes.
+- **Confirmação de senha** no cadastro de paciente (campo duplicado + checagem no front-end antes de enviar).
+- **Estados vazios** nas listas (consultas, documentos, agenda do médico, histórico do paciente) — antes, uma lista vazia simplesmente não mostrava nada; agora mostra uma mensagem amigável com ícone.
+- **Indicadores de carregamento** (spinner + texto "Enviando...") nos botões de Login e Cadastro, para dar feedback durante a chamada à API.
+- **Selo de sessão** na barra de navegação, mostrando "Sessão ativa · expira em N min" (atualizado a cada 30s).
+- **Status "Finalizado"** agora aparece como selo na lista de consultas do paciente, em vez de simplesmente não mostrar nada quando não é possível cancelar.
+- **Meta description** e `:focus-visible` (contorno visível ao navegar por teclado) adicionados para acessibilidade/SEO básicos.
+
+---
+
+## 7. Terceira rodada: mascote mais fofo e ilustrações humanas
+
+O feedback foi direto: o mascote e as cenas da rodada anterior estavam com aparência fraca. Refiz as duas coisas do zero:
+
+- **Mascote "Doutor Rex" 2.0**: proporções *kawaii* (cabeça bem maior em relação ao corpo, olhos enormes com brilho e reflexo, bochechas rosadas), gradientes suaves na pele e no jaleco (em vez de cor lisa), sombra de contato no chão, espinhos da cabeça arredondados como uma coroinha (em vez de picos agressivos) e uma boquinha sorridente com dois dentinhos discretos.
+- **Pessoas de verdade nas cenas** (ilustradas, já que este ambiente não tem uma ferramenta de geração de fotos e usar fotos de terceiros da internet nos arquivos do site violaria direitos autorais): um gerador de personagens humanos com cabeça, pescoço, tronco em "V" (jaleco/scrub), braços com mãos, pernas com sapatos, 4 estilos de cabelo (curto, coque, longo, cacheado), tons de pele variados e crachá de identificação — usado nas cenas de hospital, atendimento e equipe, substituindo os bonecos-blob genéricos.
+
+**Limitação importante, dita com transparência:** não tenho, neste ambiente, uma ferramenta de geração de imagens fotorrealistas, e não posso baixar/usar fotografias de bancos de imagem de terceiros para os arquivos do site (isso violaria direitos autorais do material entregue). O que entreguei é ilustração vetorial (SVG) de qualidade bem superior à rodada anterior — se, no futuro, você tiver fotos reais da equipe/clínica, elas podem substituir essas ilustrações diretamente nos mesmos espaços do layout.
+
+

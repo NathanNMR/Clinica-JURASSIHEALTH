@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2200" width="2000" height="2200"><rect width="2000" height="2200" fill="#F6F1E4"/><g opacity="0.18" transform="translate(-3,4) rotate(-0.5) scale(0.334,0.334)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg00" cx="38%" cy="30%" r="80%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1820 780" width="1820" height="780"><rect width="1820" height="780" fill="#24444A"/><g opacity="0.13" transform="translate(14,-7) rotate(6.0) scale(0.181)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft00" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg00" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft00" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg00" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft00" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg00" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft00" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -21,7 +21,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg00)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft00)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -29,14 +29,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg00)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg00)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft00)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft00)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg00)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft00)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg00)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft00)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -49,20 +49,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg00)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft00)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg00)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft00)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg00)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft00)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -98,20 +98,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.16" transform="translate(381,1) rotate(4.7) scale(-0.310,0.310)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg01" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(251,-8) rotate(-1.9) scale(0.206)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft01" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg01" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft01" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg01" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft01" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg01" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft01" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -121,7 +121,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg01)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft01)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -129,14 +129,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg01)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg01)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft01)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft01)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg01)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft01)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg01)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft01)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -149,20 +149,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg01)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft01)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg01)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft01)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg01)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft01)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -198,20 +198,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.20" transform="translate(775,19) rotate(-7.3) scale(0.315,0.315)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg02" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(532,-5) rotate(-2.2) scale(0.218)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft02" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg02" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft02" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg02" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft02" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg02" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft02" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -221,7 +221,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg02)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft02)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -229,14 +229,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg02)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg02)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft02)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft02)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg02)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft02)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg02)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft02)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -249,20 +249,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg02)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft02)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg02)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft02)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg02)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft02)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -298,20 +298,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.14" transform="translate(1209,7) rotate(-7.8) scale(0.273,0.273)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg03" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(783,9) rotate(5.1) scale(0.207)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft03" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg03" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft03" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg03" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft03" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg03" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft03" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -321,7 +321,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg03)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft03)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -329,14 +329,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg03)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg03)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft03)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft03)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg03)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft03)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg03)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft03)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -349,20 +349,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg03)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft03)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg03)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft03)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg03)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft03)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -398,20 +398,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.19" transform="translate(1581,-15) rotate(-0.6) scale(-0.262,0.262)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg04" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1046,-9) rotate(1.1) scale(0.215)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft04" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg04" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft04" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg04" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft04" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg04" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft04" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -421,7 +421,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg04)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft04)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -429,14 +429,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg04)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg04)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft04)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft04)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg04)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft04)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg04)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft04)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -449,20 +449,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg04)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft04)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg04)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft04)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg04)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft04)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -498,20 +498,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.16" transform="translate(201,408) rotate(2.6) scale(-0.300,0.300)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg10" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1294,-6) rotate(1.0) scale(0.214)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft05" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg10" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft05" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg10" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft05" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg10" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft05" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -521,7 +521,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg10)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft05)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -529,14 +529,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg10)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg10)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft05)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft05)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg10)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft05)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg10)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft05)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -549,20 +549,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg10)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft05)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg10)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft05)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg10)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft05)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -598,20 +598,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.15" transform="translate(630,430) rotate(3.3) scale(-0.327,0.327)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg11" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1573,5) rotate(0.8) scale(0.218)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft06" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg11" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft06" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg11" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft06" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg11" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft06" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -621,7 +621,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg11)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft06)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -629,14 +629,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg11)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg11)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft06)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft06)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg11)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft06)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg11)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft06)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -649,20 +649,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg11)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft06)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg11)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft06)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg11)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft06)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -698,20 +698,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.16" transform="translate(987,374) rotate(-1.6) scale(0.321,0.321)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg12" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(136,262) rotate(5.5) scale(0.190)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft10" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg12" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft10" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg12" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft10" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg12" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft10" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -721,7 +721,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg12)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft10)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -729,14 +729,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg12)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg12)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft10)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft10)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg12)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft10)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg12)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft10)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -749,20 +749,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg12)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft10)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg12)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft10)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg12)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft10)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -798,20 +798,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.17" transform="translate(1427,421) rotate(-4.6) scale(0.260,0.260)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg13" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(384,266) rotate(1.8) scale(0.218)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft11" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg13" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft11" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg13" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft11" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg13" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft11" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -821,7 +821,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg13)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft11)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -829,14 +829,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg13)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg13)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft11)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft11)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg13)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft11)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg13)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft11)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -849,20 +849,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg13)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft11)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg13)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft11)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg13)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft11)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -898,20 +898,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.16" transform="translate(1829,394) rotate(2.1) scale(0.266,0.266)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg14" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(639,267) rotate(-3.8) scale(0.207)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft12" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg14" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft12" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg14" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft12" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg14" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft12" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -921,7 +921,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg14)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft12)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -929,14 +929,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg14)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg14)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft12)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft12)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg14)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft12)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg14)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft12)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -949,20 +949,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg14)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft12)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg14)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft12)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg14)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft12)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -998,20 +998,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.15" transform="translate(-25,790) rotate(4.1) scale(-0.337,0.337)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg20" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(896,261) rotate(5.1) scale(0.181)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft13" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg20" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft13" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg20" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft13" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg20" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft13" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1021,7 +1021,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg20)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft13)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1029,14 +1029,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg20)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg20)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft13)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft13)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg20)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft13)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg20)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft13)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1049,20 +1049,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg20)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft13)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg20)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft13)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg20)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft13)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1098,20 +1098,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.17" transform="translate(376,774) rotate(-5.2) scale(0.324,0.324)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg21" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1170,260) rotate(1.9) scale(0.196)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft14" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg21" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft14" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg21" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft14" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg21" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft14" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1121,7 +1121,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg21)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft14)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1129,14 +1129,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg21)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg21)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft14)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft14)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg21)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft14)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg21)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft14)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1149,20 +1149,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg21)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft14)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg21)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft14)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg21)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft14)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1198,20 +1198,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.17" transform="translate(781,814) rotate(2.3) scale(-0.270,0.270)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg22" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1442,256) rotate(1.0) scale(0.195)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft15" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg22" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft15" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg22" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft15" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg22" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft15" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1221,7 +1221,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg22)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft15)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1229,14 +1229,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg22)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg22)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft15)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft15)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg22)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft15)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg22)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft15)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1249,20 +1249,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg22)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft15)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg22)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft15)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg22)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft15)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1298,20 +1298,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.19" transform="translate(1183,786) rotate(4.9) scale(-0.338,0.338)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg23" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1684,262) rotate(-0.8) scale(0.202)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft16" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg23" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft16" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg23" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft16" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg23" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft16" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1321,7 +1321,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg23)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft16)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1329,14 +1329,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg23)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg23)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft16)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft16)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg23)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft16)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg23)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft16)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1349,20 +1349,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg23)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft16)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg23)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft16)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg23)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft16)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1398,20 +1398,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.20" transform="translate(1583,794) rotate(2.3) scale(-0.328,0.328)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg24" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(5,521) rotate(6.0) scale(0.184)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft20" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg24" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft20" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg24" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft20" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg24" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft20" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1421,7 +1421,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg24)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft20)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1429,14 +1429,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg24)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg24)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft20)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft20)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg24)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft20)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg24)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft20)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1449,20 +1449,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg24)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft20)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg24)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft20)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg24)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft20)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1498,20 +1498,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.14" transform="translate(183,1185) rotate(-2.7) scale(-0.322,0.322)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg30" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(256,519) rotate(5.2) scale(0.196)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft21" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg30" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft21" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg30" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft21" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg30" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft21" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1521,7 +1521,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg30)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft21)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1529,14 +1529,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg30)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg30)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft21)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft21)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg30)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft21)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg30)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft21)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1549,20 +1549,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg30)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft21)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg30)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft21)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg30)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft21)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1598,20 +1598,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.17" transform="translate(575,1205) rotate(1.6) scale(-0.279,0.279)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg31" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(534,520) rotate(-4.8) scale(0.196)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft22" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg31" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft22" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg31" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft22" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg31" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft22" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1621,7 +1621,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg31)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft22)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1629,14 +1629,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg31)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg31)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft22)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft22)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg31)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft22)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg31)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft22)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1649,20 +1649,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg31)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft22)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg31)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft22)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg31)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft22)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1698,20 +1698,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.15" transform="translate(1028,1199) rotate(5.9) scale(-0.306,0.306)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg32" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(792,513) rotate(-1.8) scale(0.202)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft23" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg32" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft23" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg32" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft23" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg32" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft23" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1721,7 +1721,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg32)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft23)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1729,14 +1729,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg32)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg32)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft23)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft23)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg32)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft23)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg32)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft23)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1749,20 +1749,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg32)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft23)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg32)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft23)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg32)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft23)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1798,20 +1798,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.20" transform="translate(1425,1219) rotate(-5.0) scale(0.280,0.280)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg33" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1035,517) rotate(-5.6) scale(0.188)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft24" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg33" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft24" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg33" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft24" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg33" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft24" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1821,7 +1821,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg33)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft24)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1829,14 +1829,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg33)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg33)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft24)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft24)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg33)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft24)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg33)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft24)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1849,20 +1849,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg33)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft24)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg33)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft24)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg33)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft24)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1898,20 +1898,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.15" transform="translate(1782,1227) rotate(1.7) scale(-0.331,0.331)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg34" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1301,526) rotate(-3.6) scale(0.206)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft25" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg34" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft25" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg34" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft25" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg34" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft25" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -1921,7 +1921,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg34)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft25)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -1929,14 +1929,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg34)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg34)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft25)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft25)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg34)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft25)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg34)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft25)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -1949,20 +1949,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg34)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft25)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg34)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft25)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg34)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft25)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
@@ -1998,20 +1998,20 @@
     <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
     <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.19" transform="translate(-28,1628) rotate(3.3) scale(-0.279,0.279)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg40" cx="38%" cy="30%" r="80%">
+<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.13" transform="translate(1566,511) rotate(3.9) scale(0.196)"><g fill="#FFFFFF"><defs>
+    <radialGradient id="skinGradft26" cx="38%" cy="30%" r="80%">
       <stop offset="0%" stop-color="#B8BFBB"/>
       <stop offset="100%" stop-color="#98A19C"/>
     </radialGradient>
-    <linearGradient id="bellyGradbg40" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bellyGradft26" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#EDEEEA"/>
       <stop offset="100%" stop-color="#D7DAD5"/>
     </linearGradient>
-    <linearGradient id="coatGradbg40" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="coatGradft26" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#EDEFEA"/>
     </linearGradient>
-    <radialGradient id="cheekGradbg40" cx="50%" cy="50%" r="50%">
+    <radialGradient id="cheekGradft26" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
       <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
     </radialGradient>
@@ -2021,7 +2021,7 @@
 
     <!-- cauda: grossa, glossy, enrolada suavemente -->
     <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg40)"/>
+             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradft26)"/>
     <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
 
     <!-- perna tras -->
@@ -2029,14 +2029,14 @@
     <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
 
     <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg40)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg40)"/>
+    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradft26)"/>
+    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradft26)"/>
 
     <!-- corpo -->
     <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg40)"/>
+             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradft26)"/>
     <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg40)"/>
+             C234,354 166,354 148,318 Z" fill="url(#bellyGradft26)"/>
 
     <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
              C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
@@ -2049,920 +2049,20 @@
     <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
 
     <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg40)"/>
+    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradft26)"/>
     <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
           fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
     <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
     <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
 
     <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg40)"/>
+    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradft26)"/>
 
     <!-- cabeca -->
     <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
              C130,234 124,242 124,242 C148,254 174,258 200,258
              C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg40)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.15" transform="translate(406,1588) rotate(3.5) scale(-0.274,0.274)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg41" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg41" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg41" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg41" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg41)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg41)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg41)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg41)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg41)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg41)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg41)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg41)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.15" transform="translate(804,1621) rotate(-3.5) scale(0.309,0.309)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg42" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg42" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg42" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg42" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg42)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg42)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg42)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg42)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg42)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg42)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg42)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg42)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.16" transform="translate(1171,1586) rotate(-7.0) scale(-0.296,0.296)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg43" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg43" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg43" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg43" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg43)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg43)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg43)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg43)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg43)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg43)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg43)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg43)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.18" transform="translate(1604,1578) rotate(6.3) scale(0.289,0.289)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg44" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg44" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg44" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg44" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg44)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg44)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg44)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg44)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg44)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg44)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg44)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg44)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.19" transform="translate(211,2005) rotate(-7.4) scale(-0.271,0.271)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg50" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg50" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg50" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg50" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg50)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg50)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg50)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg50)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg50)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg50)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg50)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg50)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.18" transform="translate(612,2028) rotate(2.2) scale(-0.262,0.262)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg51" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg51" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg51" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg51" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg51)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg51)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg51)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg51)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg51)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg51)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg51)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg51)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.19" transform="translate(989,2030) rotate(0.7) scale(0.266,0.266)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg52" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg52" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg52" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg52" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg52)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg52)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg52)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg52)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg52)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg52)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg52)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg52)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.18" transform="translate(1414,2012) rotate(6.6) scale(-0.323,0.323)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg53" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg53" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg53" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg53" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg53)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg53)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg53)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg53)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg53)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg53)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg53)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg53)"/>
-
-    <!-- sombra suave no queixo -->
-    <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228
-             C250,244 226,254 200,254 C174,254 150,244 138,228 Z" fill="#98A19C" opacity="0.4"/>
-
-    <!-- boquinha sorridente com 2 dentinhos -->
-    <path d="M168,222 C178,236 192,244 200,244 C208,244 222,236 232,222" fill="none" stroke="#5C6462" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
-    <path d="M191,232 l3,8 l3,-8 Z M203,232 l3,8 l3,-8 Z" fill="#FFFDF7"/>
-
-    <!-- narinas -->
-    <ellipse cx="178" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-    <ellipse cx="222" cy="150" rx="4.5" ry="6" fill="#5C6462" opacity="0.45"/>
-
-    <!-- olhos enormes, kawaii -->
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="#FFFFFF"/>
-    <ellipse cx="140" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <ellipse cx="260" cy="128" rx="38" ry="42" fill="none" stroke="#98A19C" stroke-width="2" opacity="0.3"/>
-    <circle cx="150" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="250" cy="136" r="20" fill="#5C6462"/>
-    <circle cx="150" cy="136" r="20" fill="none"/>
-    <circle cx="158" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="258" cy="126" r="7" fill="#FFFFFF"/>
-    <circle cx="143" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-    <circle cx="243" cy="146" r="3.2" fill="#FFFFFF" opacity="0.85"/>
-
-    <!-- sobrancelhas gentis -->
-    <path d="M108,90 C120,80 138,79 150,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-    <path d="M292,90 C280,80 262,79 250,86" fill="none" stroke="#98A19C" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- espinhos pequenos e arredondados, tipo "coroa" -->
-    <ellipse cx="158" cy="30" rx="10" ry="14" fill="#98A19C"/>
-    <ellipse cx="184" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="216" cy="22" rx="11" ry="16" fill="#98A19C"/>
-    <ellipse cx="242" cy="30" rx="10" ry="14" fill="#98A19C"/>
-<path d="M175,230 C171,240 171,248 178,254" fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/></g></g><g opacity="0.17" transform="translate(1824,2022) rotate(4.6) scale(0.293,0.293)"><g fill="#9AA3A0"><defs>
-    <radialGradient id="skinGradbg54" cx="38%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#B8BFBB"/>
-      <stop offset="100%" stop-color="#98A19C"/>
-    </radialGradient>
-    <linearGradient id="bellyGradbg54" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#EDEEEA"/>
-      <stop offset="100%" stop-color="#D7DAD5"/>
-    </linearGradient>
-    <linearGradient id="coatGradbg54" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EDEFEA"/>
-    </linearGradient>
-    <radialGradient id="cheekGradbg54" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FF9E8A" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#FF9E8A" stop-opacity="0"/>
-    </radialGradient>
-    </defs>
-    <!-- sombra de chao -->
-    <ellipse cx="200" cy="478" rx="118" ry="16" fill="#000000" opacity="0.10"/>
-
-    <!-- cauda: grossa, glossy, enrolada suavemente -->
-    <path d="M235,368 C285,372 345,392 372,432 C384,451 380,468 364,468
-             C358,450 338,424 305,406 C282,394 258,384 235,378 Z" fill="url(#skinGradbg54)"/>
-    <path d="M340,415 C358,428 368,444 366,458" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
-
-    <!-- perna tras -->
-    <path d="M168,392 C150,392 138,412 138,436 C138,452 146,462 160,462 C176,462 186,448 187,428 C188,412 184,392 168,392 Z" fill="#98A19C"/>
-    <path d="M145,459 q-9,16 -8,24 q10,4 17,-2 q3,-12 4,-20 M162,462 q-1,16 2,24 q10,0 15,-6 q0,-10 -3,-20 M181,458 q7,14 10,22 q-9,7 -17,3 q-4,-11 -6,-19" fill="#98A19C"/>
-
-    <!-- perna frente -->
-    <path d="M222,392 C240,392 253,412 253,436 C253,453 245,463 232,463 C217,463 207,449 206,429 C205,412 208,392 222,392 Z" fill="url(#skinGradbg54)"/>
-    <path d="M207,461 q-9,16 -8,23 q10,5 17,-1 q3,-12 4,-20 M225,464 q-1,16 2,23 q10,1 15,-5 q0,-11 -3,-20 M245,459 q8,14 11,22 q-9,7 -17,3 q-4,-11 -6,-20" fill="url(#skinGradbg54)"/>
-
-    <!-- corpo -->
-    <path d="M200,248 C144,248 108,288 106,338 C104,388 142,424 200,426
-             C260,424 296,388 294,338 C292,288 256,248 200,248 Z" fill="url(#skinGradbg54)"/>
-    <path d="M148,318 C144,358 166,398 200,402 C236,398 256,358 252,320
-             C234,354 166,354 148,318 Z" fill="url(#bellyGradbg54)"/>
-
-    <path d="M200,255 C165,255 134,272 122,304 L140,406 C158,417 179,423 200,423
-             C221,423 242,417 260,406 L278,304 C266,272 235,255 200,255 Z" fill="#F1F2EF"/>
-    <path d="M200,255 L186,296 L200,318 L214,296 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C184,259 168,272 160,292 L175,297 L200,272 Z" fill="#E4E7E0"/>
-    <path d="M200,255 C216,259 232,272 240,292 L225,297 L200,272 Z" fill="#E4E7E0"/>
-    <circle cx="186" cy="342" r="4.5" fill="#AEB4B0"/>
-    <circle cx="186" cy="365" r="4.5" fill="#AEB4B0"/>
-    <rect x="203" y="326" width="28" height="22" rx="4" fill="#E4E7E0"/>
-    <rect x="206" y="329" width="11" height="3.5" rx="1.5" fill="#AEB4B0"/>
-
-    <ellipse cx="252" cy="316" rx="15" ry="11" fill="#F1F2EF"/>
-    <path d="M247,326 C267,322 282,333 286,352 C288,363 281,369 272,364 C261,358 253,343 242,334 Z" fill="url(#skinGradbg54)"/>
-    <path d="M198,266 C186,288 184,312 194,328 C201,340 215,342 224,333 C231,326 228,315 219,313"
-          fill="none" stroke="#5C6462" stroke-width="6.5" stroke-linecap="round" opacity="0.82"/>
-    <circle cx="283" cy="358" r="12" fill="#5C6462" opacity="0.82"/>
-    <circle cx="283" cy="358" r="5.5" fill="#F1F2EF"/>
-
-    <!-- pescoco -->
-    <path d="M175,230 C175,250 184,262 200,262 C216,262 225,250 225,230 L213,208 L187,208 Z" fill="url(#skinGradbg54)"/>
-
-    <!-- cabeca -->
-    <path d="M200,30 C128,30 88,86 88,142 C88,182 108,212 138,228
-             C130,234 124,242 124,242 C148,254 174,258 200,258
-             C226,258 252,254 276,242 C276,242 270,234 262,228
-             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradbg54)"/>
+             C292,212 312,182 312,142 C312,86 272,30 200,30 Z" fill="url(#skinGradft26)"/>
 
     <!-- sombra suave no queixo -->
     <path d="M138,228 C152,242 174,250 200,250 C226,250 248,242 262,228

@@ -14,12 +14,14 @@ namespace ClinicaJurassica.Controllers
         private readonly ClinicaContext _db;
         private readonly TokenService _tokens;
         private readonly IConfiguration _config;
+        private readonly LoginAttemptService _loginAttempts;
 
-        public SistemaController(ClinicaContext db, TokenService tokens, IConfiguration config)
+        public SistemaController(ClinicaContext db, TokenService tokens, IConfiguration config, LoginAttemptService loginAttempts)
         {
             _db = db;
             _tokens = tokens;
             _config = config;
+            _loginAttempts = loginAttempts;
         }
 
         // Helpers para ler a identidade colocada pelo TokenAuthAttribute.
@@ -31,6 +33,20 @@ namespace ClinicaJurassica.Controllers
         {
             var email = l.Email.Trim().ToLowerInvariant();
 
+            // NOVO: limite de tentativas de login. Antes, nada impedia um ataque de força
+            // bruta (testar milhares de senhas em sequência) contra um e-mail específico.
+            var bloqueio = _loginAttempts.VerificarBloqueio(email);
+            if (bloqueio.Bloqueado)
+                return StatusCode(429, new { mensagem = $"Muitas tentativas de login. Tente novamente em {bloqueio.MinutosParaDesbloquear} minuto(s)." });
+
+            async Task<IActionResult> Falhou()
+            {
+                var r = _loginAttempts.RegistrarFalha(email);
+                if (r.Bloqueado)
+                    return StatusCode(429, new { mensagem = $"Muitas tentativas de login. Tente novamente em {r.MinutosParaDesbloquear} minuto(s)." });
+                return Unauthorized(new { mensagem = "E-mail ou senha inválidos.", tentativasRestantes = r.TentativasRestantes });
+            }
+
             // BUG/RISCO CORRIGIDO: antes, o e-mail e a senha do administrador ficavam
             // gravados em texto puro diretamente no código-fonte (visível a qualquer pessoa
             // com acesso ao repositório). Agora vêm da configuração, e a senha fica como
@@ -40,6 +56,7 @@ namespace ClinicaJurassica.Controllers
             if (!string.IsNullOrEmpty(admEmail) && email == admEmail && !string.IsNullOrEmpty(admHash)
                 && VerificarSenha(l.Senha, admHash))
             {
+                _loginAttempts.RegistrarSucesso(email);
                 var token = _tokens.GerarToken(0, "adm");
                 return Ok(new LoginResp { Tipo = "adm", Id = 0, Nome = "Administrador", Token = token });
             }
@@ -47,6 +64,7 @@ namespace ClinicaJurassica.Controllers
             var s = await _db.Secretarios.FirstOrDefaultAsync(x => x.Email == email);
             if (s != null && VerificarSenha(l.Senha, s.Senha))
             {
+                _loginAttempts.RegistrarSucesso(email);
                 var token = _tokens.GerarToken(s.Id, "secretaria");
                 return Ok(new LoginResp { Tipo = "secretaria", Id = s.Id, Nome = s.Nome, Token = token });
             }
@@ -54,6 +72,7 @@ namespace ClinicaJurassica.Controllers
             var m = await _db.Medicos.Include(x => x.Especialidade).FirstOrDefaultAsync(x => x.Email == email);
             if (m != null && VerificarSenha(l.Senha, m.Senha))
             {
+                _loginAttempts.RegistrarSucesso(email);
                 var token = _tokens.GerarToken(m.Id, "medico");
                 return Ok(new LoginResp { Tipo = "medico", Id = m.Id, Nome = m.Nome, Crm = m.CRM, EspId = m.EspecialidadeId, EspNome = m.Especialidade?.Nome, Token = token });
             }
@@ -61,13 +80,14 @@ namespace ClinicaJurassica.Controllers
             var p = await _db.Pacientes.FirstOrDefaultAsync(x => x.Email == email);
             if (p != null && VerificarSenha(l.Senha, p.Senha))
             {
+                _loginAttempts.RegistrarSucesso(email);
                 var token = _tokens.GerarToken(p.Id, "paciente");
                 return Ok(new LoginResp { Tipo = "paciente", Id = p.Id, Nome = p.NomeCompleto, Token = token });
             }
 
             // Mesma mensagem para "não existe" e "senha errada", propositalmente,
             // para não revelar quais e-mails estão cadastrados no sistema.
-            return Unauthorized(new { mensagem = "E-mail ou senha inválidos." });
+            return await Falhou();
         }
 
         private static bool VerificarSenha(string senhaDigitada, string hashArmazenado)
