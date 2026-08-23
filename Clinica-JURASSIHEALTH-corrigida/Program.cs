@@ -12,7 +12,12 @@ var connectionString = builder.Configuration.GetConnectionString("Default")
     ?? throw new InvalidOperationException("Connection string 'Default' não configurada.");
 
 builder.Services.AddDbContext<ClinicaContext>(options =>
-    options.UseMySQL(connectionString));
+    // BUG CORRIGIDO (build): o método correto do pacote Pomelo é "UseMySql" (não
+    // "UseMySQL" — C# é case-sensitive). A versão do pacote usada aqui também exige que a
+    // versão do servidor seja informada; ServerVersion.AutoDetect faz uma conexão rápida
+    // para descobrir automaticamente se é MySQL ou MariaDB e qual versão, sem precisar
+    // escrever isso à mão.
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddSingleton<TokenService>();
 builder.Services.AddMemoryCache(); // usado pelo LoginAttemptService para o bloqueio de tentativas
