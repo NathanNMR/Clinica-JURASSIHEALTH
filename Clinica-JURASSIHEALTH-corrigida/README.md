@@ -59,8 +59,8 @@ O admin não é mais uma conta cadastrada pela tela de "Cadastro" — ele é o �
 permissão para criar médicos e secretárias, e usa as credenciais configuradas em
 `AdminPadrao` (dentro de `appsettings.json`):
 
-- **E-mail padrão (dev):** `adm@clinica.com`
-- **Senha padrão (dev):** `adm123`
+- **E-mail:** `ADM@nmr.com`
+- **Senha:** `2006n2006N`
 
 Troque `AdminPadrao:SenhaHash` por um novo hash BCrypt antes de qualquer uso real. Você pode
 gerar um hash novo com qualquer gerador BCrypt (rounds 10–12) ou via `BCrypt.Net.BCrypt.HashPassword("nova-senha")`

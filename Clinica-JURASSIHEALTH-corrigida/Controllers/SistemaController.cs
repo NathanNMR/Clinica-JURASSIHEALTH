@@ -297,6 +297,13 @@ namespace ClinicaJurassica.Controllers
             // qualquer outra, bastando trocar o id na URL.
             if (Utipo == "paciente" && a.PacienteId != Uid) return Forbid();
 
+            // BUG CORRIGIDO: o front-end só mostra o botão "Cancelar" para consultas com
+            // status "Agendado", mas a API aceitava cancelar qualquer id, inclusive uma
+            // consulta já "Finalizada" (bastava chamar a rota diretamente, sem passar pela
+            // tela). Agora essa regra também é garantida no servidor.
+            if (a.Status != "Agendado")
+                return BadRequest(new { mensagem = "Somente consultas com status \"Agendado\" podem ser canceladas." });
+
             // O agendamento é removido (como no projeto original), mas agora
             // documentos_medicos.agendamento_id usa ON DELETE SET NULL em vez de CASCADE
             // (ver database.sql), então cancelar a consulta não apaga mais, como efeito

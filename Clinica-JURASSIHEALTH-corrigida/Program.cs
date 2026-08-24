@@ -37,7 +37,7 @@ builder.Services.AddCors(options => options.AddPolicy("Padrao", p =>
         p.WithOrigins(origensPermitidas).AllowAnyHeader().AllowAnyMethod();
 }));
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -61,7 +61,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseCors("Padrao");
-app.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+// BUG CORRIGIDO: havia uma rota MVC convencional aqui ("{controller=Home}/{action=Index}/{id?}")
+// que nunca era usada — a API é toda por rotas de atributo ([Route("Sistema")] no
+// SistemaController), e não existe nenhum "HomeController" no projeto. Era código morto,
+// resquício de template, que só confundia quem lesse o arquivo. Trocado por app.MapControllers(),
+// que é o que de fato expõe os endpoints do SistemaController.
+app.MapControllers();
 
 var url = builder.Configuration["Urls"] ?? "http://localhost:5000";
 app.Run(url);

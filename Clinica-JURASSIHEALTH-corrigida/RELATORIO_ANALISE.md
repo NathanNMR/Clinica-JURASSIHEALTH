@@ -104,8 +104,6 @@ O feedback foi direto: o mascote e as cenas da rodada anterior estavam com apar�
 
 **Limitação importante, dita com transparência:** não tenho, neste ambiente, uma ferramenta de geração de imagens fotorrealistas, e não posso baixar/usar fotografias de bancos de imagem de terceiros para os arquivos do site (isso violaria direitos autorais do material entregue). O que entreguei é ilustração vetorial (SVG) de qualidade bem superior à rodada anterior — se, no futuro, você tiver fotos reais da equipe/clínica, elas podem substituir essas ilustrações diretamente nos mesmos espaços do layout.
 
----
-
 ## 8. Quarta rodada: assets fornecidos pelo cliente (mascote + fotos reais)
 
 O cliente enviou 8 imagens próprias — um novo mascote ilustrado ("Doutor Rex") e 7 fotografias de hospital/atendimento — pedindo para substituir as imagens do site por elas. Trabalho realizado:
@@ -135,5 +133,65 @@ Como as fotos não têm mais legenda "gravada" na própria imagem (ao contrário
 ### 8.3 Limitação de resolução (importante)
 Das 7 fotos, 6 vieram em resolução bem baixa (147px de altura). Para exibi-las em áreas maiores do site, foram ampliadas com reamostragem de alta qualidade (Lanczos) e um leve realce de nitidez (unsharp mask) para atenuar a perda de definição — mas um upscale nunca recupera detalhe que a imagem original não tinha. Caso versões maiores dessas fotos existam, recomendo substituí-las para um resultado mais nítido; o arquivo de mais alta resolução entre as sete (usado no card "Valores") ilustra bem a diferença de nitidez.
 
+---
+
+## 9. Quinta rodada: credenciais, qualidade de imagem, modais próprios, navegação e nova página
+
+### 9.1 Credenciais de administrador
+Alteradas a pedido: e-mail `ADM@nmr.com`, senha `2006n2006N` (hash BCrypt gerado e validado antes de aplicar).
+
+### 9.2 Qualidade de imagem
+As fotos fornecidas na rodada anterior (exceto a do card "Valores") tinham origem de ~147px de altura e, mesmo upscaladas, ficavam visivelmente borradas ("144p", como você notou). Como não há como recuperar detalhe que a foto original não tinha, voltei a usar as ilustrações vetoriais nítidas (SVG, sempre nítidas em qualquer tamanho) no carrossel principal e nos cards de Missão/Visão, mantendo a única foto de boa resolução (card "Valores"). Também corrigi o CSS: as imagens estavam sendo cortadas de forma estranha (`object-fit: cover` com altura fixa incompatível com a proporção de cada imagem) — agora cada imagem preserva sua proporção original.
+
+### 9.3 Modais e avisos personalizados
+Antes, `alert()` e `confirm()` do navegador (aquela caixinha cinza genérica) apareciam em toda mensagem do sistema. Criei um modal e um toast com a cara do site (`jAlert`, `jConfirm`, `jToast` em JS + `#modalJurassico` em HTML/CSS, com ícones e cores por tipo: sucesso/erro/aviso/pergunta) e troquei **todas** as chamadas de `alert()`/`confirm()` do código por eles.
+
+### 9.4 Botão Voltar/Avançar do navegador
+**Causa do bug:** trocar de "página" só alternava uma classe CSS (`.ativa`) entre `<div>`s — nada disso ficava registrado no histórico do navegador, então as setas voltar/avançar não tinham o que restaurar.
+
+**Correção:** implementada navegação real com a History API (`history.pushState` a cada troca de tela + listener de `popstate` para restaurar a tela certa quando as setas são usadas). Também corrigi um efeito colateral: alguns links usavam `href="#"` junto com `onclick`, o que fazia o navegador tentar navegar para a URL vazia por cima da URL que o JavaScript acabara de ajustar — agora esses links usam `href` com a âncora correta e `return false` para não conflitar com a navegação programática.
+
+Como parte disso, também blindei os painéis restritos (`painel_paciente`, `painel_medico`, `painel_secretaria`, `painel_adm`): se alguém apertar Voltar depois de fazer logout, o sistema não deixa mais o painel restrito reaparecer sem uma sessão válida do tipo certo.
+
+### 9.5 Nova página "Especialidades"
+Criada uma tela dedicada (`#especialidades`) com um card para cada uma das 5 especialidades cadastradas no banco (Cardiologia, Ortopedia, Neurologia, Clínico Geral, Pediatria), cada uma com um texto explicando o que a especialidade trata e exemplos de exames/situações comuns, mais um card de chamada para cadastro. Link adicionado na navbar e na seção de especialidades da home ("Ver todas as especialidades").
+
+### 9.6 Bugs adicionais encontrados nesta rodada
+| # | Problema | Correção |
+|---|----------|----------|
+| 1 | `DELETE /Cancelar/{id}` não verificava se a consulta já estava "Finalizada" — o botão ficava escondido no front-end, mas a rota aceitava cancelar (excluir) uma consulta já atendida se chamada diretamente | Adicionada checagem de status no servidor: só é possível cancelar consultas com status "Agendado" |
+| 2 | Após o admin cadastrar um médico ou secretário com sucesso, o formulário continuava preenchido com os dados antigos — um clique duplo em "Salvar" gerava um erro de "e-mail/CRM já cadastrado" | Formulário agora é limpo automaticamente após o cadastro dar certo |
+| 3 | Referências às credenciais antigas do admin (`adm@clinica.com` / `adm123`) ainda apareciam no `README.md`, desatualizadas em relação ao `appsettings.json` | Atualizado para as credenciais atuais |
+
+---
+
+## 10. Sexta rodada: credenciais de admin, qualidade de imagem, modais próprios, navegação e página de especialidades
+
+### 10.1 Credenciais de administrador
+Login trocado para `ADM@nmr.com` / `2006n2006N`. A senha foi convertida para hash BCrypt antes de ir para o `appsettings.json` — o texto puro nunca é gravado em lugar nenhum do projeto.
+
+### 10.2 Qualidade das imagens
+Seis das sete fotos fornecidas na rodada anterior tinham resolução nativa muito baixa (~147px de altura) e, mesmo com upscale de alta qualidade, ficavam visivelmente "pixeladas" (~144p) ao serem exibidas em áreas grandes do site. Como não há como recuperar detalhe que a imagem original não tem, a solução foi trocar essas seis imagens de volta pelas ilustrações vetoriais (SVG) — que são nítidas em qualquer tamanho de tela, por definição — mantendo apenas a foto real de resolução boa (usada no card "Valores"). Também corrigido, de quebra, um recorte estranho que acontecia nesses cards (`object-fit: cover` com altura fixa cortava o topo/rodapé de imagens com proporção diferente da esperada); agora cada imagem preserva sua proporção original.
+
+### 10.3 Modais e avisos personalizados
+Todo uso de `alert()` e `confirm()` — as caixinhas cinza padrão do navegador — foi substituído por um modal e um sistema de toast com a cara do site (cores, tipografia, ícones da marca), reaproveitados em todos os fluxos: login, cadastro, agendamento, cancelamento de consulta, cadastro de médico/secretária, expiração de sessão etc.
+
+### 10.4 Botão Voltar/Avançar do navegador
+**Bug corrigido.** O site é uma SPA que troca de "página" apenas escondendo/mostrando `<div>`s via JavaScript (função `mudar()`), sem nunca registrar isso no histórico do navegador — por isso as setas Voltar/Avançar não funcionavam (o navegador não tinha nenhuma entrada de histórico para voltar). Agora:
+- Cada troca de tela grava uma entrada no histórico via `history.pushState`, com a URL refletindo a tela atual (ex.: `#especialidades`).
+- Um listener de `popstate` restaura a tela correta quando o usuário usa as setas do navegador.
+- **Reforço de segurança correlato**: painéis restritos (`painel_paciente`, `painel_medico`, `painel_secretaria`, `painel_adm`) agora são protegidos também contra o botão Voltar — se alguém sai da conta (logout) e aperta Voltar, não volta a ver o painel antigo; é redirecionado para o login.
+
+### 10.5 Nova página: Especialidades
+Criada uma tela dedicada (`#especialidades`, acessível pelo menu superior e por um botão "Ver todas as especialidades" na home) com um card para cada uma das 5 especialidades cadastradas no banco (Cardiologia, Ortopedia, Neurologia, Clínico Geral, Pediatria), cada uma com um texto explicando o que a especialidade trata e, quando fazia sentido, exames ou situações comuns associadas — além de uma chamada para ação levando ao cadastro.
+
+### 10.6 Outros bugs encontrados nesta rodada
+| # | Problema | Correção |
+|---|----------|----------|
+| 1 | `Program.cs` registrava uma rota MVC convencional (`{controller=Home}/{action=Index}/{id?}`) que nunca era usada — não existe nenhum `HomeController` no projeto, e a API é toda por rotas de atributo. Código morto, resquício de template, que só confundia leitura do arquivo. | Removida; trocada por `app.MapControllers()`, que é o que de fato expõe os endpoints. |
+| 2 | `AddControllersWithViews()` registrava suporte a Razor Views (motor de renderização de páginas MVC) sem necessidade — o projeto não tem nenhuma view, só uma API. | Trocado para `AddControllers()`. |
+| 3 | Faltava `Properties/launchSettings.json` — sem ele, `dotnet run` sobe a aplicação em ambiente **Production** por padrão, que ignora silenciosamente o `appsettings.Development.json` (foi exatamente a causa do erro "Access denied for user 'root'@'localhost' (using password: NO)" relatado durante os testes). | Arquivo criado, forçando `ASPNETCORE_ENVIRONMENT=Development` para quem roda via `dotnet run`. |
 
 
+
+---

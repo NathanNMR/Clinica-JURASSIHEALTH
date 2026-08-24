@@ -134,27 +134,13 @@
 
         .showcase-carousel .carousel-item img {
             width: 100%;
-            height: 460px;
+            aspect-ratio: 1400 / 760;
             object-fit: cover;
             display: block;
         }
         .showcase-carousel .carousel-inner { border-radius: 22px; }
         .showcase-carousel .carousel-control-prev,
         .showcase-carousel .carousel-control-next { width: 6%; }
-        .showcase-carousel .carousel-caption {
-            background: rgba(36,68,74,0.72);
-            border-radius: 14px;
-            bottom: 26px;
-            padding: 10px 20px;
-            font-family: var(--fonte-mono);
-            font-size: 0.85rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-        @media (max-width: 767px) {
-            .showcase-carousel .carousel-item img { height: 280px; }
-            .showcase-carousel .carousel-caption { font-size: 0.68rem; padding: 6px 12px; }
-        }
 
         .navbar-jurassica {
             background-color: var(--teal-deep);
@@ -192,10 +178,12 @@
 
         .img-apoio {
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
             border-radius: 22px;
             box-shadow: 0 10px 24px rgba(32,48,47,0.18);
+            background: #fff;
         }
 
         .card-especialidade {
@@ -297,6 +285,37 @@
         @media (prefers-reduced-motion: reduce) {
             .btn-jurassico, .btn-amber { transition: none; }
         }
+
+        /* Modal proprio do site (substitui o alert()/confirm() padrao do navegador) */
+        .jurassico-modal-content {
+            border-radius: 22px;
+            border: none;
+            box-shadow: 0 20px 50px rgba(32,48,47,0.35);
+        }
+        .jurassico-modal-icon {
+            width: 64px; height: 64px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto;
+            font-size: 1.7rem;
+        }
+        .jurassico-modal-icon.sucesso { background: #E6F4EA; color: #1E7E34; }
+        .jurassico-modal-icon.erro { background: #FBE7E7; color: #C0392B; }
+        .jurassico-modal-icon.aviso { background: #FDF1DC; color: var(--laranja); }
+        .jurassico-modal-icon.pergunta { background: #E3ECEE; color: var(--tema); }
+        #modalMensagem { color: var(--ink); white-space: pre-line; }
+
+        /* Toast leve para confirmações rápidas (ex.: "Sucesso!") */
+        .toast-jurassico {
+            position: fixed; top: 90px; right: 20px; z-index: 2000;
+            background: var(--teal-deep); color: #fff;
+            padding: 14px 22px; border-radius: 14px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+            font-weight: 600; display: flex; align-items: center; gap: 10px;
+            transform: translateX(120%); transition: transform 0.35s ease;
+        }
+        .toast-jurassico.mostrar { transform: translateX(0); }
+        .toast-jurassico.erro { background: #C0392B; }
     </style>
 </head>
 <body onload="verificarSessao()">
@@ -307,13 +326,32 @@
 
     <nav class="navbar navbar-dark sticky-top navbar-jurassica">
         <div class="container">
-            <a class="navbar-brand navbar-brand-jurassico" href="#" onclick="mudar('home')">
+            <a class="navbar-brand navbar-brand-jurassico" href="#home" onclick="mudar('home'); return false;">
                 <img src="img/logo-mark.png" alt="" width="40" height="40">
                 <span>Clínica JurassiHealth</span>
             </a>
-            <div id="navAuth"><button onclick="mudar('login')" class="btn btn-amber rounded-pill px-4 fw-bold shadow-sm">Login</button></div>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#especialidades" onclick="mudar('especialidades'); return false;" class="text-white-50 text-decoration-none d-none d-sm-inline">Especialidades</a>
+                <div id="navAuth"><button onclick="mudar('login')" class="btn btn-amber rounded-pill px-4 fw-bold shadow-sm">Login</button></div>
+            </div>
         </div>
     </nav>
+
+    <!-- Modal próprio do site, no lugar do alert()/confirm() padrão do navegador -->
+    <div class="modal fade" id="modalJurassico" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content jurassico-modal-content">
+                <div class="modal-body text-center p-4">
+                    <div id="modalIcone" class="jurassico-modal-icon mb-3"><i class="bi"></i></div>
+                    <p id="modalMensagem" class="mb-4 fs-6"></p>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <button type="button" id="modalBtnCancelar" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" id="modalBtnOk" class="btn-jurassico px-4" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="home" class="tela ativa">
         <div class="hero-jurassico">
@@ -342,20 +380,16 @@
             <div id="mainCarousel" class="carousel slide showcase-carousel mb-5" data-bs-ride="carousel">
                 <div class="carousel-inner shadow">
                     <div class="carousel-item active">
-                        <img src="img/foto-hospital.jpg" alt="Fachada da Clínica JurassiHealth">
-                        <div class="carousel-caption">Estrutura completa · Alta tecnologia</div>
+                        <img src="img/cena-hospital.svg" alt="Fachada da Clínica JurassiHealth, com estrutura moderna e ambulância">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/foto-atendimento.jpg" alt="Atendimento humanizado em consultório da Clínica JurassiHealth">
-                        <div class="carousel-caption">Atendimento humanizado · Hora marcada</div>
+                        <img src="img/cena-atendimento.svg" alt="Atendimento humanizado em consultório da Clínica JurassiHealth">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/foto-equipe.jpg" alt="Equipe multidisciplinar da Clínica JurassiHealth">
-                        <div class="carousel-caption">Equipe especializada · Multidisciplinar</div>
+                        <img src="img/cena-equipe.svg" alt="Equipe multidisciplinar da Clínica JurassiHealth">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/foto-cirurgico.jpg" alt="Centro cirúrgico de alta complexidade da Clínica JurassiHealth">
-                        <div class="carousel-caption">Alta complexidade · Centro cirúrgico</div>
+                        <img src="img/cena-emergencia.svg" alt="Pronto atendimento 24 horas da Clínica JurassiHealth">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
@@ -367,7 +401,7 @@
                         <h3 style="color:var(--tema)">Nossa Missão</h3>
                         <p>Na Clínica JurassiHealth, nossa missão é fornecer um atendimento médico inabalável, unindo a resiliência e força do passado com os avanços tecnológicos mais sofisticados da medicina moderna. Buscamos a cura através da precisão e do cuidado humanizado, garantindo que sua saúde seja tratada como um legado precioso para as futuras gerações.</p>
                     </div>
-                    <div class="col-md-6"><img src="img/foto-missao.jpg" class="img-apoio" alt="Cuidado médico - Missão da Clínica JurassiHealth"></div>
+                    <div class="col-md-6"><img src="img/apoiodetexto1.svg" class="img-apoio" alt="Missão da Clínica JurassiHealth"></div>
                 </div>
             </div>
 
@@ -377,7 +411,7 @@
                         <h3 style="color:var(--tema)">Visão e Objetivos</h3>
                         <p>Nossa visão é ser a maior referência em saúde do Grupo Estrela da Manhã, expandindo nossos horizontes para garantir que cada paciente sinta a segurança de um gigante. Nossos objetivos incluem a implementação de diagnósticos por inteligência artificial e a redução total do tempo de espera, focando na eficiência diagnóstica absoluta e no bem-estar integral do paciente.</p>
                     </div>
-                    <div class="col-md-6"><img src="img/foto-visao.jpg" class="img-apoio" alt="Recepção moderna - Visão da Clínica JurassiHealth"></div>
+                    <div class="col-md-6"><img src="img/apoiodetexto2.svg" class="img-apoio" alt="Visão e objetivos da Clínica JurassiHealth"></div>
                 </div>
             </div>
 
@@ -397,7 +431,85 @@
                 <div class="col-md-4"><div class="card-especialidade"><h4>Ortopedia</h4><p>Estrutura óssea inabalável. Tratamentos avançados para coluna, articulações e traumas complexos com tecnologia de recuperação rápida e eficiente.</p></div></div>
                 <div class="col-md-4"><div class="card-especialidade"><h4>Neurologia</h4><p>Saúde cerebral avançada. Tratamos distúrbios cognitivos, enxaquecas e o sistema nervoso com a inteligência que a medicina moderna exige.</p></div></div>
             </div>
+            <div class="text-center mt-4">
+                <a href="#especialidades" onclick="mudar('especialidades'); return false;" class="btn btn-outline-light rounded-pill px-4">Ver todas as especialidades →</a>
+            </div>
         </section>
+    </div>
+
+    <div id="especialidades" class="tela py-5">
+        <div class="hero-jurassico py-5 mb-5">
+            <div class="container hero-inner" style="padding: 2rem 0;">
+                <div class="hero-copy">
+                    <span class="eyebrow">Conheça nosso corpo clínico</span>
+                    <h1 style="font-size: clamp(1.8rem, 3vw, 2.6rem);">Especialidades Médicas</h1>
+                    <p class="lead">Cinco áreas de atuação, uma só clínica. Veja o que cada especialidade cuida e agende sua consulta em poucos cliques.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pb-5">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-especialidade h-100">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="bi bi-heart-pulse-fill fs-2" style="color:var(--laranja)"></i>
+                            <h4 class="mb-0">Cardiologia</h4>
+                        </div>
+                        <p>Cuida da saúde do coração e de todo o sistema circulatório. Trata hipertensão, arritmias, insuficiência cardíaca e colesterol elevado, além de acompanhar quem tem histórico familiar de doenças cardiovasculares.</p>
+                        <p class="small text-muted mb-0"><strong>Exames comuns:</strong> eletrocardiograma, ecocardiograma, teste ergométrico e monitoramento de pressão arterial (MAPA).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-especialidade h-100">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="bi bi-bandaid-fill fs-2" style="color:var(--laranja)"></i>
+                            <h4 class="mb-0">Ortopedia</h4>
+                        </div>
+                        <p>Cuida de ossos, articulações, músculos e ligamentos. Trata fraturas, lesões esportivas, dores na coluna, artrose e acompanha a reabilitação após cirurgias ortopédicas, devolvendo mobilidade e qualidade de vida.</p>
+                        <p class="small text-muted mb-0"><strong>Situações comuns:</strong> entorses, tendinites, hérnia de disco, desgaste articular e traumas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-especialidade h-100">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="bi bi-cpu-fill fs-2" style="color:var(--laranja)"></i>
+                            <h4 class="mb-0">Neurologia</h4>
+                        </div>
+                        <p>Cuida do sistema nervoso central e periférico — cérebro, medula espinhal e nervos. Trata enxaquecas, epilepsia, tontura, distúrbios do sono e acompanha condições neurodegenerativas como Parkinson e Alzheimer.</p>
+                        <p class="small text-muted mb-0"><strong>Situações comuns:</strong> dores de cabeça frequentes, formigamento, perda de memória e convulsões.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-especialidade h-100">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="bi bi-clipboard2-pulse-fill fs-2" style="color:var(--laranja)"></i>
+                            <h4 class="mb-0">Clínico Geral</h4>
+                        </div>
+                        <p>É a porta de entrada do cuidado com a sua saúde. Faz avaliações gerais, check-ups de rotina, trata doenças comuns do dia a dia (gripes, infecções, alergias) e encaminha para o especialista certo quando necessário.</p>
+                        <p class="small text-muted mb-0"><strong>Indicado para:</strong> consultas de rotina, exames periódicos e primeiro atendimento de sintomas gerais.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-especialidade h-100">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <i class="bi bi-emoji-smile-fill fs-2" style="color:var(--laranja)"></i>
+                            <h4 class="mb-0">Pediatria</h4>
+                        </div>
+                        <p>Cuida da saúde de bebês, crianças e adolescentes. Acompanha o crescimento e desenvolvimento, orienta sobre vacinação, alimentação e sono, e trata as doenças mais comuns da infância com uma abordagem acolhedora.</p>
+                        <p class="small text-muted mb-0"><strong>Indicado para:</strong> acompanhamento do desenvolvimento infantil e consultas de puericultura.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-especialidade h-100 d-flex flex-column justify-content-center align-items-center text-center" style="border-top-color: var(--tema);">
+                        <i class="bi bi-calendar2-check-fill fs-1 mb-3" style="color:var(--tema)"></i>
+                        <h4>Pronto para agendar?</h4>
+                        <p>Cadastre-se e marque sua consulta com o especialista certo em poucos minutos.</p>
+                        <button onclick="mudar('cadastro')" class="btn btn-amber rounded-pill px-4 fw-bold mt-2">Cadastrar-se</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="login" class="tela py-5">
@@ -551,7 +663,7 @@
             if (!sessao?.expiraEm) return;
             const restanteMs = sessao.expiraEm - Date.now();
             if (restanteMs <= 0) {
-                alert('Sua sessão expirou por tempo máximo de uso. Faça login novamente.');
+                jAlert('Sua sessão expirou por tempo máximo de uso. Faça login novamente.', 'aviso');
                 sair();
                 return;
             }
@@ -578,6 +690,66 @@
             return String(str ?? '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;').replace(/\n/g, ' ');
         }
 
+        // ===================================================================
+        // NOVO: modal e toast próprios do site, no lugar do alert()/confirm()
+        // padrão (feio e genérico) do navegador.
+        // ===================================================================
+        const ICONES_MODAL = {
+            sucesso: 'bi-check-circle-fill', erro: 'bi-x-circle-fill',
+            aviso: 'bi-exclamation-triangle-fill', pergunta: 'bi-question-circle-fill'
+        };
+
+        function jAlert(mensagem, tipo = 'aviso') {
+            const modalEl = document.getElementById('modalJurassico');
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            document.getElementById('modalMensagem').textContent = mensagem;
+            const icone = document.getElementById('modalIcone');
+            icone.className = 'jurassico-modal-icon mb-3 ' + tipo;
+            icone.querySelector('i').className = 'bi ' + (ICONES_MODAL[tipo] || ICONES_MODAL.aviso);
+            document.getElementById('modalBtnCancelar').style.display = 'none';
+            document.getElementById('modalBtnOk').textContent = 'OK';
+            modal.show();
+            return new Promise(resolve => {
+                modalEl.addEventListener('hidden.bs.modal', () => resolve(true), { once: true });
+            });
+        }
+
+        function jConfirm(mensagem) {
+            const modalEl = document.getElementById('modalJurassico');
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            document.getElementById('modalMensagem').textContent = mensagem;
+            const icone = document.getElementById('modalIcone');
+            icone.className = 'jurassico-modal-icon mb-3 pergunta';
+            icone.querySelector('i').className = 'bi ' + ICONES_MODAL.pergunta;
+            const btnCancelar = document.getElementById('modalBtnCancelar');
+            const btnOk = document.getElementById('modalBtnOk');
+            btnCancelar.style.display = 'inline-block';
+            btnOk.textContent = 'Confirmar';
+            modal.show();
+            return new Promise(resolve => {
+                let respondido = false;
+                const onOk = () => { respondido = true; resolve(true); };
+                const onCancel = () => { respondido = true; resolve(false); };
+                const onHidden = () => {
+                    btnOk.removeEventListener('click', onOk);
+                    btnCancelar.removeEventListener('click', onCancel);
+                    if (!respondido) resolve(false);
+                };
+                btnOk.addEventListener('click', onOk, { once: true });
+                btnCancelar.addEventListener('click', onCancel, { once: true });
+                modalEl.addEventListener('hidden.bs.modal', onHidden, { once: true });
+            });
+        }
+
+        function jToast(mensagem, tipo = 'sucesso') {
+            const el = document.createElement('div');
+            el.className = 'toast-jurassico' + (tipo === 'erro' ? ' erro' : '');
+            el.innerHTML = `<i class="bi ${tipo === 'erro' ? 'bi-x-circle-fill' : 'bi-check-circle-fill'}"></i><span>${escHtml(mensagem)}</span>`;
+            document.body.appendChild(el);
+            requestAnimationFrame(() => el.classList.add('mostrar'));
+            setTimeout(() => { el.classList.remove('mostrar'); setTimeout(() => el.remove(), 400); }, 3000);
+        }
+
         // BUG/RISCO CORRIGIDO: antes, nenhuma chamada à API enviava qualquer prova de quem
         // era o usuário logado — a API "confiava" no id enviado na própria URL. Agora o token
         // recebido no login é enviado no cabeçalho Authorization em toda chamada protegida,
@@ -588,23 +760,58 @@
             if (sessao?.token) headers['Authorization'] = 'Bearer ' + sessao.token;
             const res = await fetch(url, Object.assign({}, options, { headers }));
             if (res.status === 401) {
-                alert('Sua sessão expirou. Faça login novamente.');
+                jAlert('Sua sessão expirou. Faça login novamente.', 'aviso');
                 sair();
                 throw new Error('Sessão expirada');
             }
             return res;
         }
 
-        function mudar(id) {
+        // ===================================================================
+        // NOVO: navegação com suporte real ao botão Voltar/Avançar do navegador.
+        // Antes, mudar de "página" só trocava a classe CSS ativa, sem registrar
+        // nada no histórico do navegador — por isso as setas voltar/avançar não
+        // funcionavam. Agora cada troca de tela empurra uma entrada no histórico
+        // (history.pushState), e o evento 'popstate' restaura a tela correta
+        // quando o usuário usa as setas do navegador.
+        // ===================================================================
+
+        // Telas que só podem ser exibidas para o tipo de usuário correspondente.
+        // Isso também impede que, após um logout, a seta "Voltar" do navegador
+        // volte a mostrar um painel restrito (ex.: painel do médico) sem sessão.
+        const TELAS_PROTEGIDAS = { painel_paciente: 'paciente', painel_secretaria: 'secretaria', painel_medico: 'medico', painel_adm: 'adm' };
+
+        function mudar(id, pushState = true) {
             if (id === 'home' && sessao && sessao.tipo !== 'paciente') {
                 if (sessao.tipo === "adm") id = 'painel_adm';
                 else if (sessao.tipo === "secretaria") id = 'painel_secretaria';
                 else if (sessao.tipo === "medico") id = 'painel_medico';
             }
+            if (TELAS_PROTEGIDAS[id] && (!sessao || sessao.tipo !== TELAS_PROTEGIDAS[id])) {
+                id = sessao ? 'home' : 'login';
+            }
+            if (!document.getElementById(id)) id = 'home';
+
             document.querySelectorAll('.tela').forEach(t => t.classList.remove('ativa'));
             document.getElementById(id).classList.add('ativa');
             window.scrollTo(0, 0);
+
+            if (pushState) {
+                if (history.state && history.state.tela === id) {
+                    history.replaceState({ tela: id }, '', '#' + id);
+                } else {
+                    history.pushState({ tela: id }, '', '#' + id);
+                }
+            }
+            return id;
         }
+
+        // Quando o usuário clica em Voltar/Avançar, restaura a tela gravada
+        // naquela entrada do histórico (sem empurrar uma nova entrada, senão
+        // criaríamos um loop de navegação).
+        window.addEventListener('popstate', (e) => {
+            mudar(e.state && e.state.tela ? e.state.tela : 'home', false);
+        });
 
         function toggleSenha(id) {
             const i = document.getElementById(id);
@@ -624,7 +831,16 @@
                 }
                 atualizarNavbar(true); carregarTelaPorTipo();
             }
-            else { configurarCamposData(); }
+            else {
+                configurarCamposData();
+                // NOVO: respeita a URL ao carregar a página (ex.: alguém acessou o
+                // link .../#especialidades diretamente, ou apertou F5 numa tela
+                // pública específica) e grava o estado inicial no histórico.
+                const hash = location.hash.replace('#', '');
+                const telasPublicasIniciais = ['login', 'cadastro', 'especialidades'];
+                if (telasPublicasIniciais.includes(hash)) mudar(hash);
+                else history.replaceState({ tela: 'home' }, '', '#home');
+            }
         }
 
         function atualizarNavbar(logado) {
@@ -676,9 +892,9 @@
                     atualizarNavbar(true); carregarTelaPorTipo();
                 } else {
                     const err = await res.json().catch(() => ({}));
-                    if (res.status === 429) alert(err.mensagem || "Muitas tentativas de login. Tente novamente mais tarde.");
-                    else if (typeof err.tentativasRestantes === 'number') alert(`E-mail ou senha inválidos. Tentativas restantes antes do bloqueio temporário: ${err.tentativasRestantes}.`);
-                    else alert(err.mensagem || "E-mail ou senha inválidos.");
+                    if (res.status === 429) jAlert(err.mensagem || "Muitas tentativas de login. Tente novamente mais tarde.", 'aviso');
+                    else if (typeof err.tentativasRestantes === 'number') jAlert(`E-mail ou senha inválidos. Tentativas restantes antes do bloqueio temporário: ${err.tentativasRestantes}.`, 'erro');
+                    else jAlert(err.mensagem || "E-mail ou senha inválidos.", 'erro');
                 }
             } finally {
                 if (btn) { btn.disabled = false; btn.innerHTML = textoOriginal; }
@@ -773,10 +989,10 @@
         }
 
         async function agendarPac() {
-            if (!horaPac) return alert("Selecione a hora!");
+            if (!horaPac) return jAlert("Selecione a hora!", 'aviso');
             const res = await apiFetch(`${BASE}/Agendar`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ PacienteId: sessao.id, MedicoId: Number(document.getElementById('pacMed').value), DataHora: document.getElementById('pacData').value + "T" + horaPac + ":00" }) });
-            if (!res.ok) { const err = await res.json().catch(() => ({})); return alert(err.mensagem || "Não foi possível agendar."); }
-            alert("Sucesso!");
+            if (!res.ok) { const err = await res.json().catch(() => ({})); return jAlert(err.mensagem || "Não foi possível agendar.", 'erro'); }
+            jToast("Consulta agendada com sucesso!");
             carregarConsultasPac(); resetarHorasPac();
         }
 
@@ -784,11 +1000,11 @@
             const res = await apiFetch(`${BASE}/BuscarPacienteCpf/` + document.getElementById('cpfBusca').value);
             if (res.ok) {
                 pacSelecionado = await res.json();
-                if (!pacSelecionado) return alert("Não encontrado!");
+                if (!pacSelecionado) return jAlert("Nenhum paciente encontrado com esse CPF.", 'aviso');
                 document.getElementById('resNome').textContent = pacSelecionado.nomeCompleto;
                 document.getElementById('dadosPac').style.display = 'block';
                 carregarDocumentos(pacSelecionado.id, 'secDocs'); carregarConsultasSec();
-            } else alert("Erro na busca.");
+            } else jAlert("Erro na busca.", 'erro');
         }
 
         function filtrarMedicosSec() {
@@ -820,10 +1036,10 @@
         }
 
         async function agendarSec() {
-            if (!horaSec) return alert("Selecione a hora!");
+            if (!horaSec) return jAlert("Selecione a hora!", 'aviso');
             const res = await apiFetch(`${BASE}/Agendar`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ PacienteId: pacSelecionado.id, MedicoId: Number(document.getElementById('secMed').value), DataHora: document.getElementById('secData').value + "T" + horaSec + ":00" }) });
-            if (!res.ok) { const err = await res.json().catch(() => ({})); return alert(err.mensagem || "Não foi possível agendar."); }
-            alert("Agendado com sucesso!");
+            if (!res.ok) { const err = await res.json().catch(() => ({})); return jAlert(err.mensagem || "Não foi possível agendar.", 'erro'); }
+            jToast("Agendado com sucesso!");
             carregarConsultasSec();
         }
 
@@ -874,16 +1090,17 @@
         async function finalizarAtendimento() {
             const doc = { AgendamentoId: agendamentoAtivo.id, PacienteId: agendamentoAtivo.pacId, MedicoId: sessao.id, EspecialidadeId: sessao.espId, Tipo: document.getElementById('docTipo').value, Conteudo: document.getElementById('docConteudo').value };
             const res = await apiFetch(`${BASE}/LancarDocumento`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(doc) });
-            if (!res.ok) return alert("Não foi possível emitir o documento.");
-            alert("Sucesso!");
+            if (!res.ok) return jAlert("Não foi possível emitir o documento.", 'erro');
+            jToast("Documento emitido com sucesso!");
             document.getElementById('atendimentoArea').style.display = 'none';
             carregarAgendaMedico();
         }
 
         async function cancelar(id, tipo) {
-            if (confirm("Deseja cancelar?")) {
+            if (await jConfirm("Deseja mesmo cancelar esta consulta?")) {
                 const res = await apiFetch(`${BASE}/Cancelar/${id}`, { method: 'DELETE' });
-                if (!res.ok) return alert("Não foi possível cancelar essa consulta.");
+                if (!res.ok) { const err = await res.json().catch(() => ({})); return jAlert(err.mensagem || "Não foi possível cancelar essa consulta.", 'erro'); }
+                jToast("Consulta cancelada.");
                 if (tipo === 'sec') carregarConsultasSec(); else carregarConsultasPac();
             }
         }
@@ -891,30 +1108,41 @@
         async function cadastrarMedico() {
             const m = { Nome: document.getElementById('mNome').value, CRM: document.getElementById('mCRM').value, EspecialidadeId: Number(document.getElementById('mEspSelect').value), Email: document.getElementById('mEmail').value, Senha: document.getElementById('mSenha').value };
             const res = await apiFetch(`${BASE}/CadastrarMedico`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(m) });
-            if (res.ok) alert("Médico cadastrado com sucesso!");
-            else if (res.status === 409) { const err = await res.json(); alert(err.mensagem); }
-            else alert("Erro ao salvar médico.");
+            if (res.ok) {
+                jToast("Médico cadastrado com sucesso!");
+                // BUG CORRIGIDO: o formulário continuava preenchido após salvar, o que
+                // podia levar a um reenvio acidental (e um erro de "CRM/e-mail já
+                // cadastrado" ao clicar SALVAR de novo sem querer).
+                ['mNome', 'mCRM', 'mEmail', 'mSenha'].forEach(id => document.getElementById(id).value = '');
+                document.getElementById('mEspSelect').selectedIndex = 0;
+            }
+            else if (res.status === 409) { const err = await res.json(); jAlert(err.mensagem, 'erro'); }
+            else jAlert("Erro ao salvar médico.", 'erro');
         }
 
         async function cadastrarSecretaria() {
             const res = await apiFetch(`${BASE}/CadastrarSecretario`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ Nome: document.getElementById('sNome').value, Email: document.getElementById('sEmail').value, Senha: document.getElementById('sSenha').value }) });
-            if (res.ok) alert("Secretaria cadastrada com sucesso!");
-            else if (res.status === 409) { const err = await res.json(); alert(err.mensagem); }
-            else alert("Erro ao salvar secretaria.");
+            if (res.ok) {
+                jToast("Secretaria cadastrada com sucesso!");
+                ['sNome', 'sEmail', 'sSenha'].forEach(id => document.getElementById(id).value = '');
+            }
+            else if (res.status === 409) { const err = await res.json(); jAlert(err.mensagem, 'erro'); }
+            else jAlert("Erro ao salvar secretaria.", 'erro');
         }
+
 
         async function fazerCadastro(btn) {
             if (document.getElementById('cSenha').value !== document.getElementById('cSenhaConf').value) {
-                return alert("As senhas digitadas não são iguais.");
+                return jAlert("As senhas digitadas não são iguais.", 'aviso');
             }
             const p = { NomeCompleto: document.getElementById('cNome').value, CPF: document.getElementById('cCPF').value, Email: document.getElementById('cEmail').value, DataNascimento: document.getElementById('cNasc').value, TelefoneCelular: document.getElementById('cTelCel').value, TelefoneSecundario: document.getElementById('cTelSec').value, Senha: document.getElementById('cSenha').value, SexoGenero: document.getElementById('cSex').value };
             const textoOriginal = btn ? btn.innerHTML : null;
             if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...'; }
             try {
                 const res = await fetch(`${BASE}/CadastrarPaciente`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(p) });
-                if (res.ok) { alert("Cadastro realizado com sucesso!"); mudar('login'); }
-                else if (res.status === 409 || res.status === 400) { const err = await res.json().catch(() => ({})); alert(err.mensagem || "Verifique os dados informados."); }
-                else alert("Erro ao realizar cadastro.");
+                if (res.ok) { await jAlert("Cadastro realizado com sucesso! Faça login para continuar.", 'sucesso'); mudar('login'); }
+                else if (res.status === 409 || res.status === 400) { const err = await res.json().catch(() => ({})); jAlert(err.mensagem || "Verifique os dados informados.", 'erro'); }
+                else jAlert("Erro ao realizar cadastro.", 'erro');
             } finally {
                 if (btn) { btn.disabled = false; btn.innerHTML = textoOriginal; }
             }
