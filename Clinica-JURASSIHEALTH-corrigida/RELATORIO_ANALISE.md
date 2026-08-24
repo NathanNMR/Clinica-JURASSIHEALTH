@@ -192,6 +192,29 @@ Criada uma tela dedicada (`#especialidades`, acessível pelo menu superior e por
 | 2 | `AddControllersWithViews()` registrava suporte a Razor Views (motor de renderização de páginas MVC) sem necessidade — o projeto não tem nenhuma view, só uma API. | Trocado para `AddControllers()`. |
 | 3 | Faltava `Properties/launchSettings.json` — sem ele, `dotnet run` sobe a aplicação em ambiente **Production** por padrão, que ignora silenciosamente o `appsettings.Development.json` (foi exatamente a causa do erro "Access denied for user 'root'@'localhost' (using password: NO)" relatado durante os testes). | Arquivo criado, forçando `ASPNETCORE_ENVIRONMENT=Development` para quem roda via `dotnet run`. |
 
+---
+
+## 11. Sétima rodada: qualidade real das fotos (super-resolução por IA)
+
+Na rodada anterior, ao ouvir "a qualidade das imagens está ruim", troquei as 6 fotos de baixa resolução por ilustrações vetoriais — mas o pedido real era **melhorar a qualidade das fotos originais**, não substituí-las. Correção feita nesta rodada.
+
+### 11.1 O que foi usado
+Em vez de um simples upscale por interpolação (que só estica os pixels existentes), instalei o **Real-ESRGAN**, um modelo de super-resolução por IA de código aberto amplamente usado (via `pip`, a partir do PyPI, e pesos oficiais baixados diretamente do repositório oficial no GitHub — fontes públicas e verificáveis). Diferente de um upscale comum, esse modelo foi treinado para *reconstruir* detalhe plausível (textura de pele, tecido, superfícies) a partir de uma imagem de baixa resolução, em vez de apenas borrar os pixels existentes.
+
+### 11.2 Resultado por foto
+| Foto | Método usado | Resultado |
+|---|---|---|
+| Recepção | Real-ESRGAN (4×) | Excelente — sem texto ou rostos minúsculos para atrapalhar |
+| Consulta médica | Real-ESRGAN (4×) | Excelente — rostos naturais e nítidos |
+| Centro cirúrgico | Real-ESRGAN (4×) | Excelente |
+| Coração nas mãos (Missão) | Real-ESRGAN (4×) | Excelente |
+| Médica com paciente (Valores) | Real-ESRGAN (2×, já partia de resolução melhor) | Excelente |
+| Fachada da clínica | Upscale Lanczos + nitidez | Real-ESRGAN "alucinava" o texto do letreiro (`JURASSIHEALTH CLÍNICA MÉDICA` saía com letras erradas/distorcidas) — problema conhecido de modelos generativos com texto pequeno. Usei um upscale de alta qualidade sem IA generativa nessa imagem especificamente, para manter o texto do letreiro fiel ao original. |
+| Corredor com equipe (Equipe) | Upscale Lanczos + nitidez | Os 3 rostos no corredor são muito pequenos/distantes no original; o Real-ESRGAN os deixou com aparência "de cera" (artefato comum em rostos minúsculos e de baixa qualidade). Tentei corrigir com GFPGAN (modelo especializado em restauração de rosto), mas o detector de rosto não conseguiu localizar rostos tão pequenos na imagem. Optei pelo upscale sem IA generativa também aqui, para não introduzir distorção. |
+
+Em resumo: 5 das 7 fotos ganharam um salto real de qualidade via IA; as outras 2 (que tinham texto ou rostos pequenos demais) usaram um upscale de alta qualidade sem risco de "inventar" detalhes errados — uma escolha deliberada para privilegiar fidelidade ao original em vez de nitidez a qualquer custo.
+
+
 
 
 ---

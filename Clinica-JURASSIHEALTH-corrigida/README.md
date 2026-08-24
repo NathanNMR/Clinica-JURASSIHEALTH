@@ -70,10 +70,8 @@ em um projeto de teste rápido.
 
 - `wwwroot/img/logo-mark.png` / `favicon.png` — marca (recorte circular do mascote oficial).
 - `wwwroot/img/mascote-hero.png` — o mascote "Doutor Rex" (arte fornecida pelo cliente), usado no hero.
-- `wwwroot/img/foto-*.jpg` — fotografias de hospital/atendimento (fornecidas pelo cliente), usadas na vitrine e nos cards de Missão/Visão/Valores.
+- `wwwroot/img/foto-*.jpg` — fotografias de hospital/atendimento (fornecidas pelo cliente e aprimoradas com super-resolução por IA — Real-ESRGAN — para melhor nitidez), usadas na vitrine e nos cards de Missão/Visão/Valores.
 - `wwwroot/img/fundosite.png` / `fundo-footer.png` — padrão de fundo com o mascote repetido em tom acinzentado, gerado a partir da arte oficial.
-
-> Seis das sete fotografias fornecidas têm resolução de origem baixa (147px de altura) e foram ampliadas com reamostragem de alta qualidade; para nitidez ideal, substitua por versões em resolução maior quando disponíveis (basta trocar o arquivo mantendo o mesmo nome em `wwwroot/img/`).
 
 ## Estrutura do projeto
 

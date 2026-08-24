@@ -134,13 +134,27 @@
 
         .showcase-carousel .carousel-item img {
             width: 100%;
-            aspect-ratio: 1400 / 760;
+            height: 460px;
             object-fit: cover;
             display: block;
         }
         .showcase-carousel .carousel-inner { border-radius: 22px; }
         .showcase-carousel .carousel-control-prev,
         .showcase-carousel .carousel-control-next { width: 6%; }
+        .showcase-carousel .carousel-caption {
+            background: rgba(36,68,74,0.72);
+            border-radius: 14px;
+            bottom: 26px;
+            padding: 10px 20px;
+            font-family: var(--fonte-mono);
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        @media (max-width: 767px) {
+            .showcase-carousel .carousel-item img { height: 280px; }
+            .showcase-carousel .carousel-caption { font-size: 0.68rem; padding: 6px 12px; }
+        }
 
         .navbar-jurassica {
             background-color: var(--teal-deep);
@@ -178,12 +192,10 @@
 
         .img-apoio {
             width: 100%;
-            height: auto;
-            max-height: 420px;
-            object-fit: contain;
+            height: 320px;
+            object-fit: cover;
             border-radius: 22px;
             box-shadow: 0 10px 24px rgba(32,48,47,0.18);
-            background: #fff;
         }
 
         .card-especialidade {
@@ -380,16 +392,20 @@
             <div id="mainCarousel" class="carousel slide showcase-carousel mb-5" data-bs-ride="carousel">
                 <div class="carousel-inner shadow">
                     <div class="carousel-item active">
-                        <img src="img/cena-hospital.svg" alt="Fachada da Clínica JurassiHealth, com estrutura moderna e ambulância">
+                        <img src="img/foto-hospital.jpg" alt="Fachada da Clínica JurassiHealth">
+                        <div class="carousel-caption">Estrutura completa · Alta tecnologia</div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/cena-atendimento.svg" alt="Atendimento humanizado em consultório da Clínica JurassiHealth">
+                        <img src="img/foto-atendimento.jpg" alt="Atendimento humanizado em consultório da Clínica JurassiHealth">
+                        <div class="carousel-caption">Atendimento humanizado · Hora marcada</div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/cena-equipe.svg" alt="Equipe multidisciplinar da Clínica JurassiHealth">
+                        <img src="img/foto-equipe.jpg" alt="Equipe multidisciplinar da Clínica JurassiHealth">
+                        <div class="carousel-caption">Equipe especializada · Multidisciplinar</div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/cena-emergencia.svg" alt="Pronto atendimento 24 horas da Clínica JurassiHealth">
+                        <img src="img/foto-cirurgico.jpg" alt="Centro cirúrgico de alta complexidade da Clínica JurassiHealth">
+                        <div class="carousel-caption">Alta complexidade · Centro cirúrgico</div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
@@ -401,7 +417,7 @@
                         <h3 style="color:var(--tema)">Nossa Missão</h3>
                         <p>Na Clínica JurassiHealth, nossa missão é fornecer um atendimento médico inabalável, unindo a resiliência e força do passado com os avanços tecnológicos mais sofisticados da medicina moderna. Buscamos a cura através da precisão e do cuidado humanizado, garantindo que sua saúde seja tratada como um legado precioso para as futuras gerações.</p>
                     </div>
-                    <div class="col-md-6"><img src="img/apoiodetexto1.svg" class="img-apoio" alt="Missão da Clínica JurassiHealth"></div>
+                    <div class="col-md-6"><img src="img/foto-missao.jpg" class="img-apoio" alt="Cuidado médico - Missão da Clínica JurassiHealth"></div>
                 </div>
             </div>
 
@@ -411,7 +427,7 @@
                         <h3 style="color:var(--tema)">Visão e Objetivos</h3>
                         <p>Nossa visão é ser a maior referência em saúde do Grupo Estrela da Manhã, expandindo nossos horizontes para garantir que cada paciente sinta a segurança de um gigante. Nossos objetivos incluem a implementação de diagnósticos por inteligência artificial e a redução total do tempo de espera, focando na eficiência diagnóstica absoluta e no bem-estar integral do paciente.</p>
                     </div>
-                    <div class="col-md-6"><img src="img/apoiodetexto2.svg" class="img-apoio" alt="Visão e objetivos da Clínica JurassiHealth"></div>
+                    <div class="col-md-6"><img src="img/foto-visao.jpg" class="img-apoio" alt="Recepção moderna - Visão da Clínica JurassiHealth"></div>
                 </div>
             </div>
 
