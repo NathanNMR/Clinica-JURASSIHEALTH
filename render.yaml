@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: jurassihealth
+    runtime: docker
+    dockerfilePath: ./Clinica-JURASSIHEALTH/Dockerfile
+    dockerContext: ./Clinica-JURASSIHEALTH
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ConnectionStrings__Default
+        sync: false
+      - key: Auth__SecretKey
+        sync: false
+      - key: AdminPadrao__Email
+        sync: false
+      - key: AdminPadrao__SenhaHash
+        sync: false

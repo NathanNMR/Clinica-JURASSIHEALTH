@@ -1,0 +1,10 @@
+JURASSIHEALTH — versão PIM IV / Render
+
+1) Importe database/database-pim4.sql.
+2) Configure as variáveis de ambiente conforme .env.example.
+3) Execute dotnet restore e dotnet run.
+4) Acesse http://localhost:5000.
+5) Para publicar, consulte docs/DEPLOY_RENDER.md.
+
+Esta versão NÃO usa .NET MAUI. O acesso mobile é feito pelo próprio site responsivo,
+conforme orientação do professor orientador.

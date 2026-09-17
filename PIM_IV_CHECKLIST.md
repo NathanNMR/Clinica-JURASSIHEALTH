@@ -1,0 +1,22 @@
+# Checklist PIM IV
+
+- [x] Caracterização da solução
+- [x] Planejamento tecnológico
+- [x] Responsabilidade social/diversidade
+- [x] Aplicação Web
+- [x] Uso mobile por Web responsiva, conforme orientação do professor
+- [x] API REST
+- [x] Autenticação e segurança
+- [x] Arquitetura em camadas
+- [x] Banco relacional
+- [x] Procedures
+- [x] Triggers
+- [x] Auditoria
+- [x] Docker
+- [x] CI/CD
+- [x] Plano de implantação Render
+- [x] Product Backlog
+- [x] Sprint Backlog / Sprints / Kanban
+- [ ] Gerar diagrama MER visual
+- [ ] Inserir screenshots desktop/mobile no relatório
+- [ ] Realizar deploy final no Render

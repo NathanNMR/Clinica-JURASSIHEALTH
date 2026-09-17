@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b716d">
+<title>JURASSIHEALTH | Clínica Integrada</title>
+<style>
+:root{--brand:#0b716d;--brand2:#094f4c;--accent:#e6a833;--bg:#f4f8f8;--card:#fff;--ink:#173332;--muted:#617776;--danger:#b63737;--ok:#257a4a;--radius:18px;--shadow:0 12px 35px #073b3820}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select,textarea{font:inherit} button{cursor:pointer}
+a{color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #dce8e7}
+.nav{min-height:72px;display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--brand2);font-size:1.2rem}
+.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--brand),#12a39a);display:grid;place-items:center;color:#fff;font-size:24px}
+nav{margin-left:auto;display:flex;gap:7px;align-items:center}.navbtn,.btn{border:0;border-radius:12px;padding:11px 15px;background:transparent;color:var(--ink);font-weight:700}
+.btn{background:var(--brand);color:#fff}.btn:hover{filter:brightness(.95)}.btn.alt{background:#e8f2f1;color:var(--brand2)}.btn.danger{background:var(--danger)}
+.menu{display:none;margin-left:auto}
+.hero{padding:72px 0 42px;background:radial-gradient(circle at 80% 10%,#d4efeb 0,transparent 40%),linear-gradient(#fff,#f4f8f8)}
+.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.eyebrow{display:inline-flex;padding:8px 12px;background:#e2f2f0;border-radius:999px;color:var(--brand2);font-weight:800}
+h1{font-size:clamp(2.4rem,6vw,5rem);line-height:.98;margin:18px 0;letter-spacing:-.05em}.lead{font-size:1.1rem;color:var(--muted);max-width:700px;line-height:1.7}
+.heroCard{background:linear-gradient(145deg,var(--brand2),var(--brand));border-radius:30px;color:white;padding:30px;box-shadow:var(--shadow);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.heroCard:before{content:"🦖";font-size:150px;position:absolute;right:20px;top:20px;opacity:.18}.heroCard strong{font-size:1.8rem}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+section{padding:64px 0}.sectionHead{max-width:730px;margin-bottom:28px}.sectionHead h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid #dfe9e8;border-radius:var(--radius);padding:22px;box-shadow:0 6px 20px #0b716d0a}
+.card h3{margin-top:0}.icon{font-size:30px}.muted{color:var(--muted)}.hidden{display:none!important}
+dialog{width:min(620px,94%);border:0;border-radius:24px;padding:0;box-shadow:0 25px 80px #0005}dialog::backdrop{background:#102b2a9c;backdrop-filter:blur(3px)}
+.modal{padding:24px}.modalTop{display:flex;align-items:center;justify-content:space-between}.close{border:0;background:#edf3f3;width:38px;height:38px;border-radius:12px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}
+label{font-weight:750;font-size:.9rem}.field{display:flex;flex-direction:column;gap:6px}.field input,.field select,.field textarea{border:1px solid #cfdedd;border-radius:12px;padding:12px;background:#fff;min-height:46px}.field textarea{min-height:110px;resize:vertical}
+.msg{padding:11px 13px;border-radius:10px;margin-top:12px}.msg.err{background:#feeaea;color:#852222}.msg.ok{background:#e8f7ed;color:#185b35}
+.dashboard{padding-top:30px}.dashHead{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{background:#fff;border:1px solid #dfe9e8;border-radius:16px;padding:18px}.stat b{font-size:2rem;display:block;color:var(--brand)}
+.tableWrap{overflow:auto;background:#fff;border-radius:16px;border:1px solid #dfe9e8}.table{width:100%;border-collapse:collapse;min-width:650px}.table th,.table td{text-align:left;padding:13px;border-bottom:1px solid #edf2f2}.table th{background:#f6fafa}
+footer{padding:38px 0;background:#0c302e;color:#dcebea;margin-top:50px}
+@media(max-width:850px){.heroGrid{grid-template-columns:1fr}.heroCard{min-height:250px}.grid3,.stats{grid-template-columns:1fr 1fr}nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:14px 4%;border-bottom:1px solid #ddd;flex-direction:column;align-items:stretch}.menu{display:block}.nav.open nav{display:flex}.form{grid-template-columns:1fr}.full{grid-column:auto}}
+@media(max-width:520px){.wrap{width:min(94%,1180px)}.hero{padding-top:42px}.heroCard{padding:22px}.grid3,.stats{grid-template-columns:1fr}.actions .btn{width:100%}.dashHead{align-items:flex-start;flex-direction:column}.modal{padding:18px}.navbtn,.btn{min-height:44px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav" id="nav">
+  <div class="brand"><div class="logo">🦖</div>JURASSIHEALTH</div>
+  <button class="menu btn alt" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Abrir menu">Menu</button>
+  <nav>
+    <a class="navbtn" href="#inicio">Início</a><a class="navbtn" href="#servicos">Serviços</a><a class="navbtn" href="#acessibilidade">Acessibilidade</a>
+    <button class="btn alt" onclick="openModal('cadastroDlg')">Criar conta</button>
+    <button class="btn" onclick="openModal('loginDlg')">Entrar</button>
+  </nav>
+</div></header>
+
+<main id="publico">
+<section class="hero" id="inicio"><div class="wrap heroGrid">
+<div><span class="eyebrow">Saúde, tecnologia e cuidado integrado</span><h1>Seu atendimento mais simples e conectado.</h1>
+<p class="lead">A JURASSIHEALTH integra pacientes, equipe médica, secretaria e administração em uma plataforma Web responsiva, acessível pelo computador, tablet ou celular.</p>
+<div class="actions"><button class="btn" onclick="openModal('loginDlg')">Acessar sistema</button><button class="btn alt" onclick="openModal('cadastroDlg')">Cadastrar paciente</button></div></div>
+<div class="heroCard"><strong>🩺 Clínica digital integrada</strong><p>Agendamento, histórico, documentos médicos e gestão em uma única solução.</p></div>
+</div></section>
+
+<section id="servicos"><div class="wrap">
+<div class="sectionHead"><h2>Uma solução para todo o fluxo clínico</h2><p class="muted">A mesma aplicação se adapta a telas grandes e pequenas, sem instalação de aplicativo.</p></div>
+<div class="grid3">
+<div class="card"><div class="icon">📅</div><h3>Agendamentos</h3><p class="muted">Escolha especialidade, profissional e horário disponível.</p></div>
+<div class="card"><div class="icon">📄</div><h3>Documentos médicos</h3><p class="muted">Receitas, laudos e atestados disponíveis de forma segura.</p></div>
+<div class="card"><div class="icon">🔐</div><h3>Segurança</h3><p class="muted">Hash de senha, autenticação, perfis de acesso e auditoria.</p></div>
+</div></div></section>
+
+<section id="acessibilidade"><div class="wrap">
+<div class="sectionHead"><h2>Acesso inclusivo</h2><p class="muted">Interface com HTML semântico, foco visível, contraste adequado, formulários rotulados, botões grandes e layout responsivo.</p></div>
+<div class="grid3"><div class="card"><h3>📱 Mobile first</h3><p>Funciona diretamente no navegador do celular.</p></div><div class="card"><h3>⌨️ Teclado</h3><p>Navegação compatível com teclado e tecnologias assistivas.</p></div><div class="card"><h3>🌎 Diversidade</h3><p>Fluxos orientados à função, sem discriminação por características pessoais.</p></div></div>
+</div></section>
+</main>
+
+<section id="dashboard" class="dashboard hidden"><div class="wrap">
+<div class="dashHead"><div><span class="eyebrow">Área autenticada</span><h2 id="bemVindo">Olá</h2><p id="perfil" class="muted"></p></div><button class="btn danger" onclick="logout()">Sair</button></div>
+<div id="painelPaciente" class="hidden">
+<div class="actions"><button class="btn" onclick="openModal('agendarDlg'); carregarMedicos()">Nova consulta</button><button class="btn alt" onclick="carregarConsultas()">Atualizar consultas</button></div>
+<h3>Minhas consultas</h3><div id="consultas"></div>
+</div>
+<div id="painelMedico" class="hidden"><h3>Agenda médica</h3><div id="agendaMedico"></div></div>
+<div id="painelGestao" class="hidden"><div class="stats" id="stats"></div><p class="muted">Dashboard de apoio à gestão e apresentação acadêmica.</p></div>
+</div></section>
+
+<dialog id="loginDlg"><div class="modal"><div class="modalTop"><h2>Entrar</h2><button class="close" onclick="loginDlg.close()">✕</button></div>
+<form id="loginForm" class="form"><div class="field full"><label for="loginEmail">E-mail</label><input id="loginEmail" type="email" required autocomplete="email"></div>
+<div class="field full"><label for="loginSenha">Senha</label><input id="loginSenha" type="password" required autocomplete="current-password"></div>
+<button class="btn full">Entrar</button><div id="loginMsg" class="full"></div></form></div></dialog>
+
+<dialog id="cadastroDlg"><div class="modal"><div class="modalTop"><h2>Criar conta de paciente</h2><button class="close" onclick="cadastroDlg.close()">✕</button></div>
+<form id="cadastroForm" class="form">
+<div class="field full"><label>Nome completo</label><input name="nome" minlength="3" required></div>
+<div class="field"><label>E-mail</label><input name="email" type="email" required></div>
+<div class="field"><label>CPF</label><input name="cpf" inputmode="numeric" maxlength="14" required></div>
+<div class="field"><label>Data de nascimento</label><input name="data" type="date" required></div>
+<div class="field"><label>Sexo / gênero</label><input name="genero" required></div>
+<div class="field"><label>Celular</label><input name="celular" inputmode="tel" required></div>
+<div class="field"><label>Telefone secundário</label><input name="telefone" inputmode="tel"></div>
+<div class="field"><label>Senha</label><input name="senha" type="password" minlength="6" required></div>
+<button class="btn full">Cadastrar</button><div id="cadastroMsg" class="full"></div>
+</form></div></dialog>
+
+<dialog id="agendarDlg"><div class="modal"><div class="modalTop"><h2>Agendar consulta</h2><button class="close" onclick="agendarDlg.close()">✕</button></div>
+<form id="agendarForm" class="form">
+<div class="field full"><label>Médico</label><select id="medicoSelect" required></select></div>
+<div class="field"><label>Data</label><input id="agendaData" type="date" required></div>
+<div class="field"><label>Horário</label><select id="agendaHora" required><option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option></select></div>
+<div class="field full"><label>Observação</label><textarea id="agendaObs"></textarea></div>
+<button class="btn full">Confirmar agendamento</button><div id="agendarMsg" class="full"></div>
+</form></div></dialog>
+
+<footer><div class="wrap"><strong>JURASSIHEALTH</strong><p>Projeto Integrado Multidisciplinar IV — Análise e Desenvolvimento de Sistemas.</p></div></footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const sess=()=>JSON.parse(localStorage.getItem("jurassi_sessao")||"null");
+function token(){return sess()?.token||""}
+function openModal(id){document.getElementById(id).showModal()}
+function msg(el,text,ok=false){el.innerHTML=`<div class="msg ${ok?'ok':'err'}">${text}</div>`}
+async function api(url,opt={}){opt.headers={...(opt.headers||{}),"Content-Type":"application/json"};if(token())opt.headers.Authorization="Bearer "+token();const r=await fetch(url,opt);let body=null;try{body=await r.json()}catch{}if(!r.ok)throw new Error(body?.mensagem||`Erro ${r.status}`);return body}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]))}
+$("#loginForm").addEventListener("submit",async e=>{e.preventDefault();try{let s=await api("/Sistema/Login",{method:"POST",body:JSON.stringify({email:$("#loginEmail").value,senha:$("#loginSenha").value})});localStorage.setItem("jurassi_sessao",JSON.stringify(s));loginDlg.close();mostrarDashboard()}catch(x){msg($("#loginMsg"),x.message)}})
+$("#cadastroForm").addEventListener("submit",async e=>{e.preventDefault();let f=new FormData(e.target),digits=x=>String(x||"").replace(/\D/g,"");try{await api("/Sistema/CadastrarPaciente",{method:"POST",body:JSON.stringify({nomeCompleto:f.get("nome"),email:f.get("email"),cpf:digits(f.get("cpf")),dataNascimento:f.get("data"),sexoGenero:f.get("genero"),telefoneCelular:digits(f.get("celular")),telefoneSecundario:digits(f.get("telefone"))||null,senha:f.get("senha")})});msg($("#cadastroMsg"),"Cadastro realizado. Agora faça login.",true);e.target.reset()}catch(x){msg($("#cadastroMsg"),x.message)}})
+async function carregarMedicos(){let m=await api("/Sistema/ListarMedicos");$("#medicoSelect").innerHTML=m.map(x=>`<option value="${x.id}">${esc(x.nome)} — ${esc(x.especialidade?.nome||"Especialidade")}</option>`).join("")}
+$("#agendarForm").addEventListener("submit",async e=>{e.preventDefault();let s=sess();try{await api("/Sistema/Agendar",{method:"POST",body:JSON.stringify({pacienteId:s.id,medicoId:+$("#medicoSelect").value,dataHora:$("#agendaData").value+"T"+$("#agendaHora").value+":00",observacao:$("#agendaObs").value})});msg($("#agendarMsg"),"Consulta agendada.",true);carregarConsultas()}catch(x){msg($("#agendarMsg"),x.message)}})
+function logout(){localStorage.removeItem("jurassi_sessao");location.reload()}
+async function carregarConsultas(){let s=sess(),dados=await api("/Sistema/MinhasConsultas/"+s.id);$("#consultas").innerHTML=`<div class="tableWrap"><table class="table"><thead><tr><th>Data</th><th>Médico</th><th>Especialidade</th><th>Status</th><th></th></tr></thead><tbody>${dados.map(x=>`<tr><td>${new Date(x.dataHora).toLocaleString("pt-BR")}</td><td>${esc(x.medico?.nome)}</td><td>${esc(x.medico?.especialidade?.nome)}</td><td>${esc(x.status)}</td><td>${x.status==="Agendado"?`<button class="btn danger" onclick="cancelar(${x.id})">Cancelar</button>`:""}</td></tr>`).join("")}</tbody></table></div>`}
+async function cancelar(id){if(!confirm("Cancelar esta consulta?"))return;try{await api("/Sistema/Cancelar/"+id,{method:"DELETE"});carregarConsultas()}catch(x){alert(x.message)}}
+async function mostrarDashboard(){let s=sess();if(!s)return;$("#publico").classList.add("hidden");$("#dashboard").classList.remove("hidden");$("#bemVindo").textContent="Olá, "+s.nome;$("#perfil").textContent="Perfil: "+s.tipo;
+if(s.tipo==="paciente"){$("#painelPaciente").classList.remove("hidden");carregarConsultas()}
+else if(s.tipo==="medico"){$("#painelMedico").classList.remove("hidden");let a=await api("/Sistema/AgendaMedico/"+s.id);$("#agendaMedico").innerHTML=a.length?a.map(x=>`<div class="card"><b>${new Date(x.dataHora).toLocaleString("pt-BR")}</b><p>${esc(x.paciente?.nomeCompleto)}</p></div>`).join(""):"<div class=card>Nenhuma consulta agendada.</div>"}
+else{$("#painelGestao").classList.remove("hidden");try{let d=await api("/api/v1/dashboard/resumo");$("#stats").innerHTML=Object.entries(d).map(([k,v])=>`<div class=stat><b>${v}</b>${esc(k)}</div>`).join("")}catch{}}
+}
+mostrarDashboard();
+</script>
+</body></html>
