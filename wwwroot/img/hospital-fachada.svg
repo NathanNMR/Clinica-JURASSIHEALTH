@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Fachada de hospital">
+  <rect width="1200" height="800" fill="#eaf6f5"/>
+  <rect y="620" width="1200" height="180" fill="#cfe5e2"/>
+  <rect x="180" y="170" width="840" height="450" rx="24" fill="#ffffff" stroke="#c4dddd" stroke-width="6"/>
+  <rect x="540" y="420" width="120" height="200" fill="#b8d7ef"/>
+  <rect x="510" y="100" width="180" height="160" rx="18" fill="#0b716d"/>
+  <rect x="575" y="125" width="50" height="110" fill="#fff"/>
+  <rect x="545" y="155" width="110" height="50" fill="#fff"/>
+  <g fill="#b9dff7">
+    <rect x="260" y="250" width="120" height="90" rx="10"/>
+    <rect x="430" y="250" width="120" height="90" rx="10"/>
+    <rect x="650" y="250" width="120" height="90" rx="10"/>
+    <rect x="820" y="250" width="120" height="90" rx="10"/>
+    <rect x="260" y="385" width="120" height="90" rx="10"/>
+    <rect x="430" y="385" width="120" height="90" rx="10"/>
+    <rect x="650" y="385" width="120" height="90" rx="10"/>
+    <rect x="820" y="385" width="120" height="90" rx="10"/>
+  </g>
+  <g fill="#68b68c">
+    <circle cx="110" cy="620" r="60"/><rect x="100" y="620" width="20" height="80"/>
+    <circle cx="1090" cy="620" r="60"/><rect x="1080" y="620" width="20" height="80"/>
+  </g>
+</svg>

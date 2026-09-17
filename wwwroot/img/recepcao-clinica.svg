@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Recepção de clínica">
+  <rect width="1200" height="800" fill="#f0f8f7"/>
+  <rect x="70" y="120" width="1060" height="560" rx="30" fill="#ffffff" stroke="#d8e8e6" stroke-width="8"/>
+  <rect x="140" y="430" width="520" height="160" rx="20" fill="#0b716d"/>
+  <rect x="170" y="455" width="460" height="22" rx="11" fill="#1ca796"/>
+  <circle cx="820" cy="300" r="86" fill="#ffcfb8"/>
+  <path d="M748 285 q68-115 152 -15 v42 h-152z" fill="#6a88a6"/>
+  <rect x="730" y="390" width="180" height="130" rx="24" fill="#66c0b6"/>
+  <circle cx="360" cy="320" r="84" fill="#ffcfb8"/>
+  <path d="M284 307 q74-115 158 -18 v45 h-158z" fill="#0f4d7f"/>
+  <rect x="260" y="405" width="200" height="125" rx="24" fill="#ffffff" stroke="#dce8ef" stroke-width="6"/>
+  <rect x="910" y="220" width="140" height="80" rx="16" fill="#0b716d"/>
+  <rect x="968" y="236" width="22" height="48" fill="#fff"/>
+  <rect x="944" y="248" width="70" height="22" fill="#fff"/>
+  <rect x="720" y="600" width="220" height="18" rx="9" fill="#dbe9e8"/>
+</svg>

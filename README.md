@@ -48,3 +48,13 @@ O projeto inclui `Dockerfile` e `render.yaml`. No Render, cadastre as quatro var
 ## Documentação do PIM
 
 Veja a pasta `docs` e `PIM_IV_CHECKLIST.md`.
+
+## Atualização visual
+
+Esta versão também inclui uma renovação visual da interface:
+
+- remoção de emojis nos blocos principais;
+- uso de ícones vetoriais;
+- inclusão de imagens ilustrativas de hospital, atendimento e recepção;
+- uso do mascote **DR Rex** como elemento de identidade visual;
+- melhoria do layout responsivo para celular e desktop.
