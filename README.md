@@ -80,3 +80,16 @@ Atualização com foco em apresentação visual:
 - galeria ampliada com mais cartões visuais;
 - hero atualizado com reforço da proposta mobile;
 - assets prontos em `wwwroot/img`.
+
+
+## Ajuste visual inspirado no PIM III (v5)
+
+- visual da homepage aproximado ao layout do PIM III, com hero em carrossel, seções em glassmorphism e paleta jurássica;
+- mascote DR Rex substituído por versão mais fofa;
+- manutenção da responsividade para mobile;
+- preservação das integrações atuais com login, cadastro, agendamento e painéis.
+
+
+## Revisão visual de continuidade — v6
+
+A interface foi revisada usando o PIM III como referência direta, preservando a identidade anterior: paleta original, fundo padronizado, navbar jurássica, carrossel, glass sections, botões pill e organização Bootstrap. O DR Rex foi redesenhado em versão mais fofa e integrado sem descaracterizar o sistema. Também foram restauradas interfaces distintas para paciente, secretaria, médico e administrador, com melhorias de responsividade.
