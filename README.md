@@ -58,3 +58,25 @@ Esta versão também inclui uma renovação visual da interface:
 - inclusão de imagens ilustrativas de hospital, atendimento e recepção;
 - uso do mascote **DR Rex** como elemento de identidade visual;
 - melhoria do layout responsivo para celular e desktop.
+
+
+## Melhorias visuais e mobile (v3)
+
+Esta versão substitui as imagens provisórias por artes melhores e melhora a experiência mobile:
+
+- novas imagens PNG de alta qualidade para hospital, atendimento e recepção;
+- novo mascote DR Rex em melhor qualidade;
+- seções reorganizadas para o celular;
+- versão em cartões para consultas no mobile;
+- hero, galeria e destaque mobile com melhor hierarquia visual.
+
+
+## Expansão visual e mascote fofo (v4)
+
+Atualização com foco em apresentação visual:
+
+- mascote DR Rex redesenhado em versão mais fofa;
+- novas imagens para sala de espera, equipe médica, agendamento no celular e cuidado com paciente idosa;
+- galeria ampliada com mais cartões visuais;
+- hero atualizado com reforço da proposta mobile;
+- assets prontos em `wwwroot/img`.

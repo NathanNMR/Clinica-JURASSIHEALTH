@@ -1,386 +1,77 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b716d">
-<title>JURASSIHEALTH | Clínica Integrada</title>
-<style>
-:root{--brand:#0b716d;--brand-2:#0a5753;--accent:#df9c2f;--bg:#f4f8f8;--card:#fff;--line:#dbe7e6;--text:#183836;--muted:#68807e;--danger:#b63c3c;--ok:#1f7f49;--radius:22px;--shadow:0 15px 40px rgba(8,56,53,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
-img{max-width:100%;display:block}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
-.wrap{width:min(1180px,92%);margin:auto}.hidden{display:none!important}.muted{color:var(--muted)}
-header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navbar{min-height:76px;display:flex;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--brand-2)}
-.brand-mark{width:46px;height:46px;border-radius:15px;background:#e4f3f2;display:grid;place-items:center;border:1px solid #cde2e1}
-.brand-mark img{width:30px;height:30px;object-fit:contain}.desktop-nav{margin-left:auto;display:flex;align-items:center;gap:8px}.nav-link,.btn{border:0;border-radius:14px;padding:11px 16px;font-weight:700}
-.nav-link{background:transparent;color:var(--text)}.btn{background:var(--brand);color:#fff}.btn.alt{background:#e8f2f1;color:var(--brand-2)}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--brand-2)}.btn.danger{background:var(--danger)}
-.mobile-toggle{display:none;margin-left:auto}
-.hero{padding:70px 0 48px;background:radial-gradient(circle at 85% 10%,#d9efeb 0,transparent 32%),linear-gradient(#fff,#f4f8f8)}
-.hero-grid{display:grid;grid-template-columns:1.07fr .93fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e7f2f1;color:var(--brand-2);padding:8px 14px;border-radius:999px;font-size:.92rem;font-weight:800}
-.hero h1{font-size:clamp(2.4rem,6vw,4.8rem);line-height:1;margin:18px 0;letter-spacing:-.05em}.lead{font-size:1.08rem;color:var(--muted);line-height:1.72;max-width:650px}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.hero-visual{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.visual-card{background:var(--card);border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
-.visual-card img{width:100%;height:100%;object-fit:cover}.visual-stack{display:grid;gap:16px}.visual-info{padding:18px}.visual-info h3{margin:0 0 8px;color:var(--brand-2)}
-section{padding:66px 0}.section-head{max-width:760px;margin-bottom:28px}.section-head h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px;letter-spacing:-.03em}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature,.showcase-card,.panel,.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 26px rgba(6,43,41,.05)}
-.feature{padding:22px}.icon-badge{width:54px;height:54px;border-radius:16px;background:#e9f5f4;display:grid;place-items:center;margin-bottom:14px}.icon-badge svg{width:26px;height:26px;stroke:var(--brand-2)}
-.feature h3{margin:0 0 8px}.showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.showcase-card{overflow:hidden}.showcase-card img{width:100%;height:220px;object-fit:cover}.showcase-card .content{padding:18px}
-.banner{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}.banner-card{padding:28px}.banner-card ul{padding-left:18px;line-height:1.8;color:var(--muted)}
-.dashboard{padding-top:32px}.dash-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.panel{padding:18px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:10px}.stat{padding:18px}.stat b{display:block;font-size:2rem;color:var(--brand);margin-bottom:4px}
-.table-wrap{overflow:auto;background:#fff;border-radius:18px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:640px}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #edf3f2}th{background:#f7fbfb}
-.list-cards{display:grid;gap:12px}.small-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
-dialog{width:min(650px,94%);border:0;padding:0;border-radius:26px;box-shadow:0 24px 80px rgba(0,0,0,.35)}dialog::backdrop{background:rgba(9,31,30,.72);backdrop-filter:blur(3px)}
-.modal{padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:14px}.close{width:40px;height:40px;border:0;border-radius:12px;background:#edf4f3}.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:.92rem;font-weight:800}.field input,.field select,.field textarea{border:1px solid #cedddd;border-radius:13px;padding:12px 13px;background:#fff;min-height:46px}.field textarea{min-height:110px;resize:vertical}
-.msg{padding:11px 13px;border-radius:12px;margin-top:12px;font-weight:600}.msg.ok{background:#e8f7ee;color:#1f613c}.msg.err{background:#fdeaea;color:#922929}
-footer{margin-top:56px;background:#0b2f2d;color:#ddedeb;padding:40px 0}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
-@media (max-width: 960px){.hero-grid,.banner{grid-template-columns:1fr}.hero-visual{order:-1}.grid-3,.showcase-grid,.stats{grid-template-columns:1fr 1fr}}
-@media (max-width: 820px){.mobile-toggle{display:block}.desktop-nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:16px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navbar.open .desktop-nav{display:flex}.form{grid-template-columns:1fr}}
-@media (max-width: 560px){.wrap{width:min(94%,1180px)}.hero{padding-top:42px}.grid-3,.showcase-grid,.stats,.footer-grid{grid-template-columns:1fr}.actions .btn,.actions .btn.alt,.actions .btn.ghost{width:100%;justify-content:center}.visual-card img{height:260px}.dash-head{flex-direction:column}.btn,.nav-link{min-height:44px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b716d">
+  <title>JURASSIHEALTH | Clínica Integrada</title>
+  <style>
+    :root{--brand:#0b716d;--brand-2:#0a5652;--bg:#f4f8f8;--surface:#ffffff;--line:#d9e7e6;--text:#173735;--muted:#64807e;--danger:#b73c3c;--ok:#23784a;--shadow:0 16px 40px rgba(9,69,65,.10);--radius:24px;--max:1180px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    img{display:block;max-width:100%} a{text-decoration:none;color:inherit} button,input,select,textarea{font:inherit} button{cursor:pointer}
+    .wrap{width:min(var(--max),92%);margin:auto}.hidden{display:none!important}.muted{color:var(--muted)}
+    header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .navbar{display:flex;align-items:center;gap:16px;min-height:78px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--brand-2);letter-spacing:-.02em}
+    .brand-logo{width:50px;height:50px;border-radius:16px;background:#edf5f5;border:1px solid var(--line);padding:4px;display:grid;place-items:center;overflow:hidden}.brand-logo img{width:100%;height:100%;object-fit:contain}
+    .desktop-nav{margin-left:auto;display:flex;align-items:center;gap:8px}.nav-link,.btn{border:0;border-radius:14px;padding:11px 16px;font-weight:700;transition:.2s ease}
+    .nav-link{background:transparent;color:var(--text)} .nav-link:hover{background:#edf5f4}.btn{background:var(--brand);color:#fff;box-shadow:0 10px 25px rgba(11,113,109,.16)}
+    .btn:hover{transform:translateY(-1px)} .btn.alt{background:#edf5f4;color:var(--brand-2);box-shadow:none} .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--brand-2);box-shadow:none}.btn.danger{background:var(--danger)} .mobile-toggle{display:none;margin-left:auto}
+    .hero{padding:54px 0 48px;background:radial-gradient(circle at 92% 10%,#d7efeb 0,transparent 32%),linear-gradient(#fff,#f4f8f8)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:32px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:#eaf5f4;color:var(--brand-2);font-size:.92rem;font-weight:800}.eyebrow svg{width:17px;height:17px}
+    h1{font-size:clamp(2.3rem,5vw,4.7rem);line-height:1.01;letter-spacing:-.05em;margin:18px 0 16px}.lead{font-size:1.08rem;line-height:1.72;max-width:650px;color:var(--muted)} .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px}.media-card{background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.media-card img{width:100%;height:100%;object-fit:cover}.hero-main{min-height:430px}.hero-main img{height:100%}
+    .hero-stack{display:grid;gap:16px;grid-template-rows:220px 1fr}.mascot-panel{display:flex;align-items:center;gap:14px;padding:18px}.mascot-panel img{width:150px;max-width:42%}.mascot-copy h3{margin:0 0 8px;color:var(--brand-2)} .mascot-copy p{margin:0;color:var(--muted);line-height:1.65}
+    section{padding:68px 0}.section-head{max-width:780px;margin-bottom:30px}.section-head h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px;letter-spacing:-.03em}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature,.panel,.stat,.showcase-card,.info-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 26px rgba(6,43,41,.05)}.feature{padding:22px}.icon-badge{width:56px;height:56px;border-radius:16px;background:#eaf5f4;display:grid;place-items:center;margin-bottom:15px}.icon-badge svg{width:28px;height:28px;stroke:var(--brand-2)} .feature h3{margin:0 0 8px}
+    .showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.showcase-card{overflow:hidden}.showcase-card img{width:100%;height:230px;object-fit:cover}.showcase-card .content{padding:18px}.showcase-card h3{margin:0 0 8px}
+    .mobile-highlight{display:grid;grid-template-columns:.92fr 1.08fr;gap:18px;align-items:center}.mobile-highlight .image-box{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff}.mobile-highlight .image-box img{width:100%;height:100%;object-fit:cover;min-height:360px}.info-card{padding:26px}.bullet-list{margin:0;padding-left:18px;color:var(--muted);line-height:1.85}
+    .dashboard{padding-top:32px}.dash-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.panel{padding:18px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{padding:18px}.stat b{display:block;font-size:1.95rem;color:var(--brand);margin-bottom:4px}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:20px;background:#fff} table{width:100%;border-collapse:collapse;min-width:680px} th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #edf3f2} th{background:#f7fbfb}
+    .mobile-cards{display:none;gap:12px}.consult-card,.small-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.consult-card strong,.small-card strong{display:block;margin-bottom:6px}.list-cards{display:grid;gap:12px}
+    dialog{width:min(650px,94%);border:0;padding:0;border-radius:28px;box-shadow:0 24px 80px rgba(0,0,0,.35)} dialog::backdrop{background:rgba(7,28,27,.70);backdrop-filter:blur(3px)}.modal{padding:22px}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:14px}.close{width:40px;height:40px;border:0;border-radius:12px;background:#edf4f3}
+    .form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:.92rem;font-weight:800}.field input,.field select,.field textarea{border:1px solid #cedddd;border-radius:13px;padding:12px 13px;background:#fff;min-height:46px}.field textarea{min-height:110px;resize:vertical}.msg{padding:11px 13px;border-radius:12px;margin-top:12px;font-weight:600}.msg.ok{background:#e8f7ee;color:#1f613c}.msg.err{background:#fdeaea;color:#922929}
+    footer{margin-top:56px;background:#0b2f2d;color:#ddedeb;padding:40px 0}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.footer-avatar{width:108px;height:108px;border-radius:22px;background:#fff;padding:10px}
+    @media (max-width:1080px){.hero-grid{grid-template-columns:1fr}.hero-visual{max-width:820px}.hero-main{min-height:320px}.mobile-highlight{grid-template-columns:1fr}.stats,.grid-3,.showcase-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:820px){.mobile-toggle{display:block}.desktop-nav{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:16px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;box-shadow:0 18px 40px rgba(0,0,0,.08)}.navbar.open .desktop-nav{display:flex}.form{grid-template-columns:1fr}.hero{padding-top:38px}.hero-visual{grid-template-columns:1fr}.hero-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}.mascot-panel{min-height:220px}.footer-grid{grid-template-columns:1fr}.wrap{width:min(94%,var(--max))}}
+    @media (max-width:640px){.actions .btn,.actions .btn.ghost,.actions .btn.alt{width:100%;justify-content:center}.grid-3,.showcase-grid,.stats,.hero-stack{grid-template-columns:1fr}.showcase-card img{height:220px}.hero-main{min-height:250px}.mascot-panel{flex-direction:column;text-align:center}.mascot-panel img{width:180px;max-width:100%}.mobile-cards{display:grid}.desktop-table{display:none}.dash-head{flex-direction:column}.modal{padding:18px}dialog{width:min(94%,650px)} h1{font-size:2.15rem}.lead{font-size:1rem}.btn,.nav-link{min-height:44px;padding:12px 16px}}
+  </style>
 </head>
 <body>
-<header>
-  <div class="wrap navbar" id="navRoot">
-    <a class="brand" href="#inicio">
-      <span class="brand-mark"><img src="/img/dr-rex.svg" alt="Logo DR Rex"></span>
-      <span>JURASSIHEALTH</span>
-    </a>
-    <button class="btn alt mobile-toggle" type="button" onclick="document.getElementById('navRoot').classList.toggle('open')">Menu</button>
-    <nav class="desktop-nav">
-      <a class="nav-link" href="#inicio">Início</a>
-      <a class="nav-link" href="#servicos">Serviços</a>
-      <a class="nav-link" href="#estrutura">Estrutura</a>
-      <a class="nav-link" href="#acessibilidade">Acessibilidade</a>
-      <button class="btn alt" type="button" onclick="openModal('cadastroDlg')">Criar conta</button>
-      <button class="btn" type="button" onclick="openModal('loginDlg')">Entrar</button>
-    </nav>
-  </div>
-</header>
-
-<main id="publico">
-  <section class="hero" id="inicio">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10Z"/></svg> Plataforma clínica moderna e responsiva</span>
-        <h1>Seu atendimento de saúde mais organizado, acessível e digital.</h1>
-        <p class="lead">A JURASSIHEALTH conecta pacientes, equipe médica, secretaria e administração em um único sistema web. No celular, tablet ou computador, o site se adapta e mantém todos os recursos essenciais de agendamento, acompanhamento e documentação clínica.</p>
-        <div class="actions">
-          <button class="btn" type="button" onclick="openModal('loginDlg')">Acessar o sistema</button>
-          <button class="btn ghost" type="button" onclick="openModal('cadastroDlg')">Cadastrar paciente</button>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-card"><img src="/img/dr-rex.svg" alt="Mascote DR Rex"></div>
-        <div class="visual-stack">
-          <div class="visual-card"><img src="/img/hospital-fachada.svg" alt="Fachada da clínica"></div>
-          <div class="visual-card visual-info">
-            <h3>DR Rex em destaque</h3>
-            <p class="muted">O mascote reforça a identidade visual da clínica e torna a experiência mais amigável sem comprometer o aspecto profissional do projeto.</p>
-          </div>
-        </div>
-      </div>
+  <header>
+    <div class="wrap navbar" id="navRoot">
+      <a class="brand" href="#inicio"><span class="brand-logo"><img src="/img/dr-rex.png" alt="Mascote DR Rex"></span><span>JURASSIHEALTH</span></a>
+      <button class="btn alt mobile-toggle" type="button" onclick="document.getElementById('navRoot').classList.toggle('open')">Menu</button>
+      <nav class="desktop-nav"><a class="nav-link" href="#inicio">Início</a><a class="nav-link" href="#servicos">Serviços</a><a class="nav-link" href="#galeria">Galeria</a><a class="nav-link" href="#mobile">Mobile</a><button class="btn alt" type="button" onclick="openModal('cadastroDlg')">Criar conta</button><button class="btn" type="button" onclick="openModal('loginDlg')">Entrar</button></nav>
     </div>
-  </section>
-
-  <section id="servicos">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Serviços e funcionalidades centrais</h2>
-        <p class="muted">A navegação ficou mais limpa, sem emojis, usando ícones e cartões com visual mais profissional.</p>
-      </div>
-      <div class="grid-3">
-        <article class="feature">
-          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
-          <h3>Agendamento inteligente</h3>
-          <p class="muted">Escolha médico, data e horário, com verificação de disponibilidade e prevenção de dupla marcação.</p>
-        </article>
-        <article class="feature">
-          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H7a2 2 0 0 0-2 2v16l5-3 5 3V8z"/><path d="M14 2l5 5h-5z"/></svg></div>
-          <h3>Documentos médicos</h3>
-          <p class="muted">Receitas, laudos e atestados ficam centralizados em um ambiente mais seguro e organizado.</p>
-        </article>
-        <article class="feature">
-          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 1v22M1 12h22"/><rect x="4" y="4" width="16" height="16" rx="4"/></svg></div>
-          <h3>Gestão administrativa</h3>
-          <p class="muted">Perfis de acesso, dashboard resumido, auditoria e fluxos de secretaria e administração.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="estrutura">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Ambientes visuais do sistema</h2>
-        <p class="muted">Mantive o espírito do site original com imagens de hospital, atendimento e recepção, além do mascote DR Rex.</p>
-      </div>
-      <div class="showcase-grid">
-        <article class="showcase-card">
-          <img src="/img/hospital-fachada.svg" alt="Fachada do hospital">
-          <div class="content"><h3>Estrutura clínica</h3><p class="muted">Representação visual do ambiente institucional e profissional da JURASSIHEALTH.</p></div>
-        </article>
-        <article class="showcase-card">
-          <img src="/img/atendimento-medico.svg" alt="Atendimento médico">
-          <div class="content"><h3>Atendimento ao paciente</h3><p class="muted">Consulta, acompanhamento e emissão de documentos em um fluxo digital integrado.</p></div>
-        </article>
-        <article class="showcase-card">
-          <img src="/img/recepcao-clinica.svg" alt="Recepção da clínica">
-          <div class="content"><h3>Recepção e secretaria</h3><p class="muted">Apoio ao cadastro, à agenda e ao atendimento com visual mais acolhedor.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="acessibilidade">
-    <div class="wrap banner">
-      <div class="banner-card feature">
-        <div class="section-head" style="margin-bottom:10px">
-          <h2>Acessível em qualquer tela</h2>
-          <p class="muted">Com base na orientação do professor, a experiência mobile é atendida pelo próprio site responsivo.</p>
-        </div>
-        <ul>
-          <li>Menu adaptado para celular;</li>
-          <li>Formulários em coluna única em telas menores;</li>
-          <li>Botões maiores e áreas de toque adequadas;</li>
-          <li>Tabelas com rolagem horizontal quando necessário;</li>
-          <li>Estrutura semântica, contraste e rótulos visíveis.</li>
-        </ul>
-      </div>
-      <div class="visual-card"><img src="/img/dr-rex.svg" alt="DR Rex com jaleco"></div>
-    </div>
-  </section>
-</main>
-
-<section id="dashboard" class="dashboard hidden">
-  <div class="wrap">
-    <div class="dash-head">
-      <div>
-        <span class="eyebrow">Área autenticada</span>
-        <h2 id="bemVindo">Olá</h2>
-        <p id="perfil" class="muted"></p>
-      </div>
-      <button class="btn danger" type="button" onclick="logout()">Sair</button>
-    </div>
-
-    <div id="painelPaciente" class="panel hidden">
-      <div class="actions">
-        <button class="btn" type="button" onclick="openModal('agendarDlg'); carregarMedicos()">Nova consulta</button>
-        <button class="btn alt" type="button" onclick="carregarConsultas()">Atualizar consultas</button>
-      </div>
-      <h3>Minhas consultas</h3>
-      <div id="consultas"></div>
-    </div>
-
-    <div id="painelMedico" class="panel hidden">
-      <h3>Agenda médica</h3>
-      <div id="agendaMedico"></div>
-    </div>
-
-    <div id="painelGestao" class="panel hidden">
-      <h3>Indicadores principais</h3>
-      <div id="stats" class="stats"></div>
-      <p class="muted">Resumo operacional para apoio à gestão e à apresentação acadêmica.</p>
-    </div>
-  </div>
-</section>
-
-<dialog id="loginDlg">
-  <div class="modal">
-    <div class="modal-head"><h2>Entrar</h2><button class="close" type="button" onclick="loginDlg.close()">✕</button></div>
-    <form id="loginForm" class="form">
-      <div class="field full"><label for="loginEmail">E-mail</label><input id="loginEmail" type="email" required autocomplete="email"></div>
-      <div class="field full"><label for="loginSenha">Senha</label><input id="loginSenha" type="password" required autocomplete="current-password"></div>
-      <button class="btn full" type="submit">Entrar</button>
-      <div id="loginMsg" class="full"></div>
-    </form>
-  </div>
-</dialog>
-
-<dialog id="cadastroDlg">
-  <div class="modal">
-    <div class="modal-head"><h2>Criar conta de paciente</h2><button class="close" type="button" onclick="cadastroDlg.close()">✕</button></div>
-    <form id="cadastroForm" class="form">
-      <div class="field full"><label>Nome completo</label><input name="nome" minlength="3" required></div>
-      <div class="field"><label>E-mail</label><input name="email" type="email" required></div>
-      <div class="field"><label>CPF</label><input name="cpf" inputmode="numeric" maxlength="14" required></div>
-      <div class="field"><label>Data de nascimento</label><input name="data" type="date" required></div>
-      <div class="field"><label>Sexo / gênero</label><input name="genero" required></div>
-      <div class="field"><label>Celular</label><input name="celular" inputmode="tel" required></div>
-      <div class="field"><label>Telefone secundário</label><input name="telefone" inputmode="tel"></div>
-      <div class="field"><label>Senha</label><input name="senha" type="password" minlength="6" required></div>
-      <button class="btn full" type="submit">Cadastrar</button>
-      <div id="cadastroMsg" class="full"></div>
-    </form>
-  </div>
-</dialog>
-
-<dialog id="agendarDlg">
-  <div class="modal">
-    <div class="modal-head"><h2>Agendar consulta</h2><button class="close" type="button" onclick="agendarDlg.close()">✕</button></div>
-    <form id="agendarForm" class="form">
-      <div class="field full"><label>Médico</label><select id="medicoSelect" required></select></div>
-      <div class="field"><label>Data</label><input id="agendaData" type="date" required></div>
-      <div class="field"><label>Horário</label>
-        <select id="agendaHora" required>
-          <option value="08:00">08:00</option><option value="09:00">09:00</option><option value="10:00">10:00</option>
-          <option value="11:00">11:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option>
-          <option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option>
-        </select>
-      </div>
-      <div class="field full"><label>Observação</label><textarea id="agendaObs"></textarea></div>
-      <button class="btn full" type="submit">Confirmar agendamento</button>
-      <div id="agendarMsg" class="full"></div>
-    </form>
-  </div>
-</dialog>
-
-<footer>
-  <div class="wrap footer-grid">
-    <div>
-      <strong>JURASSIHEALTH</strong>
-      <p class="muted" style="color:#b6d2cf">Projeto Integrado Multidisciplinar IV — solução web responsiva com foco em saúde, gestão e acessibilidade.</p>
-    </div>
-    <img src="/img/dr-rex.svg" alt="DR Rex" style="width:96px;height:96px;border-radius:20px;background:#fff;padding:8px">
-  </div>
-</footer>
-
-<script>
-const $ = (s) => document.querySelector(s);
-const sess = () => JSON.parse(localStorage.getItem('jurassi_sessao') || 'null');
-const token = () => sess()?.token || '';
-function openModal(id){ document.getElementById(id).showModal(); }
-function setMsg(el,text,ok=false){ el.innerHTML = `<div class="msg ${ok?'ok':'err'}">${text}</div>`; }
-function esc(s){ return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-
-async function api(url, opt={}){
-  opt.headers = { ...(opt.headers || {}), 'Content-Type':'application/json' };
-  if (token()) opt.headers.Authorization = 'Bearer ' + token();
-  const r = await fetch(url, opt);
-  let body = null;
-  try { body = await r.json(); } catch {}
-  if (!r.ok) throw new Error(body?.mensagem || `Erro ${r.status}`);
-  return body;
-}
-
-$('#loginForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  try {
-    const s = await api('/Sistema/Login', {
-      method:'POST',
-      body: JSON.stringify({ email: $('#loginEmail').value, senha: $('#loginSenha').value })
-    });
-    localStorage.setItem('jurassi_sessao', JSON.stringify(s));
-    loginDlg.close();
-    mostrarDashboard();
-  } catch (x) { setMsg($('#loginMsg'), x.message); }
-});
-
-$('#cadastroForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const f = new FormData(e.target);
-  const digits = (x) => String(x || '').replace(/\D/g,'');
-  try {
-    await api('/Sistema/CadastrarPaciente', {
-      method:'POST',
-      body: JSON.stringify({
-        nomeCompleto: f.get('nome'),
-        email: f.get('email'),
-        cpf: digits(f.get('cpf')),
-        dataNascimento: f.get('data'),
-        sexoGenero: f.get('genero'),
-        telefoneCelular: digits(f.get('celular')),
-        telefoneSecundario: digits(f.get('telefone')) || null,
-        senha: f.get('senha')
-      })
-    });
-    setMsg($('#cadastroMsg'), 'Cadastro realizado com sucesso.', true);
-    e.target.reset();
-  } catch (x) { setMsg($('#cadastroMsg'), x.message); }
-});
-
-async function carregarMedicos(){
-  const medicos = await api('/Sistema/ListarMedicos');
-  $('#medicoSelect').innerHTML = medicos.map(m => `<option value="${m.id}">${esc(m.nome)} — ${esc(m.especialidade?.nome || 'Especialidade')}</option>`).join('');
-}
-
-$('#agendarForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const s = sess();
-  try {
-    await api('/Sistema/Agendar', {
-      method:'POST',
-      body: JSON.stringify({
-        pacienteId: s.id,
-        medicoId: +$('#medicoSelect').value,
-        dataHora: $('#agendaData').value + 'T' + $('#agendaHora').value + ':00',
-        observacao: $('#agendaObs').value
-      })
-    });
-    setMsg($('#agendarMsg'), 'Consulta agendada com sucesso.', true);
-    carregarConsultas();
-  } catch (x) { setMsg($('#agendarMsg'), x.message); }
-});
-
-async function carregarConsultas(){
-  const s = sess();
-  const dados = await api('/Sistema/MinhasConsultas/' + s.id);
-  const rows = dados.map(x => `
-    <tr>
-      <td>${new Date(x.dataHora).toLocaleString('pt-BR')}</td>
-      <td>${esc(x.medico?.nome)}</td>
-      <td>${esc(x.medico?.especialidade?.nome)}</td>
-      <td>${esc(x.status)}</td>
-      <td>${x.status === 'Agendado' ? `<button class="btn danger" type="button" onclick="cancelar(${x.id})">Cancelar</button>` : ''}</td>
-    </tr>`).join('');
-  $('#consultas').innerHTML = `
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Data</th><th>Médico</th><th>Especialidade</th><th>Status</th><th>Ação</th></tr></thead>
-        <tbody>${rows || '<tr><td colspan="5">Nenhuma consulta encontrada.</td></tr>'}</tbody>
-      </table>
-    </div>`;
-}
-
-async function cancelar(id){
-  if (!confirm('Cancelar esta consulta?')) return;
-  try { await api('/Sistema/Cancelar/' + id, { method:'DELETE' }); carregarConsultas(); }
-  catch (x) { alert(x.message); }
-}
-
-function logout(){
-  localStorage.removeItem('jurassi_sessao');
-  location.reload();
-}
-
-async function mostrarDashboard(){
-  const s = sess();
-  if (!s) return;
-  $('#publico').classList.add('hidden');
-  $('#dashboard').classList.remove('hidden');
-  $('#bemVindo').textContent = 'Olá, ' + s.nome;
-  $('#perfil').textContent = 'Perfil: ' + s.tipo;
-
-  if (s.tipo === 'paciente') {
-    $('#painelPaciente').classList.remove('hidden');
-    carregarConsultas();
-  } else if (s.tipo === 'medico') {
-    $('#painelMedico').classList.remove('hidden');
-    const agenda = await api('/Sistema/AgendaMedico/' + s.id);
-    $('#agendaMedico').innerHTML = agenda.length
-      ? `<div class="list-cards">${agenda.map(a => `<div class="small-card"><strong>${new Date(a.dataHora).toLocaleString('pt-BR')}</strong><div class="muted">${esc(a.paciente?.nomeCompleto)}</div></div>`).join('')}</div>`
-      : '<div class="small-card">Nenhuma consulta agendada.</div>';
-  } else {
-    $('#painelGestao').classList.remove('hidden');
-    try {
-      const d = await api('/api/v1/dashboard/resumo');
-      $('#stats').innerHTML = Object.entries(d).map(([k,v]) => `<div class="stat"><b>${v}</b><span class="muted">${esc(k)}</span></div>`).join('');
-    } catch {
-      $('#stats').innerHTML = '<div class="small-card">Não foi possível carregar o resumo agora.</div>';
-    }
-  }
-}
-
-mostrarDashboard();
-</script>
+  </header>
+  <main id="publico">
+    <section class="hero" id="inicio"><div class="wrap hero-grid"><div><span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10Z"/></svg>Plataforma clínica moderna e responsiva</span><h1>Uma clínica digital mais bonita, acolhedora e pronta para funcionar bem no celular.</h1><p class="lead">A JURASSIHEALTH conecta pacientes, equipe médica, secretaria e administração em um único sistema web. Esta versão traz mais imagens, um mascote mais fofo e uma experiência visual ainda melhor no desktop e no mobile.</p><div class="actions"><button class="btn" type="button" onclick="openModal('loginDlg')">Acessar o sistema</button><button class="btn ghost" type="button" onclick="openModal('cadastroDlg')">Cadastrar paciente</button></div></div><div class="hero-visual"><div class="media-card hero-main"><img src="/img/hospital-fachada.png" alt="Fachada moderna da clínica"></div><div class="hero-stack"><div class="media-card"><img src="/img/agendamento-mobile.png" alt="Agendamento pelo celular"></div><div class="media-card mascot-panel"><img src="/img/dr-rex.png" alt="Mascote DR Rex mais fofo"><div class="mascot-copy"><h3>DR Rex</h3><p>Agora o mascote está mais fofo, simpático e memorável, ajudando a reforçar a identidade visual da clínica.</p></div></div></div></div></div></section>
+    <section id="servicos"><div class="wrap"><div class="section-head"><h2>Funcionalidades centrais do sistema</h2><p class="muted">Além do visual renovado, o site continua preparado para login, agendamento, gestão clínica e uso em dispositivos móveis.</p></div><div class="grid-3"><article class="feature"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div><h3>Agendamento inteligente</h3><p class="muted">Escolha médico, data e horário com verificação de disponibilidade e prevenção de dupla marcação.</p></article><article class="feature"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H7a2 2 0 0 0-2 2v16l5-3 5 3V8z"/><path d="M14 2l5 5h-5z"/></svg></div><h3>Documentos médicos</h3><p class="muted">Receitas, atestados e laudos ficam centralizados em um ambiente organizado e mais seguro.</p></article><article class="feature"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v18M3 12h18"/><rect x="5" y="5" width="14" height="14" rx="4"/></svg></div><h3>Gestão administrativa</h3><p class="muted">Perfis de acesso, indicadores principais e apoio à secretaria e administração da clínica.</p></article></div></div></section>
+    <section id="galeria"><div class="wrap"><div class="section-head"><h2>Galeria visual ampliada</h2><p class="muted">Foram adicionadas novas imagens para deixar a homepage mais rica, profissional e convincente.</p></div><div class="showcase-grid"><article class="showcase-card"><img src="/img/hospital-fachada.png" alt="Ambiente externo da clínica"><div class="content"><h3>Estrutura clínica</h3><p class="muted">Uma fachada moderna transmite organização, segurança e confiança ao paciente.</p></div></article><article class="showcase-card"><img src="/img/atendimento-medico.png" alt="Atendimento entre médico e paciente"><div class="content"><h3>Atendimento humanizado</h3><p class="muted">Consultas, acompanhamento e suporte médico em uma experiência mais acolhedora.</p></div></article><article class="showcase-card"><img src="/img/recepcao-clinica.png" alt="Recepção acolhedora da clínica"><div class="content"><h3>Recepção e apoio</h3><p class="muted">A recepção digital e presencial se integra para melhorar o fluxo do paciente.</p></div></article><article class="showcase-card"><img src="/img/sala-espera-premium.png" alt="Sala de espera moderna"><div class="content"><h3>Sala de espera premium</h3><p class="muted">Ambiente confortável, bonito e moderno para uma percepção de qualidade maior.</p></div></article><article class="showcase-card"><img src="/img/equipe-medica.png" alt="Equipe médica sorrindo"><div class="content"><h3>Equipe médica</h3><p class="muted">Imagem institucional ideal para reforçar credibilidade e proximidade com o paciente.</p></div></article><article class="showcase-card"><img src="/img/cuidado-idoso.png" alt="Profissional auxiliando paciente idosa"><div class="content"><h3>Cuidado e acolhimento</h3><p class="muted">Reforça empatia, atenção e cuidado com todos os perfis de pacientes.</p></div></article></div></div></section>
+    <section id="mobile"><div class="wrap mobile-highlight"><div class="image-box"><img src="/img/agendamento-mobile.png" alt="Agendamento de consulta pelo celular"></div><div class="info-card"><div class="section-head" style="margin-bottom:10px"><h2>Melhor para mobile</h2><p class="muted">A apresentação visual e o comportamento responsivo foram pensados para o professor poder acessar o sistema no celular sem parecer um site improvisado.</p></div><ul class="bullet-list"><li>Hero e imagens empilhados de forma mais agradável em telas pequenas;</li><li>Menu mobile simplificado e fácil de tocar;</li><li>Botões maiores e mais confortáveis ao toque;</li><li>Tabelas com versão em cartões no celular;</li><li>Modais mais ajustados para pouco espaço;</li><li>Ilustração de agendamento pelo celular para reforçar a proposta de aplicação web responsiva.</li></ul></div></div></section>
+  </main>
+  <section id="dashboard" class="dashboard hidden"><div class="wrap"><div class="dash-head"><div><span class="eyebrow">Área autenticada</span><h2 id="bemVindo">Olá</h2><p id="perfil" class="muted"></p></div><button class="btn danger" type="button" onclick="logout()">Sair</button></div><div id="painelPaciente" class="panel hidden"><div class="actions"><button class="btn" type="button" onclick="openModal('agendarDlg'); carregarMedicos()">Nova consulta</button><button class="btn alt" type="button" onclick="carregarConsultas()">Atualizar consultas</button></div><h3>Minhas consultas</h3><div id="consultas"></div></div><div id="painelMedico" class="panel hidden"><h3>Agenda médica</h3><div id="agendaMedico"></div></div><div id="painelGestao" class="panel hidden"><h3>Indicadores principais</h3><div id="stats" class="stats"></div><p class="muted">Resumo operacional para apoio à gestão e à apresentação acadêmica.</p></div></div></section>
+  <dialog id="loginDlg"><div class="modal"><div class="modal-head"><h2>Entrar</h2><button class="close" type="button" onclick="loginDlg.close()">✕</button></div><form id="loginForm" class="form"><div class="field full"><label for="loginEmail">E-mail</label><input id="loginEmail" type="email" required autocomplete="email"></div><div class="field full"><label for="loginSenha">Senha</label><input id="loginSenha" type="password" required autocomplete="current-password"></div><button class="btn full" type="submit">Entrar</button><div id="loginMsg" class="full"></div></form></div></dialog>
+  <dialog id="cadastroDlg"><div class="modal"><div class="modal-head"><h2>Criar conta de paciente</h2><button class="close" type="button" onclick="cadastroDlg.close()">✕</button></div><form id="cadastroForm" class="form"><div class="field full"><label>Nome completo</label><input name="nome" minlength="3" required></div><div class="field"><label>E-mail</label><input name="email" type="email" required></div><div class="field"><label>CPF</label><input name="cpf" inputmode="numeric" maxlength="14" required></div><div class="field"><label>Data de nascimento</label><input name="data" type="date" required></div><div class="field"><label>Sexo / gênero</label><input name="genero" required></div><div class="field"><label>Celular</label><input name="celular" inputmode="tel" required></div><div class="field"><label>Telefone secundário</label><input name="telefone" inputmode="tel"></div><div class="field"><label>Senha</label><input name="senha" type="password" minlength="6" required></div><button class="btn full" type="submit">Cadastrar</button><div id="cadastroMsg" class="full"></div></form></div></dialog>
+  <dialog id="agendarDlg"><div class="modal"><div class="modal-head"><h2>Agendar consulta</h2><button class="close" type="button" onclick="agendarDlg.close()">✕</button></div><form id="agendarForm" class="form"><div class="field full"><label>Médico</label><select id="medicoSelect" required></select></div><div class="field"><label>Data</label><input id="agendaData" type="date" required></div><div class="field"><label>Horário</label><select id="agendaHora" required><option value="08:00">08:00</option><option value="09:00">09:00</option><option value="10:00">10:00</option><option value="11:00">11:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option><option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option></select></div><div class="field full"><label>Observação</label><textarea id="agendaObs"></textarea></div><button class="btn full" type="submit">Confirmar agendamento</button><div id="agendarMsg" class="full"></div></form></div></dialog>
+  <footer><div class="wrap footer-grid"><div><strong>JURASSIHEALTH</strong><p class="muted" style="color:#b6d2cf">Projeto Integrado Multidisciplinar IV — solução web responsiva com foco em saúde, gestão e acessibilidade.</p></div><img class="footer-avatar" src="/img/dr-rex.png" alt="Mascote DR Rex"></div></footer>
+  <script>
+    const $ = (s) => document.querySelector(s);
+    const sess = () => JSON.parse(localStorage.getItem('jurassi_sessao') || 'null');
+    const token = () => sess()?.token || '';
+    function openModal(id){ document.getElementById(id).showModal(); }
+    function setMsg(el,text,ok=false){ el.innerHTML = `<div class="msg ${ok?'ok':'err'}">${text}</div>`; }
+    function esc(s){ return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+    async function api(url, opt={}){opt.headers={...(opt.headers||{}),'Content-Type':'application/json'};if(token())opt.headers.Authorization='Bearer '+token();const r=await fetch(url,opt);let body=null;try{body=await r.json();}catch{} if(!r.ok)throw new Error(body?.mensagem||`Erro ${r.status}`);return body;}
+    $('#loginForm').addEventListener('submit', async (e) => {e.preventDefault();try{const s=await api('/Sistema/Login',{method:'POST',body:JSON.stringify({email:$('#loginEmail').value,senha:$('#loginSenha').value})});localStorage.setItem('jurassi_sessao',JSON.stringify(s));loginDlg.close();mostrarDashboard();}catch(x){setMsg($('#loginMsg'),x.message);}});
+    $('#cadastroForm').addEventListener('submit', async (e) => {e.preventDefault();const f=new FormData(e.target);const digits=(x)=>String(x||'').replace(/\D/g,'');try{await api('/Sistema/CadastrarPaciente',{method:'POST',body:JSON.stringify({nomeCompleto:f.get('nome'),email:f.get('email'),cpf:digits(f.get('cpf')),dataNascimento:f.get('data'),sexoGenero:f.get('genero'),telefoneCelular:digits(f.get('celular')),telefoneSecundario:digits(f.get('telefone'))||null,senha:f.get('senha')})});setMsg($('#cadastroMsg'),'Cadastro realizado com sucesso.',true);e.target.reset();}catch(x){setMsg($('#cadastroMsg'),x.message);}});
+    async function carregarMedicos(){const medicos=await api('/Sistema/ListarMedicos');$('#medicoSelect').innerHTML=medicos.map(m=>`<option value="${m.id}">${esc(m.nome)} — ${esc(m.especialidade?.nome || 'Especialidade')}</option>`).join('');}
+    $('#agendarForm').addEventListener('submit', async (e) => {e.preventDefault();const s=sess();try{await api('/Sistema/Agendar',{method:'POST',body:JSON.stringify({pacienteId:s.id,medicoId:+$('#medicoSelect').value,dataHora:$('#agendaData').value+'T'+$('#agendaHora').value+':00',observacao:$('#agendaObs').value})});setMsg($('#agendarMsg'),'Consulta agendada com sucesso.',true);carregarConsultas();}catch(x){setMsg($('#agendarMsg'),x.message);}});
+    function renderConsultas(dados){const isMobile=window.innerWidth<=640;if(isMobile){const cards=dados.length?dados.map(x=>`<div class="consult-card"><strong>${new Date(x.dataHora).toLocaleString('pt-BR')}</strong><div><b>Médico:</b> ${esc(x.medico?.nome)}</div><div><b>Especialidade:</b> ${esc(x.medico?.especialidade?.nome)}</div><div><b>Status:</b> ${esc(x.status)}</div>${x.status==='Agendado'?`<div style="margin-top:10px"><button class="btn danger" type="button" onclick="cancelar(${x.id})">Cancelar</button></div>`:''}</div>`).join(''):'<div class="consult-card">Nenhuma consulta encontrada.</div>';$('#consultas').innerHTML=`<div class="mobile-cards">${cards}</div>`;} else {const rows=dados.map(x=>`<tr><td>${new Date(x.dataHora).toLocaleString('pt-BR')}</td><td>${esc(x.medico?.nome)}</td><td>${esc(x.medico?.especialidade?.nome)}</td><td>${esc(x.status)}</td><td>${x.status==='Agendado'?`<button class="btn danger" type="button" onclick="cancelar(${x.id})">Cancelar</button>`:''}</td></tr>`).join('');$('#consultas').innerHTML=`<div class="table-wrap desktop-table"><table><thead><tr><th>Data</th><th>Médico</th><th>Especialidade</th><th>Status</th><th>Ação</th></tr></thead><tbody>${rows || '<tr><td colspan="5">Nenhuma consulta encontrada.</td></tr>'}</tbody></table></div>`;}}
+    async function carregarConsultas(){const s=sess();const dados=await api('/Sistema/MinhasConsultas/' + s.id);renderConsultas(dados);} async function cancelar(id){if(!confirm('Cancelar esta consulta?'))return;try{await api('/Sistema/Cancelar/' + id,{method:'DELETE'});carregarConsultas();}catch(x){alert(x.message);}}
+    function logout(){localStorage.removeItem('jurassi_sessao');location.reload();}
+    async function mostrarDashboard(){const s=sess();if(!s)return;$('#publico').classList.add('hidden');$('#dashboard').classList.remove('hidden');$('#bemVindo').textContent='Olá, '+s.nome;$('#perfil').textContent='Perfil: '+s.tipo;if(s.tipo==='paciente'){$('#painelPaciente').classList.remove('hidden');carregarConsultas();}else if(s.tipo==='medico'){$('#painelMedico').classList.remove('hidden');const agenda=await api('/Sistema/AgendaMedico/' + s.id);$('#agendaMedico').innerHTML=agenda.length?`<div class="list-cards">${agenda.map(a=>`<div class="small-card"><strong>${new Date(a.dataHora).toLocaleString('pt-BR')}</strong><div class="muted">${esc(a.paciente?.nomeCompleto)}</div></div>`).join('')}</div>`:'<div class="small-card">Nenhuma consulta agendada.</div>';}else{$('#painelGestao').classList.remove('hidden');try{const d=await api('/api/v1/dashboard/resumo');$('#stats').innerHTML=Object.entries(d).map(([k,v])=>`<div class="stat"><b>${v}</b><span class="muted">${esc(k)}</span></div>`).join('');}catch{$('#stats').innerHTML='<div class="small-card">Não foi possível carregar o resumo agora.</div>';}}}
+    window.addEventListener('resize',()=>{if(sess()&&!$('#painelPaciente').classList.contains('hidden'))carregarConsultas();}); mostrarDashboard();
+  </script>
 </body>
 </html>
