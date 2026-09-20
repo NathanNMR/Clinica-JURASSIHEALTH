@@ -144,8 +144,11 @@ public class CadastrarPacienteReq
     [Required, EmailAddress, StringLength(150)] public string Email { get; set; } = string.Empty;
     [Required, RegularExpression(@"^\d{11}$", ErrorMessage = "CPF deve conter 11 dígitos.")] public string CPF { get; set; } = string.Empty;
     [Required] public DateTime DataNascimento { get; set; }
-    [Required, StringLength(40)] public string SexoGenero { get; set; } = string.Empty;
-    [Required, RegularExpression(@"^\d{10,11}$", ErrorMessage = "Celular inválido.")] public string TelefoneCelular { get; set; } = string.Empty;
+    [Required, StringLength(40)]
+    [RegularExpression(@"^(Masculino cisgênero|Feminino cisgênero|Masculino transgênero|Feminino transgênero|Outros|Prefiro não informar)$", ErrorMessage = "Opção de gênero inválida.")]
+    public string SexoGenero { get; set; } = string.Empty;
+    [Required, RegularExpression(@"^\d{11}$", ErrorMessage = "Celular deve conter exatamente 11 dígitos.")] public string TelefoneCelular { get; set; } = string.Empty;
+    [RegularExpression(@"^\d{10,11}$", ErrorMessage = "Telefone secundário deve conter 10 ou 11 dígitos.")]
     public string? TelefoneSecundario { get; set; }
     [Required, MinLength(6, ErrorMessage = "A senha deve possuir pelo menos 6 caracteres.")] public string Senha { get; set; } = string.Empty;
 }
@@ -154,7 +157,7 @@ public class CadastrarPacienteReq
 public class CadastrarMedicoReq
 {
     [Required, StringLength(100, MinimumLength = 3)] public string Nome { get; set; } = string.Empty;
-    [Required, RegularExpression(@"^\d{4,8}$")] public string CRM { get; set; } = string.Empty;
+    [Required, RegularExpression(@"^\d{4,8}$", ErrorMessage = "CRM deve conter de 4 a 8 dígitos.")] public string CRM { get; set; } = string.Empty;
     [Required, EmailAddress, StringLength(100)] public string Email { get; set; } = string.Empty;
     [Required, MinLength(6)] public string Senha { get; set; } = string.Empty;
     [Required] public int EspecialidadeId { get; set; }

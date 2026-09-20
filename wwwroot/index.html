@@ -177,6 +177,27 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
 .mascote-hero { animation: rexFloat 3.6s ease-in-out infinite; }
 .specialty-pill { background:#eef4f5; color:var(--tema-escuro); border:1px solid #d5e1e4; border-radius:999px; padding:8px 13px; font-weight:600; }
 @keyframes rexBounce { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-10px) rotate(1deg)} }
+
+.password-wrap { position: relative; }
+.password-wrap .form-control { padding-right: 52px; }
+.password-toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--tema);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.password-toggle:hover, .password-toggle:focus { background: rgba(83,129,142,.12); outline: none; }
+.numeric-hint { font-size: .78rem; color: #6c757d; margin-top: 4px; }
+
 @keyframes rexFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 @keyframes mascotBreath { 0%,100%{transform:scale(1)} 50%{transform:scale(1.055)} }
 @keyframes loaderSlide { 0%{transform:translateX(-110%)} 50%{transform:translateX(160%)} 100%{transform:translateX(300%)} }
@@ -276,9 +297,9 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
     <div class="glass-section mascote-card">
       <img src="/img/dr-rex.png" alt="Mascote DR Rex">
       <div>
-        <h3 class="text-tema">DR Rex</h3>
-        <p class="mb-2">O mascote continua fazendo parte da identidade da JurassiHealth, agora com uma aparência mais fofa e acolhedora, sem abandonar a proposta jurássica do projeto anterior.</p>
-        <p class="mb-0">A evolução visual foi feita para parecer uma continuação natural da mesma clínica, e não um site totalmente diferente.</p>
+        <h3 class="text-tema">Prazer, eu sou o DR Rex!</h3>
+        <p class="mb-2">Olá! Eu sou o <strong>DR Rex, médico-chefe da Clínica JurassiHealth</strong>. Minha missão é cuidar para que cada paciente seja atendido com atenção, respeito e a força de um verdadeiro gigante.</p>
+        <p class="mb-0">Junto com nossa equipe, acompanho a evolução da clínica e ajudo a unir atendimento humanizado, organização e tecnologia para tornar sua experiência cada vez melhor.</p>
       </div>
     </div>
 
@@ -308,8 +329,8 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
         <h3 class="text-tema mt-2">Login</h3>
         <p class="text-muted">Acesse a área restrita da clínica.</p>
       </div>
-      <div class="mb-3"><label class="label-bold">E-mail</label><input id="loginEmail" type="email" class="form-control" autocomplete="email"></div>
-      <div class="mb-3"><label class="label-bold">Senha</label><input id="loginSenha" type="password" class="form-control" autocomplete="current-password"></div>
+      <div class="mb-3"><label class="label-bold">E-mail</label><input id="loginEmail" type="email" class="form-control" autocomplete="off"></div>
+      <div class="mb-3"><label class="label-bold">Senha</label><div class="password-wrap"><input id="loginSenha" type="password" class="form-control" autocomplete="off"><button type="button" class="password-toggle" aria-label="Mostrar senha" title="Mostrar senha" onclick="toggleSenha('loginSenha', this)"><i class="bi bi-eye"></i></button></div></div>
       <button onclick="fazerLogin()" class="btn-jurassico w-100">ENTRAR</button>
       <div id="loginMsg"></div>
     </div>
@@ -326,12 +347,12 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
       <div class="row g-3">
         <div class="col-md-6"><label class="label-bold">Nome completo</label><input id="cadNome" class="form-control"></div>
         <div class="col-md-6"><label class="label-bold">E-mail</label><input id="cadEmail" type="email" class="form-control"></div>
-        <div class="col-md-4"><label class="label-bold">CPF</label><input id="cadCpf" class="form-control" maxlength="14"></div>
+        <div class="col-md-4"><label class="label-bold">CPF</label><input id="cadCpf" class="form-control" inputmode="numeric" maxlength="11" minlength="11" pattern="\d{11}" placeholder="11 dígitos" oninput="somenteDigitos(this,11)"><div class="numeric-hint">Exatamente 11 dígitos.</div></div>
         <div class="col-md-4"><label class="label-bold">Data de nascimento</label><input id="cadData" type="date" class="form-control"></div>
-        <div class="col-md-4"><label class="label-bold">Sexo / gênero</label><input id="cadGenero" class="form-control"></div>
-        <div class="col-md-6"><label class="label-bold">Celular</label><input id="cadCelular" class="form-control"></div>
-        <div class="col-md-6"><label class="label-bold">Telefone secundário</label><input id="cadTelefone" class="form-control"></div>
-        <div class="col-md-6"><label class="label-bold">Senha</label><input id="cadSenha" type="password" class="form-control"></div>
+        <div class="col-md-4"><label class="label-bold">Gênero</label><select id="cadGenero" class="form-select"><option value="">Selecione</option><option value="Masculino cisgênero">Masculino cisgênero</option><option value="Feminino cisgênero">Feminino cisgênero</option><option value="Masculino transgênero">Masculino transgênero</option><option value="Feminino transgênero">Feminino transgênero</option><option value="Outros">Outros</option><option value="Prefiro não informar">Prefiro não informar</option></select></div>
+        <div class="col-md-6"><label class="label-bold">Celular</label><input id="cadCelular" class="form-control" inputmode="numeric" maxlength="11" minlength="11" pattern="\d{11}" placeholder="DDD + número (11 dígitos)" oninput="somenteDigitos(this,11)"><div class="numeric-hint">Exatamente 11 dígitos.</div></div>
+        <div class="col-md-6"><label class="label-bold">Telefone secundário</label><input id="cadTelefone" class="form-control" inputmode="numeric" maxlength="11" minlength="10" pattern="\d{10,11}" placeholder="10 ou 11 dígitos" oninput="somenteDigitos(this,11)"><div class="numeric-hint">Opcional: 10 ou 11 dígitos.</div></div>
+        <div class="col-md-6"><label class="label-bold">Senha</label><div class="password-wrap"><input id="cadSenha" type="password" class="form-control" autocomplete="new-password"><button type="button" class="password-toggle" aria-label="Mostrar senha" title="Mostrar senha" onclick="toggleSenha('cadSenha', this)"><i class="bi bi-eye"></i></button></div></div>
         <div class="col-md-6 d-flex align-items-end"><button onclick="fazerCadastro()" class="btn-jurassico w-100">CADASTRAR</button></div>
       </div>
       <div id="cadastroMsg"></div>
@@ -375,7 +396,7 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
       <h3 class="text-tema">Painel da Secretaria</h3>
       <p id="tituloSecretaria" class="text-muted"></p>
       <div class="row g-3 align-items-end">
-        <div class="col-md-8"><label class="label-bold">Buscar paciente por CPF</label><input id="secCpf" class="form-control" maxlength="14"></div>
+        <div class="col-md-8"><label class="label-bold">Buscar paciente por CPF</label><input id="secCpf" class="form-control" inputmode="numeric" maxlength="11" minlength="11" pattern="\d{11}" placeholder="11 dígitos" oninput="somenteDigitos(this,11)"></div>
         <div class="col-md-4"><button onclick="buscarPacienteSecretaria()" class="btn-jurassico w-100"><i class="bi bi-search me-2"></i>LOCALIZAR</button></div>
       </div>
       <div id="secPacienteBox" class="mt-4"></div>
@@ -429,10 +450,10 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
             <h5 class="text-tema">Cadastrar Médico</h5>
             <div class="row g-2">
               <div class="col-12"><input id="admMedNome" class="form-control" placeholder="Nome"></div>
-              <div class="col-md-6"><input id="admMedCrm" class="form-control" placeholder="CRM"></div>
+              <div class="col-md-6"><input id="admMedCrm" class="form-control" placeholder="CRM (4 a 8 dígitos)" inputmode="numeric" minlength="4" maxlength="8" pattern="\d{4,8}" oninput="somenteDigitos(this,8)"></div>
               <div class="col-md-6"><select id="admMedEsp" class="form-select"></select></div>
               <div class="col-12"><input id="admMedEmail" type="email" class="form-control" placeholder="E-mail"></div>
-              <div class="col-12"><input id="admMedSenha" type="password" class="form-control" placeholder="Senha"></div>
+              <div class="col-12"><div class="password-wrap"><input id="admMedSenha" type="password" class="form-control" placeholder="Senha" autocomplete="new-password"><button type="button" class="password-toggle" aria-label="Mostrar senha" title="Mostrar senha" onclick="toggleSenha('admMedSenha', this)"><i class="bi bi-eye"></i></button></div></div>
               <div class="col-12"><button onclick="cadastrarMedicoAdm()" class="btn-jurassico w-100">SALVAR MÉDICO</button></div>
             </div>
             <div id="admMedMsg"></div>
@@ -444,7 +465,7 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
             <div class="row g-2">
               <div class="col-12"><input id="admSecNome" class="form-control" placeholder="Nome"></div>
               <div class="col-12"><input id="admSecEmail" type="email" class="form-control" placeholder="E-mail"></div>
-              <div class="col-12"><input id="admSecSenha" type="password" class="form-control" placeholder="Senha"></div>
+              <div class="col-12"><div class="password-wrap"><input id="admSecSenha" type="password" class="form-control" placeholder="Senha" autocomplete="new-password"><button type="button" class="password-toggle" aria-label="Mostrar senha" title="Mostrar senha" onclick="toggleSenha('admSecSenha', this)"><i class="bi bi-eye"></i></button></div></div>
               <div class="col-12"><button onclick="cadastrarSecretariaAdm()" class="btn-jurassico w-100">SALVAR SECRETARIA</button></div>
             </div>
             <div id="admSecMsg"></div>
@@ -492,6 +513,38 @@ const digits = x => String(x || '').replace(/\D/g, '');
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const formatarDataHora = v => new Date(v).toLocaleString('pt-BR');
 
+const GENEROS_VALIDOS = ['Masculino cisgênero','Feminino cisgênero','Masculino transgênero','Feminino transgênero','Outros','Prefiro não informar'];
+
+function somenteDigitos(input, max){
+  input.value = digits(input.value).slice(0, max);
+}
+function toggleSenha(inputId, botao){
+  const input=$(inputId); if(!input) return;
+  const mostrando=input.type==='text';
+  input.type=mostrando?'password':'text';
+  const icon=botao?.querySelector('i');
+  if(icon){ icon.className=mostrando?'bi bi-eye':'bi bi-eye-slash'; }
+  if(botao){
+    botao.setAttribute('aria-label', mostrando?'Mostrar senha':'Ocultar senha');
+    botao.setAttribute('title', mostrando?'Mostrar senha':'Ocultar senha');
+  }
+  input.focus();
+}
+function resetarCampoSenha(id){
+  const input=$(id); if(!input) return;
+  input.value=''; input.type='password';
+  const botao=input.closest('.password-wrap')?.querySelector('.password-toggle');
+  const icon=botao?.querySelector('i');
+  if(icon) icon.className='bi bi-eye';
+  if(botao){ botao.setAttribute('aria-label','Mostrar senha'); botao.setAttribute('title','Mostrar senha'); }
+}
+function limparFormularioLogin(){
+  if($('loginEmail')) $('loginEmail').value='';
+  resetarCampoSenha('loginSenha');
+  if($('loginMsg')) $('loginMsg').innerHTML='';
+}
+
+
 function mostrarLoading(texto='Preparando seu atendimento...'){
   loadingCount++;
   if ($('loadingText')) $('loadingText').textContent = texto;
@@ -503,6 +556,8 @@ function esconderLoading(force=false){
 }
 function msg(el,texto,ok=false){ if(el) el.innerHTML=`<div class="alert ${ok?'alert-success':'alert-danger'} mt-3 mb-0">${escapeHtml(texto)}</div>`; }
 function mudar(id){
+  const atual=document.querySelector('.tela.ativa')?.id || '';
+  if((atual==='login' && id!=='login') || (id==='login' && atual!=='login')) limparFormularioLogin();
   document.querySelectorAll('.tela').forEach(t=>t.classList.remove('ativa'));
   const alvo=$(id); if(!alvo) return;
   alvo.classList.remove('ativa'); void alvo.offsetWidth; alvo.classList.add('ativa');
@@ -551,7 +606,7 @@ async function verificarSessao(){
     catch{localStorage.removeItem('jurassi_sessao');sessao=null;atualizarNavbar(false);mudar('home');}
   } else {atualizarNavbar(false);mudar('home');}
 }
-function sair(){ localStorage.removeItem('jurassi_sessao'); sessao=null; pacienteSecretaria=null; atualizarNavbar(false); mudar('home'); }
+function sair(){ localStorage.removeItem('jurassi_sessao'); sessao=null; pacienteSecretaria=null; limparFormularioLogin(); atualizarNavbar(false); mudar('home'); }
 
 async function fazerLogin(){
   $('loginMsg').innerHTML='';
@@ -570,12 +625,13 @@ async function fazerCadastro(){
     return;
   }
   if(digits($('cadCpf').value).length!==11){ msg($('cadastroMsg'),'O CPF deve conter 11 dígitos.'); return; }
-  if(!/^\d{10,11}$/.test(digits($('cadCelular').value))){ msg($('cadastroMsg'),'Informe um celular válido com 10 ou 11 dígitos.'); return; }
+  if(digits($('cadCelular').value).length!==11){ msg($('cadastroMsg'),'O celular deve conter exatamente 11 dígitos (DDD + número).'); return; }
+  const telSec=digits($('cadTelefone').value); if(telSec && !/^\d{10,11}$/.test(telSec)){ msg($('cadastroMsg'),'O telefone secundário deve conter 10 ou 11 dígitos.'); return; }
+  if(!GENEROS_VALIDOS.includes($('cadGenero').value)){ msg($('cadastroMsg'),'Selecione uma opção de gênero válida.'); return; }
   if($('cadSenha').value.length<6){ msg($('cadastroMsg'),'A senha deve possuir pelo menos 6 caracteres.'); return; }
   try{
     const d=await api(`${BASE}/CadastrarPaciente`,{method:'POST',loaderText:'Criando seu cadastro...',body:JSON.stringify({nomeCompleto:$('cadNome').value,email:$('cadEmail').value,cpf:digits($('cadCpf').value),dataNascimento:$('cadData').value,sexoGenero:$('cadGenero').value,telefoneCelular:digits($('cadCelular').value),telefoneSecundario:digits($('cadTelefone').value)||null,senha:$('cadSenha').value})});
     msg($('cadastroMsg'),d.mensagem,true);
-    $('loginEmail').value=d.email||$('cadEmail').value;
     setTimeout(()=>mudar('login'),900);
   }catch(e){msg($('cadastroMsg'),e.message)}
 }
@@ -626,8 +682,8 @@ async function cadastrarEspecialidadeAdm(){
     msg($('admEspMsg'),d.mensagem,true); $('admEspNome').value=''; await carregarEspecialidadesAdm();
   }catch(e){msg($('admEspMsg'),e.message)}
 }
-async function cadastrarMedicoAdm(){ try{await api(`${BASE}/CadastrarMedico`,{method:'POST',loaderText:'Cadastrando médico...',body:JSON.stringify({nome:$('admMedNome').value,crm:$('admMedCrm').value,email:$('admMedEmail').value,senha:$('admMedSenha').value,especialidadeId:Number($('admMedEsp').value)})});msg($('admMedMsg'),'Médico cadastrado.',true);await carregarResumoAdm()}catch(e){msg($('admMedMsg'),e.message)} }
-async function cadastrarSecretariaAdm(){ try{await api(`${BASE}/CadastrarSecretario`,{method:'POST',loaderText:'Cadastrando secretaria...',body:JSON.stringify({nome:$('admSecNome').value,email:$('admSecEmail').value,senha:$('admSecSenha').value})});msg($('admSecMsg'),'Secretaria cadastrada.',true)}catch(e){msg($('admSecMsg'),e.message)} }
+async function cadastrarMedicoAdm(){ const crm=digits($('admMedCrm').value); if(!/^\d{4,8}$/.test(crm)){msg($('admMedMsg'),'O CRM deve conter de 4 a 8 dígitos.');return;} try{await api(`${BASE}/CadastrarMedico`,{method:'POST',loaderText:'Cadastrando médico...',body:JSON.stringify({nome:$('admMedNome').value,crm,email:$('admMedEmail').value,senha:$('admMedSenha').value,especialidadeId:Number($('admMedEsp').value)})});msg($('admMedMsg'),'Médico cadastrado.',true);$('admMedNome').value='';$('admMedCrm').value='';$('admMedEmail').value='';resetarCampoSenha('admMedSenha');await carregarResumoAdm()}catch(e){msg($('admMedMsg'),e.message)} }
+async function cadastrarSecretariaAdm(){ try{await api(`${BASE}/CadastrarSecretario`,{method:'POST',loaderText:'Cadastrando secretaria...',body:JSON.stringify({nome:$('admSecNome').value,email:$('admSecEmail').value,senha:$('admSecSenha').value})});msg($('admSecMsg'),'Secretaria cadastrada.',true);$('admSecNome').value='';$('admSecEmail').value='';resetarCampoSenha('admSecSenha')}catch(e){msg($('admSecMsg'),e.message)} }
 </script>
 </body>
 </html>

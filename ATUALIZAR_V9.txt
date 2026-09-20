@@ -1,0 +1,13 @@
+JURASSIHEALTH v9
+
+Alterações desta versão:
+- botões para mostrar/ocultar todas as senhas digitadas;
+- CPF limitado a exatamente 11 dígitos;
+- celular limitado a exatamente 11 dígitos;
+- telefone secundário opcional limitado a 10 ou 11 dígitos;
+- CRM somente numérico, de 4 a 8 dígitos (a quantidade varia entre registros/UFs);
+- gênero alterado para lista de opções predefinidas;
+- campos de login são apagados ao sair da tela e ao encerrar sessão;
+- texto do DR Rex reescrito em primeira pessoa como médico-chefe da clínica.
+
+Não há alteração de banco obrigatória para esta versão.

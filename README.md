@@ -111,3 +111,12 @@ Antes de publicar esta versão em um banco já existente, execute `database/migr
 ## Atualização v8 — verificação de e-mail removida
 
 A confirmação de e-mail por código e a dependência SMTP foram removidas para manter o projeto compatível com o Render Free. O cadastro do paciente é concluído imediatamente e o usuário pode entrar logo após o cadastro. Permanecem ativos o limite persistente de tentativas de login, as animações, a tela de carregamento personalizada e o gerenciamento de especialidades pelo administrador.
+
+
+## Melhorias de formulários e UX (v9)
+
+- mostrar/ocultar senha em login e cadastros;
+- limites e sanitização numérica para CPF, celular, telefone e CRM;
+- gênero por opções selecionáveis;
+- limpeza automática dos campos de login;
+- nova apresentação do DR Rex como médico-chefe da clínica.
