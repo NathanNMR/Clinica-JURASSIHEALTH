@@ -93,3 +93,16 @@ Atualização com foco em apresentação visual:
 ## Revisão visual de continuidade — v6
 
 A interface foi revisada usando o PIM III como referência direta, preservando a identidade anterior: paleta original, fundo padronizado, navbar jurássica, carrossel, glass sections, botões pill e organização Bootstrap. O DR Rex foi redesenhado em versão mais fofa e integrado sem descaracterizar o sistema. Também foram restauradas interfaces distintas para paciente, secretaria, médico e administrador, com melhorias de responsividade.
+
+
+## Atualização v7 — segurança, e-mail e experiência
+
+- tela de carregamento personalizada com o DR Rex;
+- animações de entrada, hover e scroll;
+- cadastro de paciente com verificação de e-mail por código de 6 dígitos;
+- código válido por 15 minutos, até 5 tentativas e reenvio com intervalo;
+- bloqueio de login persistente no MySQL após tentativas inválidas;
+- administrador pode cadastrar novas especialidades médicas pelo painel;
+- DTOs de entrada separados das entidades para evitar exposição de hashes sem quebrar os cadastros.
+
+Antes de publicar esta versão em um banco já existente, execute `database/migration-v7-email-login-especialidades.sql` e configure as variáveis SMTP descritas em `docs/VERIFICACAO_EMAIL.md`.

@@ -14,6 +14,7 @@ public class ClinicaContext : DbContext
     public DbSet<Especialidade> Especialidades => Set<Especialidade>();
     public DbSet<DocumentoMedico> DocumentosMedicos => Set<DocumentoMedico>();
     public DbSet<Auditoria> Auditoria => Set<Auditoria>();
+    public DbSet<LoginTentativa> LoginTentativas => Set<LoginTentativa>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -24,5 +25,6 @@ public class ClinicaContext : DbContext
         modelBuilder.Entity<Medico>().HasIndex(m => m.CRM).IsUnique();
         modelBuilder.Entity<Secretario>().HasIndex(s => s.Email).IsUnique();
         modelBuilder.Entity<Especialidade>().HasIndex(e => e.Nome).IsUnique();
+        modelBuilder.Entity<LoginTentativa>().HasIndex(e => e.Email).IsUnique();
     }
 }

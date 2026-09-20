@@ -15,7 +15,9 @@ builder.Services.AddDbContext<ClinicaContext>(options =>
 
 builder.Services.AddSingleton<TokenService>();
 builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<LoginAttemptService>();
+builder.Services.AddScoped<LoginAttemptService>();
+builder.Services.AddSingleton<VerificationCodeService>();
+builder.Services.AddTransient<IEmailService, SmtpEmailService>();
 
 var origens = builder.Configuration.GetSection("Cors:OrigensPermitidas").Get<string[]>()
               ?? Array.Empty<string>();

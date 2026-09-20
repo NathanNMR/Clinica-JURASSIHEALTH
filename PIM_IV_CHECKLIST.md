@@ -20,3 +20,7 @@
 - [ ] Gerar diagrama MER visual
 - [ ] Inserir screenshots desktop/mobile no relatório
 - [ ] Realizar deploy final no Render
+- [x] Verificação de e-mail por código
+- [x] Bloqueio persistente de tentativas de login
+- [x] Cadastro administrativo de novas especialidades
+- [x] Tela de carregamento personalizada e animações

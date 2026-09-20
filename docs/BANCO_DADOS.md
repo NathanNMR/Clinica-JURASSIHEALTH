@@ -17,3 +17,15 @@ Relacionamentos principais:
 - Paciente 1:N Agendamento;
 - Médico 1:N Agendamento;
 - Agendamento 0:N Documento Médico.
+
+## Evolução v7
+
+A versão v7 adiciona:
+
+- `pacientes.email_verificado`;
+- hash e expiração do código de verificação;
+- contador de tentativas de verificação;
+- data do último envio de código;
+- tabela `login_tentativas` para bloqueio persistente de autenticação.
+
+Para bancos criados antes desta versão, use `database/migration-v7-email-login-especialidades.sql`.

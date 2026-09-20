@@ -149,9 +149,56 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
   .btn-jurassico, .mobile-full { width: 100%; }
   .navbar-brand span { font-size: .96rem; }
 }
+
+/* v7 - animações e tela de carregamento */
+#loadingScreen {
+  position: fixed; inset: 0; z-index: 99999;
+  background: linear-gradient(145deg, #3d616b, #53818e 55%, #6c9ba8);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+#loadingScreen.oculto { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-card {
+  width: min(92vw, 410px); padding: 30px; text-align: center; color: white;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(14px); border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,.28);
+}
+.loader-dino { width: 150px; height: 150px; object-fit: contain; margin: 0 auto 12px; animation: rexBounce 1.35s ease-in-out infinite; filter: drop-shadow(0 12px 18px rgba(0,0,0,.25)); }
+.loader-track { height: 8px; background: rgba(255,255,255,.2); overflow: hidden; border-radius: 999px; margin-top: 18px; }
+.loader-bar { width: 38%; height: 100%; background: linear-gradient(90deg, #F39C12, #ffe29a); border-radius: inherit; animation: loaderSlide 1.25s ease-in-out infinite; }
+.loader-dots span { display:inline-block; width:7px; height:7px; margin:0 3px; border-radius:50%; background:#fff; animation: dotPulse 1.2s infinite; }
+.loader-dots span:nth-child(2){animation-delay:.15s}.loader-dots span:nth-child(3){animation-delay:.3s}
+.tela.ativa { animation: pageFade .48s ease both; }
+.glass-section, .form-card, .specialty-card, .media-strip img, .stat-card, .admin-subcard { transition: transform .25s ease, box-shadow .25s ease, opacity .5s ease; }
+.glass-section:hover, .specialty-card:hover, .admin-subcard:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.18); }
+.reveal-on-scroll { opacity: 0; transform: translateY(22px); }
+.reveal-on-scroll.revealed { opacity: 1; transform: translateY(0); }
+.navbar-brand img { animation: mascotBreath 3.2s ease-in-out infinite; }
+.mascote-hero { animation: rexFloat 3.6s ease-in-out infinite; }
+.verification-code { font-size: 1.65rem; text-align: center; letter-spacing: .55rem; font-weight: 800; }
+.specialty-pill { background:#eef4f5; color:var(--tema-escuro); border:1px solid #d5e1e4; border-radius:999px; padding:8px 13px; font-weight:600; }
+@keyframes rexBounce { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-10px) rotate(1deg)} }
+@keyframes rexFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes mascotBreath { 0%,100%{transform:scale(1)} 50%{transform:scale(1.055)} }
+@keyframes loaderSlide { 0%{transform:translateX(-110%)} 50%{transform:translateX(160%)} 100%{transform:translateX(300%)} }
+@keyframes dotPulse { 0%,100%{opacity:.35;transform:translateY(0)} 50%{opacity:1;transform:translateY(-4px)} }
+@keyframes pageFade { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
 </style>
 </head>
-<body onload="verificarSessao()">
+<body onload="inicializar()">
+<div id="loadingScreen" aria-live="polite" aria-label="Carregando JurassiHealth">
+  <div class="loader-card">
+    <img class="loader-dino" src="/img/dr-rex.png" alt="DR Rex preparando o sistema">
+    <h4 class="fw-bold mb-1">DR Rex está preparando seu atendimento</h4>
+    <p id="loadingText" class="mb-2 opacity-75">Organizando a clínica digital...</p>
+    <div class="loader-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="loader-track"><div class="loader-bar"></div></div>
+  </div>
+</div>
 <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
@@ -293,6 +340,22 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
   </div>
 </div>
 
+
+<div id="verificacao" class="tela py-5">
+  <div class="container" style="max-width:560px">
+    <div class="form-card text-center">
+      <img src="/img/dr-rex.png" alt="DR Rex" style="width:130px;height:130px;object-fit:contain" class="mb-2">
+      <h3 class="text-tema">Verifique seu e-mail</h3>
+      <p class="text-muted">Enviamos um código de 6 dígitos para <strong id="verificacaoEmailTexto"></strong>. O código é válido por 15 minutos.</p>
+      <label class="label-bold text-start">Código de verificação</label>
+      <input id="verificacaoCodigo" inputmode="numeric" maxlength="6" class="form-control verification-code mb-3" placeholder="000000">
+      <button onclick="verificarEmail()" class="btn-jurassico w-100 mb-2">CONFIRMAR E-MAIL</button>
+      <button onclick="reenviarCodigo()" class="btn btn-outline-secondary rounded-pill w-100">Reenviar código</button>
+      <div id="verificacaoMsg"></div>
+    </div>
+  </div>
+</div>
+
 <div id="painel_paciente" class="tela py-5">
   <div class="container">
     <div class="glass-section">
@@ -403,6 +466,24 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
             <div id="admSecMsg"></div>
           </div>
         </div>
+        <div class="col-12">
+          <div class="p-4 bg-white shadow-sm admin-subcard">
+            <div class="row g-3 align-items-end">
+              <div class="col-lg-7">
+                <h5 class="text-tema mb-2">Especialidades Médicas</h5>
+                <label class="label-bold">Nova especialidade</label>
+                <input id="admEspNome" class="form-control" maxlength="100" placeholder="Ex.: Dermatologia">
+              </div>
+              <div class="col-lg-5">
+                <button onclick="cadastrarEspecialidadeAdm()" class="btn-jurassico w-100"><i class="bi bi-plus-circle me-2"></i>ADICIONAR ESPECIALIDADE</button>
+              </div>
+              <div class="col-12">
+                <div id="admEspLista" class="d-flex flex-wrap gap-2"></div>
+                <div id="admEspMsg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -421,42 +502,164 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
 const BASE = '/Sistema';
 let sessao = null;
 let pacienteSecretaria = null;
+let emailVerificacaoAtual = '';
+let loadingCount = 1;
 const $ = id => document.getElementById(id);
 const digits = x => String(x || '').replace(/\D/g, '');
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const formatarDataHora = v => new Date(v).toLocaleString('pt-BR');
 
+function mostrarLoading(texto='Preparando seu atendimento...'){
+  loadingCount++;
+  if ($('loadingText')) $('loadingText').textContent = texto;
+  $('loadingScreen')?.classList.remove('oculto');
+}
+function esconderLoading(force=false){
+  loadingCount = force ? 0 : Math.max(0, loadingCount - 1);
+  if (loadingCount === 0) $('loadingScreen')?.classList.add('oculto');
+}
 function msg(el,texto,ok=false){ if(el) el.innerHTML=`<div class="alert ${ok?'alert-success':'alert-danger'} mt-3 mb-0">${escapeHtml(texto)}</div>`; }
-function mudar(id){ document.querySelectorAll('.tela').forEach(t=>t.classList.remove('ativa')); $(id)?.classList.add('ativa'); window.scrollTo({top:0,behavior:'smooth'}); }
+function mudar(id){
+  document.querySelectorAll('.tela').forEach(t=>t.classList.remove('ativa'));
+  const alvo=$(id); if(!alvo) return;
+  alvo.classList.remove('ativa'); void alvo.offsetWidth; alvo.classList.add('ativa');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 function atualizarNavbar(logado){ $('navAuth').innerHTML=logado?`<div class="d-flex gap-2"><button onclick="carregarTelaPorTipo()" class="btn btn-light rounded-pill px-4 fw-bold">Painel</button><button onclick="sair()" class="btn btn-danger rounded-pill px-4 fw-bold">Sair</button></div>`:`<button onclick="mudar('login')" class="btn btn-warning rounded-pill px-4 fw-bold shadow-sm">Login</button>`; }
-async function api(url,opt={}){ opt.headers={...(opt.headers||{}),'Content-Type':'application/json'}; if(sessao?.token) opt.headers.Authorization='Bearer '+sessao.token; const r=await fetch(url,opt); let b=null; try{b=await r.json()}catch{} if(!r.ok) throw new Error(b?.mensagem||b?.title||`Erro ${r.status}`); return b; }
-function verificarSessao(){ const s=localStorage.getItem('jurassi_sessao'); if(s){ try{sessao=JSON.parse(s);atualizarNavbar(true);carregarTelaPorTipo()}catch{localStorage.removeItem('jurassi_sessao');mudar('home')} } else {atualizarNavbar(false);mudar('home')} }
+
+async function api(url,opt={}){
+  const loaderText = opt.loaderText || 'DR Rex está processando sua solicitação...';
+  delete opt.loaderText;
+  mostrarLoading(loaderText);
+  try{
+    opt.headers={...(opt.headers||{}),'Content-Type':'application/json'};
+    if(sessao?.token) opt.headers.Authorization='Bearer '+sessao.token;
+    const r=await fetch(url,opt);
+    let b=null; try{b=await r.json()}catch{}
+    if(!r.ok){ const e=new Error(b?.mensagem||b?.title||`Erro ${r.status}`); e.status=r.status; e.data=b; throw e; }
+    return b;
+  } finally { esconderLoading(); }
+}
+
+function configurarAnimacoes(){
+  const elementos=document.querySelectorAll('.glass-section,.form-card,.specialty-card,.media-strip img,.admin-subcard');
+  elementos.forEach(el=>el.classList.add('reveal-on-scroll'));
+  if(!('IntersectionObserver' in window)){ elementos.forEach(el=>el.classList.add('revealed')); return; }
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target)}}),{threshold:.12});
+  elementos.forEach(el=>obs.observe(el));
+}
+
+async function inicializar(){
+  try{
+    configurarAnimacoes();
+    await verificarSessao();
+    await new Promise(r=>setTimeout(r,650));
+  } finally { esconderLoading(true); }
+}
+
+async function verificarSessao(){
+  const s=localStorage.getItem('jurassi_sessao');
+  if(s){
+    try{sessao=JSON.parse(s);atualizarNavbar(true);await carregarTelaPorTipo();}
+    catch{localStorage.removeItem('jurassi_sessao');sessao=null;atualizarNavbar(false);mudar('home');}
+  } else {atualizarNavbar(false);mudar('home');}
+}
 function sair(){ localStorage.removeItem('jurassi_sessao'); sessao=null; pacienteSecretaria=null; atualizarNavbar(false); mudar('home'); }
 
-async function fazerLogin(){ $('loginMsg').innerHTML=''; try{ const d=await api(`${BASE}/Login`,{method:'POST',body:JSON.stringify({email:$('loginEmail').value,senha:$('loginSenha').value})}); sessao=d; localStorage.setItem('jurassi_sessao',JSON.stringify(d)); atualizarNavbar(true); carregarTelaPorTipo(); }catch(e){msg($('loginMsg'),e.message)} }
-async function fazerCadastro(){ $('cadastroMsg').innerHTML=''; try{ await api(`${BASE}/CadastrarPaciente`,{method:'POST',body:JSON.stringify({nomeCompleto:$('cadNome').value,email:$('cadEmail').value,cpf:digits($('cadCpf').value),dataNascimento:$('cadData').value,sexoGenero:$('cadGenero').value,telefoneCelular:digits($('cadCelular').value),telefoneSecundario:digits($('cadTelefone').value)||null,senha:$('cadSenha').value})}); msg($('cadastroMsg'),'Cadastro realizado com sucesso! Agora faça login.',true); }catch(e){msg($('cadastroMsg'),e.message)} }
+function abrirVerificacao(email, mensagem=''){
+  emailVerificacaoAtual=email;
+  $('verificacaoEmailTexto').textContent=email;
+  $('verificacaoCodigo').value='';
+  $('verificacaoMsg').innerHTML=mensagem?`<div class="alert alert-info mt-3">${escapeHtml(mensagem)}</div>`:'';
+  mudar('verificacao');
+  setTimeout(()=>$('verificacaoCodigo')?.focus(),250);
+}
 
-function carregarTelaPorTipo(){ if(!sessao) return mudar('home'); const t=String(sessao.tipo||'').toLowerCase(); if(t==='paciente'){ $('tituloPaciente').textContent=`Bem-vindo(a), ${sessao.nome}.`; mudar('painel_paciente'); carregarConsultas(); } else if(t==='medico'){ $('tituloMedico').textContent=`Olá, ${sessao.nome}. Acompanhe sua agenda e finalize atendimentos.`; mudar('painel_medico'); carregarAgendaMedico(); } else if(t==='secretaria'){ $('tituloSecretaria').textContent=`Olá, ${sessao.nome}. Localize pacientes e realize agendamentos.`; mudar('painel_secretaria'); } else { $('tituloAdm').textContent=`Olá, ${sessao.nome}. Gerencie os principais recursos da clínica.`; mudar('painel_adm'); carregarResumoAdm(); carregarEspecialidadesAdm(); } }
+async function fazerLogin(){
+  $('loginMsg').innerHTML='';
+  try{
+    const d=await api(`${BASE}/Login`,{method:'POST',loaderText:'Validando seu acesso...',body:JSON.stringify({email:$('loginEmail').value,senha:$('loginSenha').value})});
+    sessao=d; localStorage.setItem('jurassi_sessao',JSON.stringify(d)); atualizarNavbar(true); await carregarTelaPorTipo();
+  }catch(e){
+    if(e.data?.requerVerificacao){ abrirVerificacao(e.data.email||$('loginEmail').value,e.message); return; }
+    msg($('loginMsg'),e.message);
+  }
+}
 
-async function carregarMedicos(selectId='medicoSelect'){ const ms=await api(`${BASE}/ListarMedicos`); $(selectId).innerHTML=ms.map(m=>`<option value="${m.id}">${escapeHtml(m.nome)} — ${escapeHtml(m.especialidade?.nome||'Especialidade')}</option>`).join(''); }
+async function fazerCadastro(){
+  $('cadastroMsg').innerHTML='';
+  try{
+    const d=await api(`${BASE}/CadastrarPaciente`,{method:'POST',loaderText:'Criando seu cadastro e enviando o código...',body:JSON.stringify({nomeCompleto:$('cadNome').value,email:$('cadEmail').value,cpf:digits($('cadCpf').value),dataNascimento:$('cadData').value,sexoGenero:$('cadGenero').value,telefoneCelular:digits($('cadCelular').value),telefoneSecundario:digits($('cadTelefone').value)||null,senha:$('cadSenha').value})});
+    abrirVerificacao(d.email||$('cadEmail').value,d.mensagem);
+  }catch(e){msg($('cadastroMsg'),e.message)}
+}
+
+async function verificarEmail(){
+  $('verificacaoMsg').innerHTML='';
+  const codigo=digits($('verificacaoCodigo').value);
+  if(codigo.length!==6){msg($('verificacaoMsg'),'Informe os 6 dígitos do código.');return;}
+  try{
+    const d=await api(`${BASE}/VerificarEmail`,{method:'POST',loaderText:'Confirmando seu e-mail...',body:JSON.stringify({email:emailVerificacaoAtual,codigo})});
+    msg($('verificacaoMsg'),d.mensagem,true);
+    setTimeout(()=>{ $('loginEmail').value=emailVerificacaoAtual; mudar('login'); },1000);
+  }catch(e){msg($('verificacaoMsg'),e.message)}
+}
+
+async function reenviarCodigo(){
+  try{
+    const d=await api(`${BASE}/ReenviarCodigoVerificacao`,{method:'POST',loaderText:'Enviando um novo código...',body:JSON.stringify({email:emailVerificacaoAtual})});
+    msg($('verificacaoMsg'),d.mensagem,true);
+  }catch(e){msg($('verificacaoMsg'),e.message)}
+}
+
+async function carregarTelaPorTipo(){
+  if(!sessao) return mudar('home');
+  const t=String(sessao.tipo||'').toLowerCase();
+  if(t==='paciente'){
+    $('tituloPaciente').textContent=`Bem-vindo(a), ${sessao.nome}.`; mudar('painel_paciente'); await carregarConsultas();
+  } else if(t==='medico'){
+    $('tituloMedico').textContent=`Olá, ${sessao.nome}. Acompanhe sua agenda e finalize atendimentos.`; mudar('painel_medico'); await carregarAgendaMedico();
+  } else if(t==='secretaria'){
+    $('tituloSecretaria').textContent=`Olá, ${sessao.nome}. Localize pacientes e realize agendamentos.`; mudar('painel_secretaria');
+  } else {
+    $('tituloAdm').textContent=`Olá, ${sessao.nome}. Gerencie os principais recursos da clínica.`; mudar('painel_adm'); await Promise.all([carregarResumoAdm(),carregarEspecialidadesAdm()]);
+  }
+}
+
+async function carregarMedicos(selectId='medicoSelect'){ const ms=await api(`${BASE}/ListarMedicos`,{loaderText:'Carregando médicos...'}); $(selectId).innerHTML=ms.map(m=>`<option value="${m.id}">${escapeHtml(m.nome)} — ${escapeHtml(m.especialidade?.nome||'Especialidade')}</option>`).join(''); }
 function abrirAgendamento(){ $('agendamentoBox').classList.remove('d-none'); carregarMedicos(); const hoje=new Date().toISOString().split('T')[0]; $('agendaData').min=hoje; }
 function fecharAgendamento(){ $('agendamentoBox').classList.add('d-none'); }
-async function agendarPac(){ try{ await api(`${BASE}/Agendar`,{method:'POST',body:JSON.stringify({pacienteId:sessao.id,medicoId:Number($('medicoSelect').value),dataHora:$('agendaData').value+'T'+$('agendaHora').value+':00',observacao:$('agendaObs').value})}); msg($('agendarMsg'),'Consulta agendada com sucesso!',true); carregarConsultas(); }catch(e){msg($('agendarMsg'),e.message)} }
-async function carregarConsultas(){ const ds=await api(`${BASE}/MinhasConsultas/${sessao.id}`); const rows=ds.map(x=>`<tr><td>${formatarDataHora(x.dataHora)}</td><td>${escapeHtml(x.medico?.nome)}</td><td>${escapeHtml(x.medico?.especialidade?.nome)}</td><td>${escapeHtml(x.status)}</td><td>${x.status==='Agendado'?`<button class="btn btn-sm btn-danger rounded-pill px-3" onclick="cancelar(${x.id})">Cancelar</button>`:''}</td></tr>`).join(''); $('consultasTabela').innerHTML=`<table class="table table-hover align-middle bg-white d-none d-md-table"><thead class="table-light"><tr><th>Data</th><th>Médico</th><th>Especialidade</th><th>Status</th><th>Ação</th></tr></thead><tbody>${rows||'<tr><td colspan="5">Nenhuma consulta.</td></tr>'}</tbody></table>`; $('consultasCards').innerHTML=ds.length?ds.map(x=>`<div class="col-12"><div class="card mobile-consulta-card"><div class="card-body"><h6 class="text-tema">${formatarDataHora(x.dataHora)}</h6><p class="mb-1"><b>Médico:</b> ${escapeHtml(x.medico?.nome)}</p><p class="mb-1"><b>Especialidade:</b> ${escapeHtml(x.medico?.especialidade?.nome)}</p><p class="mb-3"><b>Status:</b> ${escapeHtml(x.status)}</p>${x.status==='Agendado'?`<button class="btn btn-danger rounded-pill w-100" onclick="cancelar(${x.id})">Cancelar</button>`:''}</div></div></div>`).join(''):'<div class="col-12"><div class="alert alert-light">Nenhuma consulta.</div></div>'; }
-async function cancelar(id){ if(!confirm('Cancelar esta consulta?'))return; try{await api(`${BASE}/Cancelar/${id}`,{method:'DELETE'});carregarConsultas()}catch(e){alert(e.message)} }
-async function carregarDocumentos(){ try{const ds=await api(`${BASE}/DocumentosPaciente/${sessao.id}`); $('documentosBox').innerHTML=`<h5 class="text-tema mt-4">Documentos Médicos</h5>`+(ds.length?ds.map(d=>`<div class="doc-box ${d.visualizado?'doc-visualizado':''}"><div class="d-flex justify-content-between gap-3 flex-wrap"><strong>${escapeHtml(d.tipo)}</strong><small>${new Date(d.dataEmissao).toLocaleDateString('pt-BR')}</small></div><p class="mb-1">${escapeHtml(d.conteudo)}</p><small class="text-muted">Dr(a). ${escapeHtml(d.medico?.nome||'')} — ${escapeHtml(d.especialidade?.nome||'')}</small></div>`).join(''):'<div class="alert alert-light">Nenhum documento disponível.</div>');}catch(e){$('documentosBox').innerHTML=`<div class="alert alert-danger">${escapeHtml(e.message)}</div>`;} }
+async function agendarPac(){ try{ await api(`${BASE}/Agendar`,{method:'POST',loaderText:'Confirmando seu agendamento...',body:JSON.stringify({pacienteId:sessao.id,medicoId:Number($('medicoSelect').value),dataHora:$('agendaData').value+'T'+$('agendaHora').value+':00',observacao:$('agendaObs').value})}); msg($('agendarMsg'),'Consulta agendada com sucesso!',true); await carregarConsultas(); }catch(e){msg($('agendarMsg'),e.message)} }
+async function carregarConsultas(){ const ds=await api(`${BASE}/MinhasConsultas/${sessao.id}`,{loaderText:'Atualizando suas consultas...'}); const rows=ds.map(x=>`<tr><td>${formatarDataHora(x.dataHora)}</td><td>${escapeHtml(x.medico?.nome)}</td><td>${escapeHtml(x.medico?.especialidade?.nome)}</td><td>${escapeHtml(x.status)}</td><td>${x.status==='Agendado'?`<button class="btn btn-sm btn-danger rounded-pill px-3" onclick="cancelar(${x.id})">Cancelar</button>`:''}</td></tr>`).join(''); $('consultasTabela').innerHTML=`<table class="table table-hover align-middle bg-white d-none d-md-table"><thead class="table-light"><tr><th>Data</th><th>Médico</th><th>Especialidade</th><th>Status</th><th>Ação</th></tr></thead><tbody>${rows||'<tr><td colspan="5">Nenhuma consulta.</td></tr>'}</tbody></table>`; $('consultasCards').innerHTML=ds.length?ds.map(x=>`<div class="col-12"><div class="card mobile-consulta-card"><div class="card-body"><h6 class="text-tema">${formatarDataHora(x.dataHora)}</h6><p class="mb-1"><b>Médico:</b> ${escapeHtml(x.medico?.nome)}</p><p class="mb-1"><b>Especialidade:</b> ${escapeHtml(x.medico?.especialidade?.nome)}</p><p class="mb-3"><b>Status:</b> ${escapeHtml(x.status)}</p>${x.status==='Agendado'?`<button class="btn btn-danger rounded-pill w-100" onclick="cancelar(${x.id})">Cancelar</button>`:''}</div></div></div>`).join(''):'<div class="col-12"><div class="alert alert-light">Nenhuma consulta.</div></div>'; }
+async function cancelar(id){ if(!confirm('Cancelar esta consulta?'))return; try{await api(`${BASE}/Cancelar/${id}`,{method:'DELETE',loaderText:'Cancelando consulta...'});await carregarConsultas()}catch(e){alert(e.message)} }
+async function carregarDocumentos(){ try{const ds=await api(`${BASE}/DocumentosPaciente/${sessao.id}`,{loaderText:'Carregando documentos médicos...'}); $('documentosBox').innerHTML=`<h5 class="text-tema mt-4">Documentos Médicos</h5>`+(ds.length?ds.map(d=>`<div class="doc-box ${d.visualizado?'doc-visualizado':''}"><div class="d-flex justify-content-between gap-3 flex-wrap"><strong>${escapeHtml(d.tipo)}</strong><small>${new Date(d.dataEmissao).toLocaleDateString('pt-BR')}</small></div><p class="mb-1">${escapeHtml(d.conteudo)}</p><small class="text-muted">Dr(a). ${escapeHtml(d.medico?.nome||'')} — ${escapeHtml(d.especialidade?.nome||'')}</small></div>`).join(''):'<div class="alert alert-light">Nenhum documento disponível.</div>');}catch(e){$('documentosBox').innerHTML=`<div class="alert alert-danger">${escapeHtml(e.message)}</div>`;} }
 
-async function buscarPacienteSecretaria(){ $('secPacienteBox').innerHTML=''; pacienteSecretaria=null; try{const p=await api(`${BASE}/BuscarPacienteCpf/${digits($('secCpf').value)}`); if(!p){$('secPacienteBox').innerHTML='<div class="alert alert-warning">Paciente não encontrado.</div>';return;} pacienteSecretaria=p; $('secPacienteBox').innerHTML=`<div class="bg-white rounded-4 shadow-sm p-4 border-start border-5 border-warning"><h5 class="text-tema">${escapeHtml(p.nomeCompleto)}</h5><p class="mb-1"><b>E-mail:</b> ${escapeHtml(p.email)}</p><p class="mb-0"><b>CPF:</b> ${escapeHtml(p.cpf)}</p></div>`; $('secAgendamentoBox').classList.remove('d-none'); await carregarMedicos('secMedicoSelect'); $('secAgendaData').min=new Date().toISOString().split('T')[0];}catch(e){$('secPacienteBox').innerHTML=`<div class="alert alert-danger">${escapeHtml(e.message)}</div>`;} }
-async function agendarSecretaria(){ if(!pacienteSecretaria)return; try{await api(`${BASE}/Agendar`,{method:'POST',body:JSON.stringify({pacienteId:pacienteSecretaria.id,medicoId:Number($('secMedicoSelect').value),dataHora:$('secAgendaData').value+'T'+$('secAgendaHora').value+':00',observacao:$('secObs').value})});msg($('secMsg'),'Agendamento realizado com sucesso!',true)}catch(e){msg($('secMsg'),e.message)} }
+async function buscarPacienteSecretaria(){ $('secPacienteBox').innerHTML=''; pacienteSecretaria=null; try{const p=await api(`${BASE}/BuscarPacienteCpf/${digits($('secCpf').value)}`,{loaderText:'Localizando paciente...'}); if(!p){$('secPacienteBox').innerHTML='<div class="alert alert-warning">Paciente não encontrado.</div>';return;} pacienteSecretaria=p; $('secPacienteBox').innerHTML=`<div class="bg-white rounded-4 shadow-sm p-4 border-start border-5 border-warning"><h5 class="text-tema">${escapeHtml(p.nomeCompleto)}</h5><p class="mb-1"><b>E-mail:</b> ${escapeHtml(p.email)}</p><p class="mb-0"><b>CPF:</b> ${escapeHtml(p.cpf)}</p></div>`; $('secAgendamentoBox').classList.remove('d-none'); await carregarMedicos('secMedicoSelect'); $('secAgendaData').min=new Date().toISOString().split('T')[0];}catch(e){$('secPacienteBox').innerHTML=`<div class="alert alert-danger">${escapeHtml(e.message)}</div>`;} }
+async function agendarSecretaria(){ if(!pacienteSecretaria)return; try{await api(`${BASE}/Agendar`,{method:'POST',loaderText:'Registrando agendamento...',body:JSON.stringify({pacienteId:pacienteSecretaria.id,medicoId:Number($('secMedicoSelect').value),dataHora:$('secAgendaData').value+'T'+$('secAgendaHora').value+':00',observacao:$('secObs').value})});msg($('secMsg'),'Agendamento realizado com sucesso!',true)}catch(e){msg($('secMsg'),e.message)} }
 
-async function carregarAgendaMedico(){ const ds=await api(`${BASE}/AgendaMedico/${sessao.id}`); const rows=ds.map(a=>`<tr><td>${formatarDataHora(a.dataHora)}</td><td>${escapeHtml(a.paciente?.nomeCompleto)}</td><td>${escapeHtml(a.status)}</td><td><button class="btn btn-sm btn-warning rounded-pill" onclick="abrirDocumento(${a.id})">Finalizar</button></td></tr>`).join(''); $('agendaMedicoTabela').innerHTML=`<table class="table table-hover align-middle bg-white d-none d-md-table"><thead class="table-light"><tr><th>Data</th><th>Paciente</th><th>Status</th><th>Ação</th></tr></thead><tbody>${rows||'<tr><td colspan="4">Nenhuma consulta.</td></tr>'}</tbody></table>`; $('agendaMedicoCards').innerHTML=ds.length?ds.map(a=>`<div class="col-12"><div class="card mobile-consulta-card"><div class="card-body"><h6 class="text-tema">${formatarDataHora(a.dataHora)}</h6><p><b>Paciente:</b> ${escapeHtml(a.paciente?.nomeCompleto)}</p><button class="btn btn-warning rounded-pill w-100" onclick="abrirDocumento(${a.id})">Finalizar atendimento</button></div></div></div>`).join(''):'<div class="col-12"><div class="alert alert-light">Nenhuma consulta.</div></div>'; }
+async function carregarAgendaMedico(){ const ds=await api(`${BASE}/AgendaMedico/${sessao.id}`,{loaderText:'Atualizando agenda médica...'}); const rows=ds.map(a=>`<tr><td>${formatarDataHora(a.dataHora)}</td><td>${escapeHtml(a.paciente?.nomeCompleto)}</td><td>${escapeHtml(a.status)}</td><td><button class="btn btn-sm btn-warning rounded-pill" onclick="abrirDocumento(${a.id})">Finalizar</button></td></tr>`).join(''); $('agendaMedicoTabela').innerHTML=`<table class="table table-hover align-middle bg-white d-none d-md-table"><thead class="table-light"><tr><th>Data</th><th>Paciente</th><th>Status</th><th>Ação</th></tr></thead><tbody>${rows||'<tr><td colspan="4">Nenhuma consulta.</td></tr>'}</tbody></table>`; $('agendaMedicoCards').innerHTML=ds.length?ds.map(a=>`<div class="col-12"><div class="card mobile-consulta-card"><div class="card-body"><h6 class="text-tema">${formatarDataHora(a.dataHora)}</h6><p><b>Paciente:</b> ${escapeHtml(a.paciente?.nomeCompleto)}</p><button class="btn btn-warning rounded-pill w-100" onclick="abrirDocumento(${a.id})">Finalizar atendimento</button></div></div></div>`).join(''):'<div class="col-12"><div class="alert alert-light">Nenhuma consulta.</div></div>'; }
 function abrirDocumento(id){ $('docAgendamentoId').value=id; $('emitirDocBox').classList.remove('d-none'); window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}); }
-async function emitirDocumento(){ try{await api(`${BASE}/LancarDocumento`,{method:'POST',body:JSON.stringify({agendamentoId:Number($('docAgendamentoId').value),tipo:$('docTipo').value,conteudo:$('docConteudo').value,pacienteId:0,medicoId:0,especialidadeId:0})});msg($('docMsg'),'Documento emitido e atendimento finalizado.',true);$('docConteudo').value='';$('emitirDocBox').classList.add('d-none');carregarAgendaMedico()}catch(e){msg($('docMsg'),e.message)} }
+async function emitirDocumento(){ try{await api(`${BASE}/LancarDocumento`,{method:'POST',loaderText:'Emitindo documento médico...',body:JSON.stringify({agendamentoId:Number($('docAgendamentoId').value),tipo:$('docTipo').value,conteudo:$('docConteudo').value,pacienteId:0,medicoId:0,especialidadeId:0})});msg($('docMsg'),'Documento emitido e atendimento finalizado.',true);$('docConteudo').value='';$('emitirDocBox').classList.add('d-none');await carregarAgendaMedico()}catch(e){msg($('docMsg'),e.message)} }
 
-async function carregarResumoAdm(){ try{const d=await api('/api/v1/dashboard/resumo'); $('stats').innerHTML=Object.entries(d).map(([k,v])=>`<div class="col-sm-6 col-lg-3"><div class="bg-white shadow-sm p-4 stat-card h-100"><div class="small text-muted text-uppercase">${escapeHtml(k)}</div><div class="display-6 fw-bold text-tema">${escapeHtml(v)}</div></div></div>`).join('');}catch(e){$('stats').innerHTML=`<div class="col-12"><div class="alert alert-warning">${escapeHtml(e.message)}</div></div>`;} }
-async function carregarEspecialidadesAdm(){ try{const es=await api(`${BASE}/ListarEspecialidades`);$('admMedEsp').innerHTML=es.map(e=>`<option value="${e.id}">${escapeHtml(e.nome)}</option>`).join('');}catch{} }
-async function cadastrarMedicoAdm(){ try{await api(`${BASE}/CadastrarMedico`,{method:'POST',body:JSON.stringify({nome:$('admMedNome').value,crm:$('admMedCrm').value,email:$('admMedEmail').value,senha:$('admMedSenha').value,especialidadeId:Number($('admMedEsp').value)})});msg($('admMedMsg'),'Médico cadastrado.',true);carregarResumoAdm()}catch(e){msg($('admMedMsg'),e.message)} }
-async function cadastrarSecretariaAdm(){ try{await api(`${BASE}/CadastrarSecretario`,{method:'POST',body:JSON.stringify({nome:$('admSecNome').value,email:$('admSecEmail').value,senha:$('admSecSenha').value})});msg($('admSecMsg'),'Secretaria cadastrada.',true)}catch(e){msg($('admSecMsg'),e.message)} }
+async function carregarResumoAdm(){ try{const d=await api('/api/v1/dashboard/resumo',{loaderText:'Atualizando indicadores...'}); $('stats').innerHTML=Object.entries(d).map(([k,v])=>`<div class="col-sm-6 col-lg-3"><div class="bg-white shadow-sm p-4 stat-card h-100"><div class="small text-muted text-uppercase">${escapeHtml(k)}</div><div class="display-6 fw-bold text-tema">${escapeHtml(v)}</div></div></div>`).join('');}catch(e){$('stats').innerHTML=`<div class="col-12"><div class="alert alert-warning">${escapeHtml(e.message)}</div></div>`;} }
+async function carregarEspecialidadesAdm(){
+  try{
+    const es=await api(`${BASE}/ListarEspecialidades`,{loaderText:'Carregando especialidades...'});
+    $('admMedEsp').innerHTML=es.map(e=>`<option value="${e.id}">${escapeHtml(e.nome)}</option>`).join('');
+    $('admEspLista').innerHTML=es.map(e=>`<span class="specialty-pill"><i class="bi bi-heart-pulse me-1"></i>${escapeHtml(e.nome)}</span>`).join('');
+  }catch(e){ if($('admEspLista')) $('admEspLista').innerHTML=`<span class="text-danger">${escapeHtml(e.message)}</span>`; }
+}
+async function cadastrarEspecialidadeAdm(){
+  $('admEspMsg').innerHTML='';
+  const nome=$('admEspNome').value.trim();
+  if(nome.length<2){msg($('admEspMsg'),'Informe o nome da especialidade.');return;}
+  try{
+    const d=await api(`${BASE}/CadastrarEspecialidade`,{method:'POST',loaderText:'Adicionando especialidade...',body:JSON.stringify({nome})});
+    msg($('admEspMsg'),d.mensagem,true); $('admEspNome').value=''; await carregarEspecialidadesAdm();
+  }catch(e){msg($('admEspMsg'),e.message)}
+}
+async function cadastrarMedicoAdm(){ try{await api(`${BASE}/CadastrarMedico`,{method:'POST',loaderText:'Cadastrando médico...',body:JSON.stringify({nome:$('admMedNome').value,crm:$('admMedCrm').value,email:$('admMedEmail').value,senha:$('admMedSenha').value,especialidadeId:Number($('admMedEsp').value)})});msg($('admMedMsg'),'Médico cadastrado.',true);await carregarResumoAdm()}catch(e){msg($('admMedMsg'),e.message)} }
+async function cadastrarSecretariaAdm(){ try{await api(`${BASE}/CadastrarSecretario`,{method:'POST',loaderText:'Cadastrando secretaria...',body:JSON.stringify({nome:$('admSecNome').value,email:$('admSecEmail').value,senha:$('admSecSenha').value})});msg($('admSecMsg'),'Secretaria cadastrada.',true)}catch(e){msg($('admSecMsg'),e.message)} }
 </script>
 </body>
 </html>

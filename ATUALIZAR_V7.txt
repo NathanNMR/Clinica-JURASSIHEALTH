@@ -1,0 +1,53 @@
+JURASSIHEALTH v7 - PASSOS IMPORTANTES
+=====================================
+
+1. BANCO AIVEN
+--------------
+Antes de publicar o novo código no Render, execute UMA VEZ no MySQL Workbench:
+
+database/migration-v7-email-login-especialidades.sql
+
+Esse script:
+- adiciona verificação de e-mail aos pacientes;
+- mantém pacientes antigos como já verificados;
+- cria a tabela persistente de tentativas/bloqueios de login.
+
+2. E-MAIL NO RENDER
+-------------------
+Adicione estas variáveis em Environment:
+
+Email__Smtp__Host
+Email__Smtp__Port
+Email__Smtp__User
+Email__Smtp__Password
+Email__Smtp__FromEmail
+Email__Smtp__FromName
+Email__Smtp__EnableSsl
+
+As credenciais dependem do provedor SMTP escolhido.
+Sem SMTP configurado, novos cadastros de pacientes não conseguem receber o código de verificação.
+
+3. FLUXO NOVO
+-------------
+Cadastro -> envio do código -> confirmação do e-mail -> login.
+
+Código: 6 dígitos
+Validade: 15 minutos
+Tentativas de código: 5
+Reenvio: mínimo de 60 segundos
+
+Login:
+5 falhas na janela configurada -> bloqueio por 15 minutos (padrão).
+O bloqueio agora fica persistido no MySQL e não some apenas porque o Render reiniciou.
+
+4. ADMINISTRADOR
+----------------
+No Painel Administrativo agora existe a seção "Especialidades Médicas".
+O ADM pode adicionar uma especialidade e ela aparece imediatamente no seletor de cadastro de médicos.
+
+5. FRONT-END
+------------
+- tela de carregamento personalizada com DR Rex;
+- animações de tela, cards e mascote;
+- animações respeitam prefers-reduced-motion;
+- carregamento contextual nas operações da API.
