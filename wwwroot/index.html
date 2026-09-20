@@ -175,7 +175,6 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
 .reveal-on-scroll.revealed { opacity: 1; transform: translateY(0); }
 .navbar-brand img { animation: mascotBreath 3.2s ease-in-out infinite; }
 .mascote-hero { animation: rexFloat 3.6s ease-in-out infinite; }
-.verification-code { font-size: 1.65rem; text-align: center; letter-spacing: .55rem; font-weight: 800; }
 .specialty-pill { background:#eef4f5; color:var(--tema-escuro); border:1px solid #d5e1e4; border-radius:999px; padding:8px 13px; font-weight:600; }
 @keyframes rexBounce { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-10px) rotate(1deg)} }
 @keyframes rexFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
@@ -341,21 +340,6 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
 </div>
 
 
-<div id="verificacao" class="tela py-5">
-  <div class="container" style="max-width:560px">
-    <div class="form-card text-center">
-      <img src="/img/dr-rex.png" alt="DR Rex" style="width:130px;height:130px;object-fit:contain" class="mb-2">
-      <h3 class="text-tema">Verifique seu e-mail</h3>
-      <p class="text-muted">Enviamos um código de 6 dígitos para <strong id="verificacaoEmailTexto"></strong>. O código é válido por 15 minutos.</p>
-      <label class="label-bold text-start">Código de verificação</label>
-      <input id="verificacaoCodigo" inputmode="numeric" maxlength="6" class="form-control verification-code mb-3" placeholder="000000">
-      <button onclick="verificarEmail()" class="btn-jurassico w-100 mb-2">CONFIRMAR E-MAIL</button>
-      <button onclick="reenviarCodigo()" class="btn btn-outline-secondary rounded-pill w-100">Reenviar código</button>
-      <div id="verificacaoMsg"></div>
-    </div>
-  </div>
-</div>
-
 <div id="painel_paciente" class="tela py-5">
   <div class="container">
     <div class="glass-section">
@@ -502,7 +486,6 @@ footer img { width: 105px; height: 105px; object-fit: contain; }
 const BASE = '/Sistema';
 let sessao = null;
 let pacienteSecretaria = null;
-let emailVerificacaoAtual = '';
 let loadingCount = 1;
 const $ = id => document.getElementById(id);
 const digits = x => String(x || '').replace(/\D/g, '');
@@ -536,7 +519,11 @@ async function api(url,opt={}){
     if(sessao?.token) opt.headers.Authorization='Bearer '+sessao.token;
     const r=await fetch(url,opt);
     let b=null; try{b=await r.json()}catch{}
-    if(!r.ok){ const e=new Error(b?.mensagem||b?.title||`Erro ${r.status}`); e.status=r.status; e.data=b; throw e; }
+    if(!r.ok){
+      const detalhes = b?.errors ? Object.values(b.errors).flat().join(' ') : '';
+      const e=new Error(b?.mensagem || detalhes || b?.title || `Erro ${r.status}`);
+      e.status=r.status; e.data=b; throw e;
+    }
     return b;
   } finally { esconderLoading(); }
 }
@@ -566,50 +553,31 @@ async function verificarSessao(){
 }
 function sair(){ localStorage.removeItem('jurassi_sessao'); sessao=null; pacienteSecretaria=null; atualizarNavbar(false); mudar('home'); }
 
-function abrirVerificacao(email, mensagem=''){
-  emailVerificacaoAtual=email;
-  $('verificacaoEmailTexto').textContent=email;
-  $('verificacaoCodigo').value='';
-  $('verificacaoMsg').innerHTML=mensagem?`<div class="alert alert-info mt-3">${escapeHtml(mensagem)}</div>`:'';
-  mudar('verificacao');
-  setTimeout(()=>$('verificacaoCodigo')?.focus(),250);
-}
-
 async function fazerLogin(){
   $('loginMsg').innerHTML='';
   try{
     const d=await api(`${BASE}/Login`,{method:'POST',loaderText:'Validando seu acesso...',body:JSON.stringify({email:$('loginEmail').value,senha:$('loginSenha').value})});
     sessao=d; localStorage.setItem('jurassi_sessao',JSON.stringify(d)); atualizarNavbar(true); await carregarTelaPorTipo();
   }catch(e){
-    if(e.data?.requerVerificacao){ abrirVerificacao(e.data.email||$('loginEmail').value,e.message); return; }
     msg($('loginMsg'),e.message);
   }
 }
 
 async function fazerCadastro(){
   $('cadastroMsg').innerHTML='';
+  if(!$('cadNome').value.trim() || !$('cadEmail').value.trim() || !$('cadCpf').value.trim() || !$('cadData').value || !$('cadGenero').value.trim() || !$('cadCelular').value.trim() || !$('cadSenha').value){
+    msg($('cadastroMsg'),'Preencha todos os campos obrigatórios.');
+    return;
+  }
+  if(digits($('cadCpf').value).length!==11){ msg($('cadastroMsg'),'O CPF deve conter 11 dígitos.'); return; }
+  if(!/^\d{10,11}$/.test(digits($('cadCelular').value))){ msg($('cadastroMsg'),'Informe um celular válido com 10 ou 11 dígitos.'); return; }
+  if($('cadSenha').value.length<6){ msg($('cadastroMsg'),'A senha deve possuir pelo menos 6 caracteres.'); return; }
   try{
-    const d=await api(`${BASE}/CadastrarPaciente`,{method:'POST',loaderText:'Criando seu cadastro e enviando o código...',body:JSON.stringify({nomeCompleto:$('cadNome').value,email:$('cadEmail').value,cpf:digits($('cadCpf').value),dataNascimento:$('cadData').value,sexoGenero:$('cadGenero').value,telefoneCelular:digits($('cadCelular').value),telefoneSecundario:digits($('cadTelefone').value)||null,senha:$('cadSenha').value})});
-    abrirVerificacao(d.email||$('cadEmail').value,d.mensagem);
+    const d=await api(`${BASE}/CadastrarPaciente`,{method:'POST',loaderText:'Criando seu cadastro...',body:JSON.stringify({nomeCompleto:$('cadNome').value,email:$('cadEmail').value,cpf:digits($('cadCpf').value),dataNascimento:$('cadData').value,sexoGenero:$('cadGenero').value,telefoneCelular:digits($('cadCelular').value),telefoneSecundario:digits($('cadTelefone').value)||null,senha:$('cadSenha').value})});
+    msg($('cadastroMsg'),d.mensagem,true);
+    $('loginEmail').value=d.email||$('cadEmail').value;
+    setTimeout(()=>mudar('login'),900);
   }catch(e){msg($('cadastroMsg'),e.message)}
-}
-
-async function verificarEmail(){
-  $('verificacaoMsg').innerHTML='';
-  const codigo=digits($('verificacaoCodigo').value);
-  if(codigo.length!==6){msg($('verificacaoMsg'),'Informe os 6 dígitos do código.');return;}
-  try{
-    const d=await api(`${BASE}/VerificarEmail`,{method:'POST',loaderText:'Confirmando seu e-mail...',body:JSON.stringify({email:emailVerificacaoAtual,codigo})});
-    msg($('verificacaoMsg'),d.mensagem,true);
-    setTimeout(()=>{ $('loginEmail').value=emailVerificacaoAtual; mudar('login'); },1000);
-  }catch(e){msg($('verificacaoMsg'),e.message)}
-}
-
-async function reenviarCodigo(){
-  try{
-    const d=await api(`${BASE}/ReenviarCodigoVerificacao`,{method:'POST',loaderText:'Enviando um novo código...',body:JSON.stringify({email:emailVerificacaoAtual})});
-    msg($('verificacaoMsg'),d.mensagem,true);
-  }catch(e){msg($('verificacaoMsg'),e.message)}
 }
 
 async function carregarTelaPorTipo(){

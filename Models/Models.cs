@@ -34,21 +34,6 @@ public class Paciente
     [Required, JsonIgnore]
     public string Senha { get; set; } = string.Empty;
 
-    [Column("email_verificado")]
-    public bool EmailVerificado { get; set; }
-
-    [Column("codigo_verificacao_hash"), JsonIgnore]
-    public string? CodigoVerificacaoHash { get; set; }
-
-    [Column("codigo_verificacao_expira_em"), JsonIgnore]
-    public DateTime? CodigoVerificacaoExpiraEm { get; set; }
-
-    [Column("tentativas_verificacao"), JsonIgnore]
-    public int TentativasVerificacao { get; set; }
-
-    [Column("ultimo_envio_verificacao"), JsonIgnore]
-    public DateTime? UltimoEnvioVerificacao { get; set; }
-
     [Column("data_cadastro"), DatabaseGenerated(DatabaseGeneratedOption.Computed)]
     public DateTime DataCadastro { get; set; }
 }
@@ -165,16 +150,6 @@ public class CadastrarPacienteReq
     [Required, MinLength(6, ErrorMessage = "A senha deve possuir pelo menos 6 caracteres.")] public string Senha { get; set; } = string.Empty;
 }
 
-public class VerificarEmailReq
-{
-    [Required, EmailAddress] public string Email { get; set; } = string.Empty;
-    [Required, RegularExpression(@"^\d{6}$", ErrorMessage = "Informe o código de 6 dígitos.")] public string Codigo { get; set; } = string.Empty;
-}
-
-public class ReenviarVerificacaoReq
-{
-    [Required, EmailAddress] public string Email { get; set; } = string.Empty;
-}
 
 public class CadastrarMedicoReq
 {

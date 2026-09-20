@@ -17,17 +17,3 @@ services:
         sync: false
       - key: AdminPadrao__SenhaHash
         sync: false
-      - key: Email__Smtp__Host
-        sync: false
-      - key: Email__Smtp__Port
-        value: 587
-      - key: Email__Smtp__User
-        sync: false
-      - key: Email__Smtp__Password
-        sync: false
-      - key: Email__Smtp__FromEmail
-        sync: false
-      - key: Email__Smtp__FromName
-        value: Clinica JurassiHealth
-      - key: Email__Smtp__EnableSsl
-        value: true

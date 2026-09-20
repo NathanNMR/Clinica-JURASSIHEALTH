@@ -17,11 +17,6 @@ CREATE TABLE pacientes (
  telefone_celular VARCHAR(11) NOT NULL,
  telefone_secundario VARCHAR(11),
  senha VARCHAR(255) NOT NULL,
- email_verificado BOOLEAN NOT NULL DEFAULT FALSE,
- codigo_verificacao_hash VARCHAR(128) NULL,
- codigo_verificacao_expira_em DATETIME NULL,
- tentativas_verificacao INT NOT NULL DEFAULT 0,
- ultimo_envio_verificacao DATETIME NULL,
  data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
  INDEX ix_paciente_nome(nome_completo)
 ) ENGINE=InnoDB;

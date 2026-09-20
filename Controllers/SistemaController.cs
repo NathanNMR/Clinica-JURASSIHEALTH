@@ -15,23 +15,17 @@ public class SistemaController : ControllerBase
     private readonly TokenService _tokens;
     private readonly IConfiguration _config;
     private readonly LoginAttemptService _loginAttempts;
-    private readonly IEmailService _email;
-    private readonly VerificationCodeService _verificationCodes;
 
     public SistemaController(
         ClinicaContext db,
         TokenService tokens,
         IConfiguration config,
-        LoginAttemptService loginAttempts,
-        IEmailService email,
-        VerificationCodeService verificationCodes)
+        LoginAttemptService loginAttempts)
     {
         _db = db;
         _tokens = tokens;
         _config = config;
         _loginAttempts = loginAttempts;
-        _email = email;
-        _verificationCodes = verificationCodes;
     }
 
     private int Uid => (int)HttpContext.Items["uid"]!;
@@ -105,16 +99,6 @@ public class SistemaController : ControllerBase
         if (p != null && VerificarSenha(l.Senha, p.Senha))
         {
             await _loginAttempts.RegistrarSucessoAsync(email);
-            if (!p.EmailVerificado)
-            {
-                return StatusCode(403, new
-                {
-                    mensagem = "Seu e-mail ainda não foi verificado. Informe o código recebido por e-mail.",
-                    requerVerificacao = true,
-                    email = p.Email
-                });
-            }
-
             return Ok(new LoginResp { Tipo = "paciente", Id = p.Id, Nome = p.NomeCompleto, Token = _tokens.GerarToken(p.Id, "paciente") });
         }
 
@@ -146,7 +130,6 @@ public class SistemaController : ControllerBase
         if (await _db.Pacientes.AnyAsync(x => x.CPF == cpf))
             return Conflict(new { mensagem = "CPF já cadastrado." });
 
-        var codigo = _verificationCodes.GerarCodigo();
         var paciente = new Paciente
         {
             NomeCompleto = req.NomeCompleto.Trim(),
@@ -156,100 +139,17 @@ public class SistemaController : ControllerBase
             SexoGenero = req.SexoGenero.Trim(),
             TelefoneCelular = celular,
             TelefoneSecundario = telefoneSec,
-            Senha = BCrypt.Net.BCrypt.HashPassword(req.Senha),
-            EmailVerificado = false,
-            CodigoVerificacaoHash = _verificationCodes.Hash(codigo),
-            CodigoVerificacaoExpiraEm = DateTime.UtcNow.AddMinutes(15),
-            TentativasVerificacao = 0,
-            UltimoEnvioVerificacao = DateTime.UtcNow
+            Senha = BCrypt.Net.BCrypt.HashPassword(req.Senha)
         };
 
         _db.Pacientes.Add(paciente);
         await _db.SaveChangesAsync();
 
-        try
-        {
-            await _email.EnviarCodigoVerificacaoAsync(paciente.Email, paciente.NomeCompleto, codigo);
-        }
-        catch
-        {
-            _db.Pacientes.Remove(paciente);
-            await _db.SaveChangesAsync();
-            return StatusCode(503, new
-            {
-                mensagem = "Não foi possível enviar o e-mail de verificação. Confira a configuração SMTP e tente novamente."
-            });
-        }
-
         return Ok(new
         {
-            mensagem = "Cadastro realizado. Enviamos um código de 6 dígitos para confirmar seu e-mail.",
-            requerVerificacao = true,
+            mensagem = "Cadastro realizado com sucesso. Você já pode fazer login.",
             email = paciente.Email
         });
-    }
-
-    [HttpPost("VerificarEmail")]
-    public async Task<IActionResult> VerificarEmail(VerificarEmailReq req)
-    {
-        if (!ModelState.IsValid) return BadRequest(new { mensagem = "Código inválido." });
-        var email = req.Email.Trim().ToLowerInvariant();
-        var paciente = await _db.Pacientes.FirstOrDefaultAsync(x => x.Email == email);
-        if (paciente == null) return BadRequest(new { mensagem = "Não foi possível validar o código." });
-        if (paciente.EmailVerificado) return Ok(new { mensagem = "E-mail já verificado." });
-
-        if (paciente.CodigoVerificacaoExpiraEm == null || paciente.CodigoVerificacaoExpiraEm < DateTime.UtcNow)
-            return BadRequest(new { mensagem = "O código expirou. Solicite um novo código." });
-
-        if (paciente.TentativasVerificacao >= 5)
-            return StatusCode(429, new { mensagem = "Muitas tentativas de código. Solicite um novo código." });
-
-        if (!_verificationCodes.Confere(req.Codigo, paciente.CodigoVerificacaoHash))
-        {
-            paciente.TentativasVerificacao++;
-            await _db.SaveChangesAsync();
-            var restantes = Math.Max(0, 5 - paciente.TentativasVerificacao);
-            return BadRequest(new { mensagem = $"Código incorreto. Restam {restantes} tentativa(s)." });
-        }
-
-        paciente.EmailVerificado = true;
-        paciente.CodigoVerificacaoHash = null;
-        paciente.CodigoVerificacaoExpiraEm = null;
-        paciente.TentativasVerificacao = 0;
-        await _db.SaveChangesAsync();
-
-        return Ok(new { mensagem = "E-mail verificado com sucesso. Agora você já pode fazer login." });
-    }
-
-    [HttpPost("ReenviarCodigoVerificacao")]
-    public async Task<IActionResult> ReenviarCodigoVerificacao(ReenviarVerificacaoReq req)
-    {
-        var email = req.Email.Trim().ToLowerInvariant();
-        var paciente = await _db.Pacientes.FirstOrDefaultAsync(x => x.Email == email);
-
-        // Resposta genérica reduz enumeração de contas.
-        if (paciente == null)
-            return Ok(new { mensagem = "Se existir um cadastro pendente para esse e-mail, um novo código será enviado." });
-        if (paciente.EmailVerificado)
-            return Ok(new { mensagem = "Este e-mail já está verificado." });
-
-        if (paciente.UltimoEnvioVerificacao.HasValue &&
-            DateTime.UtcNow - paciente.UltimoEnvioVerificacao.Value < TimeSpan.FromSeconds(60))
-        {
-            var faltam = 60 - (int)(DateTime.UtcNow - paciente.UltimoEnvioVerificacao.Value).TotalSeconds;
-            return StatusCode(429, new { mensagem = $"Aguarde {Math.Max(1, faltam)} segundo(s) antes de reenviar." });
-        }
-
-        var codigo = _verificationCodes.GerarCodigo();
-        await _email.EnviarCodigoVerificacaoAsync(paciente.Email, paciente.NomeCompleto, codigo);
-
-        paciente.CodigoVerificacaoHash = _verificationCodes.Hash(codigo);
-        paciente.CodigoVerificacaoExpiraEm = DateTime.UtcNow.AddMinutes(15);
-        paciente.TentativasVerificacao = 0;
-        paciente.UltimoEnvioVerificacao = DateTime.UtcNow;
-        await _db.SaveChangesAsync();
-
-        return Ok(new { mensagem = "Novo código enviado. Ele é válido por 15 minutos." });
     }
 
     [HttpGet("ListarEspecialidades")]

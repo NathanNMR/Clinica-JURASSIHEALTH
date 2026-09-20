@@ -1,0 +1,10 @@
+JURASSIHEALTH V8 — VERIFICAÇÃO DE E-MAIL REMOVIDA
+
+1. Atualize o GitHub com os arquivos desta versão.
+2. No Render, as variáveis Email__Smtp__* não são mais necessárias e podem ser apagadas.
+3. Mantenha: ConnectionStrings__Default, Auth__SecretKey, AdminPadrao__Email e AdminPadrao__SenhaHash.
+4. Se você já executou a migration da v7 no Aiven, NÃO precisa executar nenhum SQL para remover a verificação. As colunas antigas podem permanecer sem uso.
+5. A tabela login_tentativas continua necessária para o limite de login. Se ela já existe, não faça nada. Caso não exista, execute database/migration-v8-login-limit.sql.
+6. Faça Manual Deploy -> Deploy latest commit no Render.
+
+Recursos mantidos: animações, loading DR Rex, limite persistente de login, cadastro de especialidades pelo ADM, responsividade e painéis.

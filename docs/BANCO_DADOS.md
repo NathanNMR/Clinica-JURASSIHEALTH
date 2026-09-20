@@ -18,14 +18,7 @@ Relacionamentos principais:
 - Médico 1:N Agendamento;
 - Agendamento 0:N Documento Médico.
 
-## Evolução v7
 
-A versão v7 adiciona:
+## Evolução v8
 
-- `pacientes.email_verificado`;
-- hash e expiração do código de verificação;
-- contador de tentativas de verificação;
-- data do último envio de código;
-- tabela `login_tentativas` para bloqueio persistente de autenticação.
-
-Para bancos criados antes desta versão, use `database/migration-v7-email-login-especialidades.sql`.
+A versão v8 mantém a tabela `login_tentativas` para o bloqueio persistente de autenticação. A verificação de e-mail foi removida da aplicação e não exige SMTP. Bancos que vieram da v7 podem manter as colunas antigas de verificação em `pacientes`; elas não são utilizadas pela aplicação.

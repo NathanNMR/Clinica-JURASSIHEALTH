@@ -106,3 +106,8 @@ A interface foi revisada usando o PIM III como referência direta, preservando a
 - DTOs de entrada separados das entidades para evitar exposição de hashes sem quebrar os cadastros.
 
 Antes de publicar esta versão em um banco já existente, execute `database/migration-v7-email-login-especialidades.sql` e configure as variáveis SMTP descritas em `docs/VERIFICACAO_EMAIL.md`.
+
+
+## Atualização v8 — verificação de e-mail removida
+
+A confirmação de e-mail por código e a dependência SMTP foram removidas para manter o projeto compatível com o Render Free. O cadastro do paciente é concluído imediatamente e o usuário pode entrar logo após o cadastro. Permanecem ativos o limite persistente de tentativas de login, as animações, a tela de carregamento personalizada e o gerenciamento de especialidades pelo administrador.
