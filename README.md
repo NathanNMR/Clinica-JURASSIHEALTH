@@ -120,3 +120,12 @@ A confirmação de e-mail por código e a dependência SMTP foram removidas para
 - gênero por opções selecionáveis;
 - limpeza automática dos campos de login;
 - nova apresentação do DR Rex como médico-chefe da clínica.
+
+
+## Melhorias de interface e agendamento (v10)
+
+- favicon com o DR Rex;
+- modo escuro persistente;
+- agendamento em sequência especialidade → médico → data → horário;
+- médicos filtrados por especialidade;
+- horários ocupados e horários passados são ocultados.

@@ -1,0 +1,18 @@
+JURASSIHEALTH v10
+
+Novidades:
+- favicon/logo na aba do navegador usando o DR Rex;
+- modo escuro com preferência salva no navegador;
+- fluxo de agendamento: especialidade -> médico -> data -> horário;
+- médicos são filtrados pela especialidade selecionada;
+- horários já ocupados não aparecem no seletor;
+- horários passados no dia atual também não aparecem;
+- mesma experiência no painel do paciente e da secretaria.
+
+Banco de dados:
+- não requer migration nem alteração no MySQL.
+
+Render:
+1. Atualize os arquivos no GitHub.
+2. Faça Deploy latest commit.
+3. Não é necessário criar variáveis de ambiente novas.

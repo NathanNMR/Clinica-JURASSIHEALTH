@@ -171,8 +171,14 @@ public class SistemaController : ControllerBase
     }
 
     [HttpGet("ListarMedicos")]
-    public async Task<IActionResult> ListarMedicos() =>
-        Ok(await _db.Medicos.AsNoTracking().Include(x => x.Especialidade).OrderBy(x => x.Nome).ToListAsync());
+    public async Task<IActionResult> ListarMedicos([FromQuery] int? especialidadeId)
+    {
+        var query = _db.Medicos.AsNoTracking().Include(x => x.Especialidade).AsQueryable();
+        if (especialidadeId.HasValue)
+            query = query.Where(x => x.EspecialidadeId == especialidadeId.Value);
+
+        return Ok(await query.OrderBy(x => x.Nome).ToListAsync());
+    }
 
     [HttpGet("Ocupados")]
     public async Task<IActionResult> Ocupados(string data, int medicoId)
